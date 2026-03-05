@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TinyBless</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#6ea7b3;
+text-align:center;
+padding:40px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+}
+
+.btn{
+display:block;
+padding:18px;
+margin:15px 0;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+color:black;
+}
+
+.yellow{background:#ffd200;}
+.purple{background:#a7a2e5;}
+.orange{background:#f4a62a;}
+.pink{background:#e8a2a9;}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Cute Chibi Art • Wallpapers • Digital Goods</h1>
+
+<p>Koleksi chibi aesthetic, wallpaper, dan digital goodies yang lucu.</p>
+
+<a class="btn yellow" href="#">🌐 UNDUH FREE 5 WALLPAPER</a>
+
+<a class="btn purple" href="#">🛍 BELI WALLPAPER CHIBI - 35 PCS</a>
+
+<a class="btn orange" href="#">✨ BELI STIKER WA CHIBI</a>
+
+<a class="btn pink" href="https://instagram.com">📷 INSTAGRAM</a>
+
+</div>
+
+</body>
+</html>
