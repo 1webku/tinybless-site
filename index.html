@@ -4,7 +4,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Creator Bio Link Demo</title>
+<title>Bio Link Demo</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -18,54 +18,58 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+background:#0f2027;
 color:white;
 text-align:center;
-}
-
-.container{
-width:340px;
-padding:20px;
-}
-
-.avatar{
-width:110px;
-height:110px;
-border-radius:50%;
-border:4px solid white;
-margin-bottom:15px;
+padding:40px 20px;
 }
 
 h1{
-font-size:24px;
-margin-bottom:5px;
+font-size:32px;
+margin-bottom:10px;
 }
 
-.bio{
+.subtitle{
 opacity:0.8;
-margin-bottom:25px;
+margin-bottom:40px;
 }
 
-.link{
-display:block;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.card{
 background:white;
 color:#333;
-text-decoration:none;
-padding:14px;
-margin:12px 0;
-border-radius:30px;
-font-weight:500;
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
-transition:0.25s;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-.link:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(0,0,0,0.35);
+.card h2{
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+margin-bottom:20px;
+}
+
+.button{
+display:inline-block;
+background:#203a43;
+color:white;
+padding:10px 20px;
+border-radius:25px;
+text-decoration:none;
+}
+
+.button:hover{
+background:#2c5364;
 }
 
 </style>
@@ -74,23 +78,31 @@ box-shadow:0 12px 25px rgba(0,0,0,0.35);
 
 <body>
 
-<div class="container">
+<h1>Bio Link Demo Portfolio</h1>
 
-<img src="https://i.pravatar.cc/200" class="avatar">
+<div class="subtitle">
+Contoh Website Bio Link Modern untuk Creator, UMKM, dan Affiliate
+</div>
 
-<h1>Creator Name</h1>
+<div class="grid">
 
-<div class="bio">Content Creator & Influencer</div>
+<div class="card">
+<h2>Creator Bio Link</h2>
+<p>Contoh bio link untuk content creator dan influencer.</p>
+<a class="button" href="creator/">Lihat Demo</a>
+</div>
 
-<a class="link" href="#">TikTok</a>
+<div class="card">
+<h2>UMKM Bio Link</h2>
+<p>Bio link untuk toko online, bisnis kecil, dan brand lokal.</p>
+<a class="button" href="umkm/">Lihat Demo</a>
+</div>
 
-<a class="link" href="#">Instagram</a>
-
-<a class="link" href="#">YouTube</a>
-
-<a class="link" href="#">Portfolio</a>
-
-<a class="link" href="#">Contact WhatsApp</a>
+<div class="card">
+<h2>Affiliate Bio Link</h2>
+<p>Bio link khusus untuk TikTok affiliate dan promosi produk.</p>
+<a class="button" href="affiliate/">Lihat Demo</a>
+</div>
 
 </div>
 
