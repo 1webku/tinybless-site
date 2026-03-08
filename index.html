@@ -1,57 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>TinyBless</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Bio Link</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-font-family: Arial;
-background:#6ea7b3;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
 text-align:center;
-padding:40px;
 }
 
 .container{
-max-width:500px;
-margin:auto;
+width:320px;
 }
 
-.btn{
+.avatar{
+width:110px;
+border-radius:50%;
+border:4px solid white;
+margin-bottom:15px;
+}
+
+h1{
+font-size:22px;
+margin-bottom:5px;
+}
+
+p{
+opacity:0.8;
+margin-bottom:25px;
+}
+
+.link{
 display:block;
-padding:18px;
-margin:15px 0;
-border-radius:40px;
+background:white;
+color:#333;
 text-decoration:none;
-font-weight:bold;
-color:black;
+padding:14px;
+margin:12px 0;
+border-radius:30px;
+font-weight:500;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
 
-.yellow{background:#ffd200;}
-.purple{background:#a7a2e5;}
-.orange{background:#f4a62a;}
-.pink{background:#e8a2a9;}
+.link:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.footer{
+margin-top:25px;
+font-size:12px;
+opacity:0.6;
+}
 
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>Cute Chibi Art • Wallpapers • Digital Goods</h1>
+<img src="https://i.pravatar.cc/150" class="avatar">
 
-<p>Koleksi chibi aesthetic, wallpaper, dan digital goodies yang lucu.</p>
+<h1>TinyBless</h1>
+<p>Chibi Creator & Digital Artist</p>
 
-<a class="btn yellow" href="#">🌐 UNDUH FREE 5 WALLPAPER</a>
+<a class="link" href="#">TikTok</a>
+<a class="link" href="#">Instagram</a>
+<a class="link" href="#">Dreamstime Portfolio</a>
+<a class="link" href="#">Shop Digital Product</a>
+<a class="link" href="#">Contact WhatsApp</a>
 
-<a class="btn purple" href="#">🛍 BELI WALLPAPER CHIBI - 35 PCS</a>
-
-<a class="btn orange" href="#">✨ BELI STIKER WA CHIBI</a>
-
-<a class="btn pink" href="https://instagram.com">📷 INSTAGRAM</a>
+<div class="footer">
+Made with GitHub Pages
+</div>
 
 </div>
 
