@@ -1,29 +1,29 @@
 <!DOCTYPE html>
+<html lang="id">
 
-<html>
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Infografis IPA SMP SMA | TinyBless Edu</title>
-
-<meta name="description" content="Kumpulan infografis IPA untuk siswa SMP dan SMA. Materi sains dengan visual yang mudah dipahami.">
+<title>Infografis IPA - TinyBless Edu</title>
 
 <style>
 
 body{
-font-family:Poppins;
-background:#0f2027;
+font-family:Arial, sans-serif;
+background:#0b2e36;
 color:white;
 text-align:center;
 padding:40px;
 }
 
+h1{
+margin-bottom:30px;
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 max-width:900px;
 margin:auto;
 }
@@ -31,17 +31,38 @@ margin:auto;
 .card{
 background:white;
 color:#333;
-padding:20px;
 border-radius:12px;
+padding:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+}
+
+.card h3{
+margin-top:15px;
 }
 
 .button{
 display:inline-block;
 margin-top:10px;
-padding:10px 20px;
-background:#203a43;
+padding:10px 16px;
+background:#0b2e36;
 color:white;
 border-radius:20px;
+text-decoration:none;
+}
+
+.button:hover{
+background:#154c59;
+}
+
+a.back{
+display:block;
+margin-top:40px;
+color:#00ffd5;
 text-decoration:none;
 }
 
@@ -53,29 +74,32 @@ text-decoration:none;
 
 <h1>Infografis IPA</h1>
 
-<p>Kumpulan infografis IPA untuk siswa SMP dan SMA.</p>
-
 <div class="grid">
 
 <div class="card">
-<h3>Siklus Air</h3>
-<p>Proses evaporasi, kondensasi, dan presipitasi.</p>
-<a class="button" href="siklus-air.html">Baca</a>
-</div>
-
-<div class="card">
+<img src="../../img/ipa/perubahan-wujud-zat.png">
 <h3>Perubahan Wujud Zat</h3>
-<p>Padat, cair, dan gas dalam kehidupan sehari-hari.</p>
-<a class="button" href="perubahan-wujud-zat.html">Baca</a>
+<p>Proses perubahan zat dari padat, cair, hingga gas.</p>
+<a class="button" href="perubahan-wujud-zat.html">Buka Materi</a>
 </div>
 
 <div class="card">
+<img src="../../img/ipa/siklus-air.png">
+<h3>Siklus Air</h3>
+<p>Proses perputaran air di bumi melalui penguapan dan hujan.</p>
+<a class="button" href="siklus-air.html">Buka Materi</a>
+</div>
+
+<div class="card">
+<img src="../../img/ipa/gaya-dan-gerak.png">
 <h3>Gaya dan Gerak</h3>
-<p>Konsep gaya dalam kehidupan sehari-hari.</p>
-<a class="button" href="gaya-dan-gerak.html">Baca</a>
+<p>Konsep gaya yang mempengaruhi gerak benda.</p>
+<a class="button" href="gaya-dan-gerak.html">Buka Materi</a>
 </div>
 
 </div>
+
+<a class="back" href="/">← Kembali ke Beranda</a>
 
 </body>
 </html>
