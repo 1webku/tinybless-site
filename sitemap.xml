@@ -27,4 +27,19 @@
 <priority>0.90</priority>
 </url>
 
+<url>
+<loc>https://tinybless.my.id/bio-link-creator</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://tinybless.my.id/bio-link-umkm</loc>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://tinybless.my.id/bio-link-affiliate</loc>
+<priority>0.80</priority>
+</url>  
+
 </urlset>
