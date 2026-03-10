@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generator Bio Link | TinyBless</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f2027;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+input{
+padding:10px;
+margin:10px;
+width:250px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#00ffcc;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Generator Bio Link</h1>
+
+<p>Masukkan nama dan link kamu.</p>
+
+<input id="name" placeholder="Nama">
+<br>
+
+<input id="link1" placeholder="Link Instagram">
+<br>
+
+<input id="link2" placeholder="Link TikTok">
+<br>
+
+<button onclick="generate()">Generate</button>
+
+<div id="output" class="result"></div>
+
+<script>
+
+function generate(){
+
+let name=document.getElementById("name").value
+let link1=document.getElementById("link1").value
+let link2=document.getElementById("link2").value
+
+document.getElementById("output").innerHTML=`
+
+<h2>${name}</h2>
+
+<p><a href="${link1}">Instagram</a></p>
+
+<p><a href="${link2}">TikTok</a></p>
+
+`
+
+}
+
+</script>
+
+</body>
+</html>
