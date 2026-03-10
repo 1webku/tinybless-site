@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Caption Generator | TinyBless</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f2027;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+input{
+padding:10px;
+width:260px;
+margin-top:10px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#00ffcc;
+margin-top:10px;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+max-width:500px;
+margin-left:auto;
+margin-right:auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Caption Generator</h1>
+
+<p>Masukkan topik konten kamu.</p>
+
+<input id="topic" placeholder="contoh: travel">
+
+<br>
+
+<button onclick="generate()">Generate Caption</button>
+
+<div id="result" class="result"></div>
+
+<script>
+
+function generate(){
+
+let topic=document.getElementById("topic").value
+
+let captions=[
+
+"Menikmati momen terbaik tentang "+topic+" hari ini ✨",
+
+"Hal kecil tentang "+topic+" yang membuat hari lebih menyenangkan.",
+
+"Berbagi cerita tentang "+topic+" yang mungkin kamu suka.",
+
+"Petualangan baru seputar "+topic+" dimulai hari ini.",
+
+"Tidak ada yang lebih menyenangkan selain "+topic+" hari ini."
+
+]
+
+let random=captions[Math.floor(Math.random()*captions.length)]
+
+document.getElementById("result").innerHTML=random
+
+}
+
+</script>
+
+</body>
+</html>
