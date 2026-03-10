@@ -77,17 +77,39 @@ function generate(){
 
 let url=document.getElementById("url").value
 
+if(url==""){
+alert("Masukkan link terlebih dahulu")
+return
+}
+
 let code=Math.random().toString(36).substring(2,7)
 
 let shortLink="https://tinybless.my.id/go/"+code
 
-document.getElementById("result").innerHTML=
-
-"Link pendek:<br><b>"+shortLink+"</b><br><br>(redirect manual perlu dibuat)"
+document.getElementById("result").innerHTML = `
+<p><b>Link Pendek:</b></p>
+<input id="shortlink" value="${shortLink}" style="width:100%;padding:10px;border-radius:8px;border:none;margin-top:10px;">
+<br><br>
+<button onclick="copyLink()">Copy</button>
+`
 
 }
 
+function copyLink(){
+
+let copyText=document.getElementById("shortlink")
+
+copyText.select()
+copyText.setSelectionRange(0,99999)
+
+navigator.clipboard.writeText(copyText.value)
+
+alert("Link berhasil disalin!")
+
+}
+  
 </script>
+
 
 <br>
 
