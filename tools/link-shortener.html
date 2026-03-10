@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Link Shortener | TinyBless</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f2027;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+input{
+padding:10px;
+width:260px;
+margin-top:10px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#00ffcc;
+margin-top:10px;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+max-width:500px;
+margin:auto;
+}
+
+a{
+color:#00ffcc;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Link Shortener</h1>
+
+<p>Masukkan link panjang kamu.</p>
+
+<input id="url" placeholder="https://contoh.com">
+
+<br>
+
+<button onclick="generate()">Generate Link</button>
+
+<div id="result" class="result"></div>
+
+<script>
+
+function generate(){
+
+let url=document.getElementById("url").value
+
+let code=Math.random().toString(36).substring(2,7)
+
+let shortLink="https://tinybless.my.id/go/"+code
+
+document.getElementById("result").innerHTML=
+
+"Link pendek:<br><b>"+shortLink+"</b><br><br>(redirect manual perlu dibuat)"
+
+}
+
+</script>
+
+<br>
+
+<a href="/">← Kembali ke Beranda</a>
+
+</body>
+</html>
