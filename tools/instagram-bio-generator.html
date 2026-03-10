@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Instagram Bio Generator | TinyBless</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f2027;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+input{
+padding:12px;
+width:100%;
+max-width:420px;
+border-radius:8px;
+border:none;
+margin:15px auto;
+display:block;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:#00ffcc;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+background:white;
+color:#333;
+padding:20px;
+border-radius:10px;
+max-width:420px;
+margin-left:auto;
+margin-right:auto;
+}
+
+a{
+color:#00ffcc;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Instagram Bio Generator</h1>
+
+<p>Masukkan nama dan topik akun kamu.</p>
+
+<input id="name" placeholder="Nama / Brand">
+
+<input id="topic" placeholder="Contoh: Travel, Fashion, Edukasi">
+
+<button onclick="generate()">Generate Bio</button>
+
+<div id="result" class="result"></div>
+
+<script>
+
+function generate(){
+
+let name=document.getElementById("name").value
+let topic=document.getElementById("topic").value
+
+let bio = `
+${name}
+
+✨ Konten tentang ${topic}
+📍 Berbagi tips & inspirasi
+👇 Cek link di bawah
+`
+
+document.getElementById("result").innerText=bio
+
+}
+
+</script>
+
+<br>
+
+<a href="/">← Kembali ke Beranda</a>
+
+</body>
+</html>
