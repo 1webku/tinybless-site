@@ -6,13 +6,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Infografis IPA - TinyBless Edu</title>
+<title>Infografis IPA SMP SMA | TinyBless Edu</title>
+
+<meta name="description" content="Portal infografis IPA untuk siswa SMP dan SMA. Materi sains visual seperti siklus air, perubahan wujud zat, dan gaya gerak.">
+
+<link rel="canonical" href="https://tinybless.my.id/edukasi/ipa/">
 
 <style>
 
 body{
 font-family:Arial, sans-serif;
-background:#0b2e36;
+background:#0f2027;
 color:white;
 text-align:center;
 padding:40px 20px;
@@ -20,6 +24,11 @@ margin:0;
 }
 
 h1{
+margin-bottom:10px;
+}
+
+.desc{
+opacity:0.9;
 margin-bottom:30px;
 }
 
@@ -29,9 +38,8 @@ margin-bottom:30px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
-max-width:900px;
+max-width:1000px;
 margin:40px auto;
-padding:0 15px;
 }
 
 /* CARD */
@@ -39,29 +47,38 @@ padding:0 15px;
 .card{
 background:white;
 color:#333;
-border-radius:12px;
+border-radius:15px;
 padding:20px;
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .card img{
 width:100%;
-border-radius:8px;
-margin-bottom:10px;
+border-radius:10px;
+margin-bottom:12px;
 }
+
+/* CATEGORY */
+
+.tag{
+display:inline-block;
+background:#eaf6ff;
+color:#0077cc;
+font-size:12px;
+padding:4px 10px;
+border-radius:12px;
+margin-bottom:8px;
+}
+
+/* TITLE */
 
 .card h3{
-margin-top:10px;
-}
-
-.card p{
-font-size:14px;
-margin-bottom:10px;
+margin:10px 0;
 }
 
 /* BUTTON */
@@ -69,8 +86,8 @@ margin-bottom:10px;
 .button{
 display:inline-block;
 margin-top:10px;
-padding:10px 16px;
-background:#0b2e36;
+padding:10px 18px;
+background:#203a43;
 color:white;
 border-radius:20px;
 text-decoration:none;
@@ -78,30 +95,16 @@ font-size:14px;
 }
 
 .button:hover{
-background:#154c59;
+background:#2c5364;
 }
 
-/* BACK LINK */
+/* BACK */
 
-a.back{
+.back{
 display:block;
 margin-top:40px;
 color:#00ffd5;
 text-decoration:none;
-}
-
-/* MOBILE FIX */
-
-@media (max-width:768px){
-
-body{
-padding:30px 10px;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
 }
 
 </style>
@@ -112,32 +115,71 @@ grid-template-columns:1fr;
 
 <h1>Infografis IPA</h1>
 
+<p class="desc">
+Belajar sains dengan infografis visual yang mudah dipahami untuk siswa SMP dan SMA.
+</p>
+
 <div class="grid">
 
+<!-- Materi 1 -->
+
 <div class="card">
+
 <img src="../../img/ipa/perubahan-wujud-zat.png">
+
+<span class="tag">IPA SMP</span>
+
 <h3>Perubahan Wujud Zat</h3>
-<p>Proses perubahan zat dari padat, cair, hingga gas.</p>
+
+<p>
+Memahami perubahan zat dari padat, cair, dan gas dalam kehidupan sehari-hari.
+</p>
+
 <a class="button" href="perubahan-wujud-zat.html">Buka Materi</a>
+
 </div>
 
+
+<!-- Materi 2 -->
+
 <div class="card">
+
 <img src="../../img/ipa/siklus-air.png">
+
+<span class="tag">IPA SMP</span>
+
 <h3>Siklus Air</h3>
-<p>Proses perputaran air di bumi melalui penguapan dan hujan.</p>
+
+<p>
+Proses perputaran air di bumi melalui penguapan, kondensasi, dan hujan.
+</p>
+
 <a class="button" href="siklus-air.html">Buka Materi</a>
+
 </div>
+
+
+<!-- Materi 3 -->
 
 <div class="card">
+
 <img src="../../img/ipa/gaya-dan-gerak.png">
+
+<span class="tag">IPA SMP</span>
+
 <h3>Gaya dan Gerak</h3>
-<p>Konsep gaya yang mempengaruhi gerak benda.</p>
+
+<p>
+Konsep gaya seperti mendorong, menarik, melempar, dan menghentikan benda.
+</p>
+
 <a class="button" href="gaya-dan-gerak.html">Buka Materi</a>
-</div>
 
 </div>
 
-<a class="back" href="/">← Kembali ke Beranda</a>
+</div>
+
+<a class="back" href="/edukasi/">← Kembali ke Edukasi</a>
 
 </body>
 </html>
