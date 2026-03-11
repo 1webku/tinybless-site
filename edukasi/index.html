@@ -1,24 +1,38 @@
 <!DOCTYPE html>
+<html lang="id">
 
-<html>
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Infografis Edukasi IPA SMP SMA | TinyBless</title>
+<title>Infografis IPA SMP SMA | TinyBless Edu</title>
 
-<meta name="description" content="Kumpulan infografis IPA, fisika, dan biologi untuk siswa SMP dan SMA. Belajar sains dengan visual yang mudah dipahami.">
+<meta name="description" content="Kumpulan infografis IPA untuk siswa SMP dan SMA. Belajar sains dengan visual sederhana seperti siklus air, perubahan wujud zat, dan gaya gerak.">
+
+<link rel="canonical" href="https://tinybless.my.id/edukasi/">
 
 <style>
 
 body{
-font-family:Poppins;
+font-family:Arial, sans-serif;
 background:#0f2027;
 color:white;
 text-align:center;
-padding:40px;
+padding:40px 20px;
+margin:0;
 }
+
+h1{
+margin-bottom:10px;
+}
+
+p.desc{
+opacity:0.9;
+margin-bottom:30px;
+}
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -29,27 +43,52 @@ margin:40px auto;
 padding:0 15px;
 }
 
+/* CARD */
+
 .card{
 background:white;
 color:#333;
-padding:20px;
+padding:25px;
 border-radius:15px;
-text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+transition:0.3s;
 }
 
-.card img{
-width:100%;
-border-radius:10px;
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h2{
 margin-bottom:10px;
-}  
-  
+}
+
+.card p{
+font-size:14px;
+margin-bottom:15px;
+}
+
+/* BUTTON */
+
 .button{
 display:inline-block;
-margin-top:10px;
 padding:10px 20px;
 background:#203a43;
 color:white;
 border-radius:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+.button:hover{
+background:#2c5364;
+}
+
+/* BACK */
+
+.back{
+display:block;
+margin-top:40px;
+color:#00ffd5;
 text-decoration:none;
 }
 
@@ -61,17 +100,19 @@ text-decoration:none;
 
 <h1>Infografis Edukasi</h1>
 
-<p>Belajar IPA, Fisika, dan Biologi dengan infografis sederhana.</p>
+<p class="desc">Belajar IPA dengan infografis visual yang mudah dipahami.</p>
 
 <div class="grid">
 
 <div class="card">
-<h2>IPA</h2>
-<p>Materi IPA untuk siswa SMP dan SMA.</p>
-<a class="button" href="ipa/">Lihat Materi</a>
+<h2>Infografis IPA</h2>
+<p>Kumpulan materi IPA untuk siswa SMP dan SMA seperti siklus air, gaya dan gerak, serta perubahan wujud zat.</p>
+<a class="button" href="/edukasi/ipa/">Lihat Materi</a>
 </div>
 
 </div>
+
+<a class="back" href="/">← Kembali ke Beranda</a>
 
 </body>
 </html>
