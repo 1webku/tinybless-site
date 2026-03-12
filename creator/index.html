@@ -16,43 +16,17 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
-/* BACKGROUND CERAH */
+/* BACKGROUND */
 
 body{
 
-background:linear-gradient(135deg,#4ca1af,#6dd5ed);
+background:linear-gradient(135deg,#5fb1c0,#6dd5ed,#7fd3c9);
 
 min-height:100vh;
 
 color:white;
 
 padding:40px 20px;
-
-position:relative;
-
-overflow-x:hidden;
-
-}
-
-/* GAMBAR BACKGROUND */
-
-.bg-image{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:url("/img/chibi.png") center/cover no-repeat;
-
-opacity:0.15;
-
-filter:blur(6px);
-
-z-index:-1;
 
 }
 
@@ -62,7 +36,6 @@ z-index:-1;
 
 max-width:420px;
 margin:auto;
-
 text-align:center;
 
 }
@@ -98,16 +71,20 @@ margin-bottom:6px;
 
 .bio{
 
-opacity:0.95;
+opacity:0.9;
 margin-bottom:25px;
 
 }
 
-/* BUTTON */
+/* LINK BUTTON */
 
 .link{
 
-display:block;
+display:flex;
+
+align-items:center;
+
+gap:12px;
 
 margin:12px 0;
 
@@ -127,6 +104,23 @@ transition:0.25s;
 
 }
 
+/* ICON */
+
+.icon{
+
+width:24px;
+height:24px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:18px;
+
+}
+
+/* HOVER */
+
 .link:hover{
 
 transform:scale(1.05);
@@ -145,11 +139,13 @@ opacity:0.9;
 
 }
 
+/* FOOTER */
+
 .footer{
 
 margin-top:30px;
 font-size:13px;
-opacity:0.8;
+opacity:0.85;
 
 }
 
@@ -158,8 +154,6 @@ opacity:0.8;
 </head>
 
 <body>
-
-<div class="bg-image"></div>
 
 <div class="container">
 
@@ -172,26 +166,38 @@ Creator • Tools • Edukasi
 </p>
 
 <a class="link" href="https://tiktok.com/@tinybless.edu" target="_blank">
-🎵 TikTok
+<span class="icon">🎵</span>
+TikTok
 </a>
 
 <a class="link" href="https://wa.me/6283124254787" target="_blank">
-💬 WhatsApp
+<span class="icon">💬</span>
+WhatsApp
 </a>
 
 <a class="link" href="/jasa-bio-link/">
-🚀 Jasa Bio Link
+<span class="icon">🚀</span>
+Jasa Bio Link
 </a>
 
 <div class="section">
 TinyBless Content
 </div>
 
-<a class="link" href="/tools/">🧰 Tools Creator</a>
+<a class="link" href="/tools/">
+<span class="icon">🧰</span>
+Tools Creator
+</a>
 
-<a class="link" href="/tips/">💡 Tips Digital</a>
+<a class="link" href="/tips/">
+<span class="icon">💡</span>
+Tips Digital
+</a>
 
-<a class="link" href="/edukasi/ipa/">📚 Infografis IPA</a>
+<a class="link" href="/edukasi/ipa/">
+<span class="icon">📚</span>
+Infografis IPA
+</a>
 
 <div class="footer">
 tinybless.my.id
