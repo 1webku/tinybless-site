@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,7 +21,7 @@ font-family:Arial, Helvetica, sans-serif;
 body{
 
 background:
-linear-gradient(rgba(0,180,200,0.45),rgba(0,180,200,0.45)),
+linear-gradient(rgba(0,200,210,0.45),rgba(0,200,210,0.45)),
 url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
 
 background-size:cover;
@@ -28,16 +29,18 @@ background-position:center;
 
 min-height:100vh;
 
-padding:30px 16px;
+padding:35px 16px;
 
 }
 
 /* CONTAINER */
 
 .container{
+
 max-width:420px;
 margin:auto;
 text-align:center;
+
 }
 
 /* FOTO PROFIL */
@@ -59,33 +62,43 @@ margin-bottom:12px;
 
 }
 
-/* TITLE */
+/* JUDUL */
 
 h1{
-font-size:24px;
+
+font-size:26px;
+
 color:black;
-margin-bottom:4px;
+
+margin-bottom:6px;
+
 }
 
+/* SUBTITLE */
+
 .bio{
-color:#333;
-margin-bottom:22px;
+
+color:black;
+
+font-size:18px;
+
+font-weight:600;
+
+margin-bottom:26px;
+
 }
 
 /* TOMBOL */
 
 .btn{
 
-display:flex;
-align-items:center;
+position:relative;
 
 background:white;
 
-height:62px;
+height:64px;
 
 border-radius:40px;
-
-padding:0 16px;
 
 margin:12px 0;
 
@@ -93,65 +106,88 @@ box-shadow:0 5px 15px rgba(0,0,0,0.15);
 
 text-decoration:none;
 
+display:block;
+
 }
 
 /* ICON KIRI */
 
-.btn img{
+.icon{
 
-width:42px;
-height:42px;
+width:46px;
+height:46px;
 
 border-radius:50%;
 
-object-fit:cover;
+position:absolute;
 
-margin-right:14px;
+left:10px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+object-fit:cover;
 
 }
 
-/* TEKS TOMBOL */
+/* TEKS TOMBOL TENGAH */
 
 .btn span{
 
-flex:1;
+position:absolute;
 
-text-align:center;
+left:50%;
 
-font-size:16px;
+top:50%;
 
-font-weight:600;
+transform:translate(-50%,-50%);
+
+font-size:17px;
+
+font-weight:700;
 
 color:black;
 
 }
 
-/* SECTION */
+/* SECTION TITLE */
 
 .section{
 
-margin-top:25px;
-font-size:13px;
-color:#444;
+margin-top:30px;
+
+font-size:18px;
+
+font-weight:700;
+
+color:black;
 
 }
 
+/* FOOTER */
+
 .footer{
 
-margin-top:28px;
-font-size:13px;
-color:#444;
+margin-top:32px;
+
+font-size:18px;
+
+font-weight:700;
+
+color:black;
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<img src="../img/profile.jpg" class="avatar">
+<img src="../img/profile.png" class="avatar">
 
 <h1>TinyBless Digital Studio</h1>
 
@@ -160,34 +196,36 @@ Creator • Tools • Edukasi
 </p>
 
 <a class="btn" href="https://tiktok.com/@tinybless.edu">
-<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
 <span>TikTok</span>
 </a>
 
 <a class="btn" href="https://wa.me/6283124254787">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 <span>WhatsApp</span>
 </a>
 
 <a class="btn" href="/jasa-bio-link/">
-<img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
 <span>Jasa Bio Link</span>
 </a>
 
-<div class="section">TinyBless Content</div>
+<div class="section">
+TinyBless Content
+</div>
 
 <a class="btn" href="/tools/">
-<img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png">
 <span>Tools Creator</span>
 </a>
 
 <a class="btn" href="/tips/">
-<img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
 <span>Tips Digital</span>
 </a>
 
 <a class="btn" href="/edukasi/ipa/">
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
 <span>Infografis IPA</span>
 </a>
 
