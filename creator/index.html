@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+
 <head>
 
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Creator Bio Link Demo</title>
+<title>TinyBless Creator Bio Link</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="description" content="Bio link creator TinyBless Digital Studio">
 
 <style>
 
@@ -14,58 +16,93 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-height:100vh;
+
+background:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") no-repeat center center/cover;
+
+min-height:100vh;
 display:flex;
-justify-content:center;
 align-items:center;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-text-align:center;
+justify-content:center;
+
+}
+
+.overlay{
+
+background:rgba(0,0,0,0.65);
+width:100%;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+
 }
 
 .container{
-width:340px;
-padding:20px;
+
+max-width:420px;
+width:90%;
+text-align:center;
+color:white;
+
 }
 
 .avatar{
+
 width:110px;
 height:110px;
 border-radius:50%;
-border:4px solid white;
+border:3px solid white;
 margin-bottom:15px;
+
 }
 
 h1{
+
 font-size:24px;
-margin-bottom:5px;
+margin-bottom:6px;
+
 }
 
 .bio{
-opacity:0.8;
+
+opacity:0.9;
 margin-bottom:25px;
+
 }
 
-.link{
+.links a{
+
 display:block;
-background:white;
-color:#333;
-text-decoration:none;
-padding:14px;
 margin:12px 0;
+padding:14px;
+
+background:white;
+color:#111;
 border-radius:30px;
-font-weight:500;
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
+text-decoration:none;
+font-weight:bold;
+
 transition:0.25s;
+
 }
 
-.link:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(0,0,0,0.35);
+.links a:hover{
+
+transform:scale(1.05);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+
+}
+
+.footer{
+
+margin-top:30px;
+font-size:13px;
+opacity:0.7;
+
 }
 
 </style>
@@ -74,23 +111,41 @@ box-shadow:0 12px 25px rgba(0,0,0,0.35);
 
 <body>
 
+<div class="overlay">
+
 <div class="container">
 
-<img src="https://i.pravatar.cc/200" class="avatar">
+<img class="avatar" src="https://via.placeholder.com/110">
 
-<h1>Creator Name</h1>
+<h1>TinyBless</h1>
 
-<div class="bio">Content Creator & Influencer</div>
+<p class="bio">
+Creator • Digital Tools • Edukasi
+</p>
 
-<a class="link" href="#">TikTok</a>
+<div class="links">
 
-<a class="link" href="#">Instagram</a>
+<a href="https://wa.me/6283124254787">Order Bio Link</a>
 
-<a class="link" href="#">YouTube</a>
+<a href="https://tinybless.my.id/tools/">Tools Creator</a>
 
-<a class="link" href="#">Portfolio</a>
+<a href="https://tinybless.my.id/tips/">Tips Digital</a>
 
-<a class="link" href="#">Contact WhatsApp</a>
+<a href="https://tinybless.my.id/edukasi/ipa/">Infografis IPA</a>
+
+<a href="https://instagram.com/">Instagram</a>
+
+<a href="https://tiktok.com/">TikTok</a>
+
+</div>
+
+<div class="footer">
+
+Powered by tinybless.my.id
+
+</div>
+
+</div>
 
 </div>
 
