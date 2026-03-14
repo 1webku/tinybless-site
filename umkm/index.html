@@ -101,16 +101,37 @@ display:block;
 border-bottom:1px solid #eee;
 }
 
+/* EBOOK GRID PROFESSIONAL */
+
 .ebook-grid{
 display:flex;
-gap:10px;
+gap:14px;
 justify-content:center;
-margin-bottom:12px;
+margin-bottom:16px;
 }
 
-.ebook-grid img{
+.ebook-item{
 width:30%;
-border-radius:8px;
+height:160px;
+background:#f4f6f8;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+box-shadow:0 6px 14px rgba(0,0,0,0.12);
+transition:.25s;
+}
+
+.ebook-item:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 20px rgba(0,0,0,0.18);
+}
+
+.ebook-item img{
+max-width:100%;
+max-height:140px;
+object-fit:contain;
 }
   
 /* CARD CONTENT */
@@ -240,15 +261,21 @@ Lihat Produk
 
 <!-- PRODUCT 2 -->
 
-<!-- PRODUCT 2 -->
-
 <div class="card">
 
 <div class="ebook-grid">
 
-<img src="../img/buat-web-gratis.png">
-<img src="../img/cara-mudah-buat-ebook.png">
-<img src="../img/quantum-field.png">
+<div class="ebook-item">
+<img src="../img/ebook1.png">
+</div>
+
+<div class="ebook-item">
+<img src="../img/ebook2.png">
+</div>
+
+<div class="ebook-item">
+<img src="../img/ebook3.png">
+</div>
 
 </div>
 
@@ -268,7 +295,8 @@ Lihat Produk
 </div>
 
 </div>
-  
+
+
 <!-- BELI LYNK -->
 
 <a class="btn" href="https://lynk.id/tinybless">
