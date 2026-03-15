@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Redirect</title>
+
+<script>
+window.location.replace("https://s.shopee.co.id/70FQ8ziRpL");
+</script>
+
+</head>
+
+<body>
+Redirecting...
+</body>
+</html>
