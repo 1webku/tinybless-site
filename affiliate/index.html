@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,29 +9,45 @@
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
-text-align:center;
+}
 
-background-image:url("../img/bg.jpg");
+body{
+
+background:
+linear-gradient(135deg,#4ecdc488,#6dd5ed88),
+url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+
 background-size:cover;
 background-position:center;
-background-attachment:fixed;
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+
+padding:40px 18px;
+
 }
 
 .container{
 max-width:420px;
-margin:auto;
-padding:40px 20px;
+width:100%;
+text-align:center;
 }
 
 .logo{
 width:70px;
+height:70px;
 border-radius:50%;
 background:white;
 padding:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+margin:auto;
+box-shadow:0 6px 18px rgba(0,0,0,0.25);
 }
 
 h1{
@@ -39,28 +56,32 @@ font-size:22px;
 }
 
 .subtitle{
+margin-top:5px;
 color:#333;
 font-size:14px;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .card{
+
 background:white;
-border-radius:18px;
+border-radius:20px;
 padding:25px;
-margin:20px 0;
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
+margin-bottom:22px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
 }
 
 .product-img{
-width:160px;
-margin-bottom:10px;
+width:150px;
+margin-bottom:12px;
 }
 
 .product-title{
 font-weight:bold;
 font-size:16px;
-margin:10px 0;
+margin-bottom:6px;
 }
 
 .product-desc{
@@ -70,28 +91,40 @@ margin-bottom:15px;
 }
 
 .btn{
+
 display:inline-block;
+
 background:#2f7d5c;
 color:white;
-padding:12px 25px;
-border-radius:25px;
+
+padding:12px 28px;
+
+border-radius:28px;
+
 text-decoration:none;
+
 font-weight:bold;
+
+transition:0.2s;
+
 }
 
 .btn:hover{
-opacity:0.9;
-}
 
-.section-title{
-margin-top:30px;
-font-weight:bold;
+background:#276a4e;
+
 }
 
 .footer{
-margin-top:40px;
+
+margin-top:25px;
+
 font-size:12px;
+
 color:white;
+
+opacity:0.9;
+
 }
 
 </style>
@@ -102,15 +135,18 @@ color:white;
 
 <div class="container">
 
-<img src="../img/logo.png" class="logo">
+<img src="https://tinybless.my.id/img/logo.png" class="logo">
 
 <h1>TinyBless Affiliate</h1>
-<p class="subtitle">Rekomendasi produk pilihan terbaik</p>
+
+<p class="subtitle">
+Rekomendasi produk pilihan terbaik
+</p>
 
 
 <div class="card">
 
-<img src="../img/product1.png" class="product-img">
+<img src="https://via.placeholder.com/150" class="product-img">
 
 <div class="product-title">
 Keyboard Mechanical Murah
@@ -130,7 +166,7 @@ Lihat Produk
 
 <div class="card">
 
-<img src="../img/product2.png" class="product-img">
+<img src="https://via.placeholder.com/150" class="product-img">
 
 <div class="product-title">
 Laptop Stand Aluminium
@@ -150,7 +186,7 @@ Lihat Produk
 
 <div class="card">
 
-<img src="../img/product3.png" class="product-img">
+<img src="https://via.placeholder.com/150" class="product-img">
 
 <div class="product-title">
 Mouse Wireless Silent
@@ -165,6 +201,7 @@ Lihat Produk
 </a>
 
 </div>
+
 
 
 <div class="footer">
