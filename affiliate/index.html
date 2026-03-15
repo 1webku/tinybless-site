@@ -5,6 +5,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TinyBless Affiliate</title>
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,61 +23,86 @@ body{
 background:
 linear-gradient(135deg,#4ecdc488,#6dd5ed88),
 url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+
 background-size:cover;
 background-position:center;
+
 min-height:100vh;
 display:flex;
 justify-content:center;
 padding:40px 18px;
 }
 
+/* CONTAINER */
+
 .container{
 width:100%;
-max-width:540px;
+max-width:640px;
 text-align:center;
 }
+
+/* LOGO */
 
 .avatar{
 width:90px;
 height:90px;
 border-radius:50%;
-object-fit:contain;
 background:white;
 padding:10px;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
 margin-bottom:14px;
 }
 
+/* TITLE */
+
 h1{
-font-size:24px;
+font-size:26px;
 margin-bottom:6px;
 }
 
 .bio{
 font-size:16px;
 font-weight:600;
-margin-bottom:26px;
+margin-bottom:28px;
 }
 
-/* FEATURED */
+/* FEATURED PRODUCT */
 
 .featured{
 background:white;
-border-radius:20px;
-padding:24px;
-margin-bottom:22px;
-box-shadow:0 10px 28px rgba(0,0,0,0.18);
+border-radius:22px;
+padding:26px;
+margin-bottom:26px;
+box-shadow:0 12px 32px rgba(0,0,0,0.18);
+text-align:left;
+}
+
+.featured-badge{
+display:inline-block;
+background:#ff4d4d;
+color:white;
+font-size:12px;
+font-weight:700;
+padding:4px 10px;
+border-radius:14px;
+margin-bottom:10px;
 }
 
 .featured h2{
-font-size:20px;
-margin-bottom:8px;
+font-size:22px;
+margin-bottom:6px;
 }
 
 .featured p{
 font-size:14px;
 color:#555;
-margin-bottom:14px;
+margin-bottom:10px;
+}
+
+.rating{
+font-size:13px;
+color:#f4b400;
+margin-bottom:12px;
 }
 
 /* GRID */
@@ -84,7 +110,7 @@ margin-bottom:14px;
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:14px;
+gap:16px;
 }
 
 /* CARD */
@@ -93,34 +119,36 @@ gap:14px;
 background:white;
 border-radius:18px;
 padding:18px;
-box-shadow:0 8px 20px rgba(0,0,0,0.18);
+box-shadow:0 8px 22px rgba(0,0,0,0.16);
+text-align:left;
 position:relative;
-text-align:center;
+}
+
+.card-badge{
+position:absolute;
+top:10px;
+right:10px;
+background:#ff4d4d;
+color:white;
+font-size:11px;
+padding:4px 8px;
+border-radius:12px;
+font-weight:700;
 }
 
 .card h3{
 font-size:16px;
-margin-bottom:8px;
+margin-bottom:6px;
 }
 
 .card p{
 font-size:13px;
 color:#555;
-margin-bottom:12px;
+margin-bottom:8px;
 }
 
-/* BADGE */
-
-.badge{
-position:absolute;
-top:8px;
-left:8px;
-background:#ff4d4d;
-color:white;
-font-size:11px;
-font-weight:700;
-padding:4px 8px;
-border-radius:12px;
+.card .rating{
+margin-bottom:12px;
 }
 
 /* BUTTON */
@@ -129,8 +157,8 @@ border-radius:12px;
 display:inline-block;
 background:#2b7a78;
 color:white;
-padding:8px 18px;
-border-radius:24px;
+padding:8px 16px;
+border-radius:22px;
 text-decoration:none;
 font-weight:600;
 font-size:14px;
@@ -150,9 +178,11 @@ text-decoration:none;
 /* MOBILE */
 
 @media (max-width:600px){
+
 .grid{
 grid-template-columns:1fr;
 }
+
 }
 
 </style>
@@ -168,18 +198,24 @@ grid-template-columns:1fr;
 <h1>TinyBless Affiliate</h1>
 
 <p class="bio">
-Rekomendasi produk pilihan terbaik
+Rekomendasi produk terbaik untuk produktivitas
 </p>
 
-<!-- FEATURED -->
+<!-- FEATURED PRODUCT -->
 
 <div class="featured">
+
+<div class="featured-badge">Editor's Pick</div>
 
 <h2>⭐ Mechanical Keyboard</h2>
 
 <p>
-Keyboard nyaman untuk produktivitas dan gaming.
+Keyboard terbaik untuk kerja, belajar, dan gaming.
 </p>
+
+<div class="rating">
+★★★★★ 4.9 (2.1k review)
+</div>
 
 <a class="product-btn" href="/go/keyboard.html" target="_blank">
 Lihat Produk
@@ -187,17 +223,19 @@ Lihat Produk
 
 </div>
 
-<!-- GRID -->
+<!-- GRID PRODUCTS -->
 
 <div class="grid">
 
 <div class="card">
 
-<span class="badge">Best Seller</span>
+<div class="card-badge">Best Seller</div>
 
 <h3>💻 Laptop Stand</h3>
 
 <p>Stand ergonomis untuk laptop.</p>
+
+<div class="rating">★★★★☆ 4.7</div>
 
 <a class="product-btn" href="/go/laptopstand.html" target="_blank">
 Beli
@@ -211,6 +249,8 @@ Beli
 
 <p>Mouse wireless tanpa suara klik.</p>
 
+<div class="rating">★★★★☆ 4.6</div>
+
 <a class="product-btn" href="/go/mouse.html" target="_blank">
 Beli
 </a>
@@ -222,6 +262,8 @@ Beli
 <h3>🎧 Headset</h3>
 
 <p>Headset nyaman untuk meeting.</p>
+
+<div class="rating">★★★★☆ 4.5</div>
 
 <a class="product-btn" href="/go/headset.html" target="_blank">
 Beli
@@ -235,7 +277,37 @@ Beli
 
 <p>Webcam HD untuk meeting online.</p>
 
+<div class="rating">★★★★☆ 4.6</div>
+
 <a class="product-btn" href="/go/webcam.html" target="_blank">
+Beli
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📱 Tripod HP</h3>
+
+<p>Tripod stabil untuk TikTok & YouTube.</p>
+
+<div class="rating">★★★★☆ 4.7</div>
+
+<a class="product-btn" href="/go/tripod.html" target="_blank">
+Beli
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🎙 Condenser Microphone</h3>
+
+<p>Mic podcast yang dipakai YouTuber.</p>
+
+<div class="rating">★★★★☆ 4.8</div>
+
+<a class="product-btn" href="/go/microphone.html" target="_blank">
 Beli
 </a>
 
