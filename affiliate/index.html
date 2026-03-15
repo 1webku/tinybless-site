@@ -9,6 +9,7 @@
 <title>TinyBless Affiliate</title>
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
 <style>
 
@@ -19,6 +20,8 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
+/* BACKGROUND */
+
 body{
 background:
 linear-gradient(135deg,#4ecdc488,#6dd5ed88),
@@ -28,6 +31,7 @@ background-size:cover;
 background-position:center;
 
 min-height:100vh;
+
 display:flex;
 justify-content:center;
 
@@ -38,7 +42,7 @@ padding:40px 18px;
 
 .container{
 width:100%;
-max-width:520px;
+max-width:420px;
 text-align:center;
 }
 
@@ -55,102 +59,70 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 margin-bottom:14px;
 }
 
+/* TITLE */
+
 h1{
 font-size:24px;
+color:#000;
 margin-bottom:6px;
 }
 
+/* SUBTITLE */
+
 .bio{
-font-size:16px;
+font-size:18px;
 font-weight:600;
+color:#000;
 margin-bottom:26px;
 }
 
-/* FEATURED PRODUCT */
+/* CARD */
 
-.featured{
+.card{
 background:white;
 border-radius:20px;
 overflow:hidden;
-margin-bottom:22px;
-box-shadow:0 12px 28px rgba(0,0,0,0.2);
+margin:18px 0;
+box-shadow:0 10px 28px rgba(0,0,0,0.18);
 }
 
-.featured img{
+/* IMAGE */
+
+.card img{
 width:100%;
 display:block;
 }
 
-.featured-content{
-padding:16px;
+/* CONTENT */
+
+.card-content{
+padding:10px 16px 16px 16px;
 }
 
-.featured h2{
-font-size:20px;
+/* TITLE */
+
+.card h2{
+font-size:18px;
 margin-bottom:6px;
 }
 
-.featured p{
+/* DESCRIPTION */
+
+.card p{
 font-size:14px;
 color:#555;
 margin-bottom:12px;
 }
 
-/* GRID PRODUCTS */
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-margin-top:6px;
-}
-
-.product{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,0.18);
-position:relative;
-}
-
-.product img{
-width:100%;
-display:block;
-}
-
-.product-content{
-padding:10px;
-}
-
-.product h3{
-font-size:14px;
-margin-bottom:6px;
-}
-
-/* BADGE */
-
-.badge{
-position:absolute;
-top:10px;
-left:10px;
-background:#ff6b6b;
-color:white;
-font-size:11px;
-padding:4px 8px;
-border-radius:12px;
-font-weight:700;
-}
-
 /* BUTTON */
 
-.btn{
+.product-btn{
 display:inline-block;
 background:#2b7a78;
 color:white;
-padding:8px 16px;
-border-radius:20px;
+padding:10px 20px;
+border-radius:24px;
 text-decoration:none;
-font-size:13px;
 font-weight:600;
 }
 
@@ -159,7 +131,7 @@ font-weight:600;
 .footer{
 display:inline-block;
 margin-top:30px;
-font-size:14px;
+font-size:16px;
 font-weight:700;
 color:#000;
 text-decoration:none;
@@ -178,24 +150,24 @@ text-decoration:none;
 <h1>TinyBless Affiliate</h1>
 
 <p class="bio">
-Rekomendasi produk terbaik pilihan kami
+Rekomendasi produk pilihan terbaik
 </p>
 
-<!-- FEATURED PRODUCT -->
+<!-- PRODUCT 1 -->
 
-<div class="featured">
+<div class="card">
 
-<img src="https://via.placeholder.com/500x300">
+<img src="https://via.placeholder.com/400x250">
 
-<div class="featured-content">
+<div class="card-content">
 
-<h2>⭐ Mechanical Keyboard RGB</h2>
+<h2>⌨️ Mechanical Keyboard</h2>
 
 <p>
-Keyboard terbaik untuk produktivitas dan gaming.
+Keyboard nyaman untuk kerja dan gaming.
 </p>
 
-<a class="btn" href="/go/keyboard">
+<a class="product-btn" href="/go/keyboard" target="_blank">
 Lihat Produk
 </a>
 
@@ -203,73 +175,45 @@ Lihat Produk
 
 </div>
 
-<!-- GRID PRODUCTS -->
+<!-- PRODUCT 2 -->
 
-<div class="grid">
+<div class="card">
 
-<div class="product">
+<img src="https://via.placeholder.com/400x250">
 
-<span class="badge">Best Seller</span>
+<div class="card-content">
 
-<img src="https://via.placeholder.com/300x200">
+<h2>💻 Laptop Stand Aluminium</h2>
 
-<div class="product-content">
+<p>
+Stand ergonomis untuk laptop dan tablet.
+</p>
 
-<h3>Laptop Stand</h3>
-
-<a class="btn" href="/go/laptopstand">
-Beli
+<a class="product-btn" href="/go/laptopstand" target="_blank">
+Lihat Produk
 </a>
 
 </div>
 
 </div>
 
-<div class="product">
+<!-- PRODUCT 3 -->
 
-<img src="https://via.placeholder.com/300x200">
+<div class="card">
 
-<div class="product-content">
+<img src="https://via.placeholder.com/400x250">
 
-<h3>Wireless Mouse</h3>
+<div class="card-content">
 
-<a class="btn" href="/go/mouse">
-Beli
+<h2>🖱 Mouse Wireless Silent</h2>
+
+<p>
+Mouse wireless tanpa suara klik.
+</p>
+
+<a class="product-btn" href="/go/mouse" target="_blank">
+Lihat Produk
 </a>
-
-</div>
-
-</div>
-
-<div class="product">
-
-<img src="https://via.placeholder.com/300x200">
-
-<div class="product-content">
-
-<h3>Webcam HD</h3>
-
-<a class="btn" href="/go/webcam">
-Beli
-</a>
-
-</div>
-
-</div>
-
-<div class="product">
-
-<img src="https://via.placeholder.com/300x200">
-
-<div class="product-content">
-
-<h3>USB Hub Type C</h3>
-
-<a class="btn" href="/go/usbhub">
-Beli
-</a>
-
-</div>
 
 </div>
 
