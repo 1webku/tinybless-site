@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="id">
 <head>
+<meta charset="UTF-8">
+<title>Redirect</title>
+
 <meta http-equiv="refresh" content="0; url=https://s.shopee.co.id/3B2hbUo1pw">
+
+<script>
+window.location.href="https://s.shopee.co.id/3B2hbUo1pw";
+</script>
+
 </head>
-<body></body>
+
+<body>
+
+<p>Redirecting...</p>
+
+<a href="https://s.shopee.co.id/3B2hbUo1pw">
+Klik jika tidak otomatis
+</a>
+
+</body>
 </html>
