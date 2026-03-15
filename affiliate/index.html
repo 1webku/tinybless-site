@@ -9,7 +9,6 @@
 <title>TinyBless Affiliate</title>
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
 <style>
 
@@ -20,8 +19,6 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* BACKGROUND */
-
 body{
 background:
 linear-gradient(135deg,#4ecdc488,#6dd5ed88),
@@ -31,10 +28,8 @@ background-size:cover;
 background-position:center;
 
 min-height:100vh;
-
 display:flex;
 justify-content:center;
-
 padding:40px 18px;
 }
 
@@ -42,7 +37,7 @@ padding:40px 18px;
 
 .container{
 width:100%;
-max-width:420px;
+max-width:540px;
 text-align:center;
 }
 
@@ -63,52 +58,40 @@ margin-bottom:14px;
 
 h1{
 font-size:24px;
-color:#000;
 margin-bottom:6px;
 }
 
-/* SUBTITLE */
-
 .bio{
-font-size:18px;
+font-size:16px;
 font-weight:600;
-color:#000;
-margin-bottom:26px;
+margin-bottom:24px;
 }
 
-/* CARD */
+/* FEATURED PRODUCT */
 
-.card{
+.featured{
 background:white;
 border-radius:20px;
 overflow:hidden;
-margin:18px 0;
+margin-bottom:22px;
 box-shadow:0 10px 28px rgba(0,0,0,0.18);
 }
 
-/* IMAGE */
-
-.card img{
+.featured img{
 width:100%;
 display:block;
 }
 
-/* CONTENT */
-
-.card-content{
-padding:10px 16px 16px 16px;
+.featured-content{
+padding:16px;
 }
 
-/* TITLE */
-
-.card h2{
-font-size:18px;
+.featured h2{
+font-size:20px;
 margin-bottom:6px;
 }
 
-/* DESCRIPTION */
-
-.card p{
+.featured p{
 font-size:14px;
 color:#555;
 margin-bottom:12px;
@@ -126,15 +109,78 @@ text-decoration:none;
 font-weight:600;
 }
 
+/* GRID PRODUK */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.18);
+position:relative;
+}
+
+.card img{
+width:100%;
+height:140px;
+object-fit:contain;
+padding:14px;
+background:#f7f7f7;
+}
+
+.card-content{
+padding:10px;
+}
+
+.card h3{
+font-size:15px;
+margin-bottom:8px;
+}
+
+/* BADGE */
+
+.badge{
+position:absolute;
+top:10px;
+left:10px;
+background:#ff4d4d;
+color:white;
+font-size:11px;
+font-weight:700;
+padding:4px 8px;
+border-radius:12px;
+}
+
 /* FOOTER */
 
 .footer{
 display:inline-block;
 margin-top:30px;
-font-size:16px;
+font-size:14px;
 font-weight:700;
 color:#000;
 text-decoration:none;
+}
+
+/* MOBILE */
+
+@media (max-width:600px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.card img{
+height:180px;
+}
+
 }
 
 </style>
@@ -153,18 +199,18 @@ text-decoration:none;
 Rekomendasi produk pilihan terbaik
 </p>
 
-<!-- PRODUCT 1 -->
+<!-- FEATURED -->
 
-<div class="card">
+<div class="featured">
 
-<img src="https://via.placeholder.com/400x250">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png">
 
-<div class="card-content">
+<div class="featured-content">
 
-<h2>⌨️ Mechanical Keyboard</h2>
+<h2>⭐ Mechanical Keyboard</h2>
 
 <p>
-Keyboard nyaman untuk kerja dan gaming.
+Keyboard nyaman untuk produktivitas dan gaming.
 </p>
 
 <a class="product-btn" href="/go/keyboard" target="_blank">
@@ -175,45 +221,73 @@ Lihat Produk
 
 </div>
 
-<!-- PRODUCT 2 -->
+<!-- GRID PRODUK -->
+
+<div class="grid">
 
 <div class="card">
 
-<img src="https://via.placeholder.com/400x250">
+<span class="badge">Best Seller</span>
+
+<img src="https://cdn-icons-png.flaticon.com/512/1048/1048945.png">
 
 <div class="card-content">
 
-<h2>💻 Laptop Stand Aluminium</h2>
-
-<p>
-Stand ergonomis untuk laptop dan tablet.
-</p>
+<h3>💻 Laptop Stand</h3>
 
 <a class="product-btn" href="/go/laptopstand" target="_blank">
-Lihat Produk
+Beli
 </a>
 
 </div>
 
 </div>
-
-<!-- PRODUCT 3 -->
 
 <div class="card">
 
-<img src="https://via.placeholder.com/400x250">
+<img src="https://cdn-icons-png.flaticon.com/512/1069/1069181.png">
 
 <div class="card-content">
 
-<h2>🖱 Mouse Wireless Silent</h2>
-
-<p>
-Mouse wireless tanpa suara klik.
-</p>
+<h3>🖱 Wireless Mouse</h3>
 
 <a class="product-btn" href="/go/mouse" target="_blank">
-Lihat Produk
+Beli
 </a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/561/561188.png">
+
+<div class="card-content">
+
+<h3>🎧 Headset</h3>
+
+<a class="product-btn" href="/go/headset" target="_blank">
+Beli
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png">
+
+<div class="card-content">
+
+<h3>📷 Webcam</h3>
+
+<a class="product-btn" href="/go/webcam" target="_blank">
+Beli
+</a>
+
+</div>
 
 </div>
 
