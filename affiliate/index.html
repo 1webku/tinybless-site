@@ -40,24 +40,29 @@ width:100%;
 text-align:center;
 }
 
-.logo{
-width:70px;
-height:70px;
+.logo-wrap{
+width:90px;
+height:90px;
 border-radius:50%;
 background:white;
-padding:10px;
 margin:auto;
-box-shadow:0 6px 18px rgba(0,0,0,0.25);
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+margin-bottom:10px;
+}
+
+.logo{
+width:45px;
 }
 
 h1{
-margin-top:10px;
 font-size:22px;
+margin-bottom:4px;
 }
 
 .subtitle{
-margin-top:5px;
-color:#333;
 font-size:14px;
 margin-bottom:25px;
 }
@@ -66,28 +71,29 @@ margin-bottom:25px;
 
 background:white;
 border-radius:20px;
-padding:25px;
-margin-bottom:22px;
+padding:28px 22px;
+margin-bottom:24px;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+box-shadow:0 10px 25px rgba(0,0,0,0.18);
 
 }
 
 .product-img{
-width:150px;
-margin-bottom:12px;
+width:200px;
+margin-bottom:10px;
 }
 
 .product-title{
 font-weight:bold;
-font-size:16px;
+font-size:17px;
 margin-bottom:6px;
 }
 
 .product-desc{
-font-size:13px;
+font-size:14px;
 color:#555;
-margin-bottom:15px;
+margin-bottom:18px;
+line-height:1.5;
 }
 
 .btn{
@@ -97,33 +103,35 @@ display:inline-block;
 background:#2f7d5c;
 color:white;
 
-padding:12px 28px;
+padding:13px 30px;
 
-border-radius:28px;
+border-radius:30px;
 
 text-decoration:none;
 
 font-weight:bold;
 
-transition:0.2s;
+font-size:15px;
 
 }
 
 .btn:hover{
-
-background:#276a4e;
-
+background:#256b4d;
 }
 
 .footer{
 
-margin-top:25px;
+margin-top:30px;
 
-font-size:12px;
+font-size:14px;
+
+}
+
+.footer a{
 
 color:white;
-
-opacity:0.9;
+text-decoration:none;
+font-weight:bold;
 
 }
 
@@ -135,7 +143,13 @@ opacity:0.9;
 
 <div class="container">
 
-<img src="https://tinybless.my.id/img/logo.png" class="logo">
+
+<div class="logo-wrap">
+
+<img src="https://tinybless.my.id/favicon-32x32.png" class="logo">
+
+</div>
+
 
 <h1>TinyBless Affiliate</h1>
 
@@ -144,9 +158,10 @@ Rekomendasi produk pilihan terbaik
 </p>
 
 
+
 <div class="card">
 
-<img src="https://via.placeholder.com/150" class="product-img">
+<img src="https://via.placeholder.com/200" class="product-img">
 
 <div class="product-title">
 Keyboard Mechanical Murah
@@ -166,7 +181,7 @@ Lihat Produk
 
 <div class="card">
 
-<img src="https://via.placeholder.com/150" class="product-img">
+<img src="https://via.placeholder.com/200" class="product-img">
 
 <div class="product-title">
 Laptop Stand Aluminium
@@ -186,7 +201,7 @@ Lihat Produk
 
 <div class="card">
 
-<img src="https://via.placeholder.com/150" class="product-img">
+<img src="https://via.placeholder.com/200" class="product-img">
 
 <div class="product-title">
 Mouse Wireless Silent
@@ -205,8 +220,13 @@ Lihat Produk
 
 
 <div class="footer">
+
+<a href="https://tinybless.my.id">
 tinybless.my.id
+</a>
+
 </div>
+
 
 </div>
 
