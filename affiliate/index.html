@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
 
@@ -7,17 +8,22 @@
 
 <title>TinyBless Affiliate</title>
 
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicon-32x32.png">
+
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-body{
+/* BACKGROUND */
 
+body{
 background:
 linear-gradient(135deg,#4ecdc488,#6dd5ed88),
 url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
@@ -31,108 +37,112 @@ display:flex;
 justify-content:center;
 
 padding:40px 18px;
-
 }
 
+/* CONTAINER */
+
 .container{
-max-width:420px;
 width:100%;
+max-width:420px;
 text-align:center;
 }
 
-.logo-wrap{
+/* LOGO */
+
+.avatar{
 width:90px;
 height:90px;
 border-radius:50%;
+object-fit:contain;
 background:white;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
-margin-bottom:10px;
+padding:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+margin-bottom:14px;
 }
-
-.logo{
-width:45px;
-}
+  
+/* TITLE */
 
 h1{
-font-size:22px;
-margin-bottom:4px;
-}
-
-.subtitle{
-font-size:14px;
-margin-bottom:25px;
-}
-
-.card{
-
-background:white;
-border-radius:20px;
-padding:28px 22px;
-margin-bottom:24px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.18);
-
-}
-
-.product-img{
-width:200px;
-margin-bottom:10px;
-}
-
-.product-title{
-font-weight:bold;
-font-size:17px;
+font-size:24px;
+color:#000;
 margin-bottom:6px;
 }
 
-.product-desc{
+/* SUBTITLE */
+
+.bio{
+font-size:18px;
+font-weight:600;
+color:#000;
+margin-bottom:26px;
+}
+
+/* PRODUCT CARD */
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+margin:18px 0;
+box-shadow:0 10px 28px rgba(0,0,0,0.18);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 36px rgba(0,0,0,0.22);
+}
+  
+/* PRODUCT IMAGE */
+
+.card img{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* CARD CONTENT */
+
+.card-content{
+padding:10px 16px 16px 16px;
+}
+  
+/* PRODUCT TITLE */
+
+.card h2{
+font-size:18px;
+margin-bottom:6px;
+}
+
+/* PRODUCT DESCRIPTION */
+
+.card p{
 font-size:14px;
 color:#555;
-margin-bottom:18px;
-line-height:1.5;
+margin-bottom:12px;
 }
 
-.btn{
+/* PRODUCT BUTTON */
 
+.product-btn{
 display:inline-block;
-
-background:#2f7d5c;
+background:#2b7a78;
 color:white;
-
-padding:13px 30px;
-
-border-radius:30px;
-
+padding:10px 20px;
+border-radius:24px;
 text-decoration:none;
-
-font-weight:bold;
-
-font-size:15px;
-
+font-weight:600;
 }
 
-.btn:hover{
-background:#256b4d;
-}
+/* FOOTER */
 
 .footer{
-
+display:inline-block;
 margin-top:30px;
-
-font-size:14px;
-
-}
-
-.footer a{
-
-color:white;
+font-size:16px;
+font-weight:700;
+color:#000;
 text-decoration:none;
-font-weight:bold;
-
 }
 
 </style>
@@ -143,90 +153,83 @@ font-weight:bold;
 
 <div class="container">
 
-
-<div class="logo-wrap">
-
-<img src="https://tinybless.my.id/favicon-32x32.png" class="logo">
-
-</div>
-
+<img src="../img/logo-tinybless.png" class="avatar">
 
 <h1>TinyBless Affiliate</h1>
 
-<p class="subtitle">
+<p class="bio">
 Rekomendasi produk pilihan terbaik
 </p>
 
-
+<!-- PRODUCT 1 -->
 
 <div class="card">
 
-<img src="https://via.placeholder.com/200" class="product-img">
+<img src="https://via.placeholder.com/400x250">
 
-<div class="product-title">
-Keyboard Mechanical Murah
-</div>
+<div class="card-content">
 
-<div class="product-desc">
+<h2>⌨️ Mechanical Keyboard</h2>
+
+<p>
 Keyboard nyaman untuk kerja dan gaming.
-</div>
+</p>
 
-<a class="btn" href="#">
+<a class="product-btn" href="#" target="_blank">
 Lihat Produk
 </a>
 
 </div>
 
+</div>
 
+<!-- PRODUCT 2 -->
 
 <div class="card">
 
-<img src="https://via.placeholder.com/200" class="product-img">
+<img src="https://via.placeholder.com/400x250">
 
-<div class="product-title">
-Laptop Stand Aluminium
-</div>
+<div class="card-content">
 
-<div class="product-desc">
+<h2>💻 Laptop Stand Aluminium</h2>
+
+<p>
 Stand ergonomis untuk laptop dan tablet.
-</div>
+</p>
 
-<a class="btn" href="#">
+<a class="product-btn" href="#" target="_blank">
 Lihat Produk
 </a>
 
 </div>
 
+</div>
 
+<!-- PRODUCT 3 -->
 
 <div class="card">
 
-<img src="https://via.placeholder.com/200" class="product-img">
+<img src="https://via.placeholder.com/400x250">
 
-<div class="product-title">
-Mouse Wireless Silent
-</div>
+<div class="card-content">
 
-<div class="product-desc">
+<h2>🖱 Mouse Wireless Silent</h2>
+
+<p>
 Mouse wireless tanpa suara klik.
-</div>
+</p>
 
-<a class="btn" href="#">
+<a class="product-btn" href="#" target="_blank">
 Lihat Produk
 </a>
 
 </div>
 
+</div>
 
-
-<div class="footer">
-
-<a href="https://tinybless.my.id">
+<a class="footer" href="https://tinybless.my.id">
 tinybless.my.id
 </a>
-
-</div>
-
 
 </div>
 
