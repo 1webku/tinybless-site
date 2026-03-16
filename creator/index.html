@@ -20,8 +20,6 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 }
 
-/* BACKGROUND */
-
 body{
 
 background:
@@ -40,7 +38,7 @@ padding:40px 18px;
 
 }
 
-/* CONTAINER */
+/* container */
 
 .container{
 width:100%;
@@ -48,7 +46,7 @@ max-width:420px;
 text-align:center;
 }
 
-/* AVATAR */
+/* avatar */
 
 .avatar{
 width:95px;
@@ -60,15 +58,13 @@ box-shadow:0 6px 16px rgba(0,0,0,0.25);
 margin-bottom:12px;
 }
 
-/* TITLE */
+/* title */
 
 h1{
 font-size:24px;
 color:#000;
 margin-bottom:6px;
 }
-
-/* SUBTITLE */
 
 .bio{
 font-size:18px;
@@ -77,11 +73,13 @@ color:#000;
 margin-bottom:28px;
 }
 
-/* BUTTON */
+/* button */
 
 .btn{
 
-position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
 
 background:white;
 
@@ -95,23 +93,21 @@ box-shadow:0 6px 18px rgba(0,0,0,0.18);
 
 text-decoration:none;
 
-display:block;
+padding-left:60px;
+padding-right:20px;
+
+position:relative;
 
 transition:.25s;
-
-padding-left:70px;
 
 }
 
 .btn:hover{
-
 transform:translateY(-3px);
-
 box-shadow:0 12px 28px rgba(0,0,0,0.25);
-
 }
 
-/* ICON BULATAN */
+/* icon circle */
 
 .icon{
 
@@ -119,16 +115,12 @@ position:absolute;
 
 left:10px;
 
-top:50%;
-
-transform:translateY(-50%);
-
-width:50px;
-height:50px;
+width:48px;
+height:48px;
 
 border-radius:50%;
 
-background:#f2f2f2;
+background:#eeeeee;
 
 display:flex;
 align-items:center;
@@ -136,61 +128,40 @@ justify-content:center;
 
 }
 
-/* ICON IMAGE */
-
 .icon img{
-width:26px;
-height:26px;
+width:24px;
+height:24px;
 }
 
-/* BUTTON TEXT */
+/* button text */
 
 .btn span{
-
 font-size:18px;
-
 font-weight:700;
-
 color:#000;
-
 }
 
-/* SECTION */
+/* section */
 
 .section{
-
 margin-top:32px;
-
 font-size:20px;
-
 font-weight:800;
-
 color:#000;
-
 }
 
-/* FOOTER */
+/* footer */
 
 .footer{
-
 display:inline-block;
-
 margin-top:34px;
-
 font-size:18px;
-
 font-weight:800;
-
 color:#000;
-
 text-decoration:none;
-
 padding:6px 14px;
-
 border-radius:10px;
-
 background:rgba(255,255,255,0.6);
-
 }
 
 .footer:hover{
@@ -213,7 +184,7 @@ background:white;
 Creator • Tools • Edukasi
 </p>
 
-<!-- TIKTOK -->
+<!-- TikTok -->
 
 <a class="btn" href="https://tiktok.com/@tinybless.edu" target="_blank">
 
@@ -225,7 +196,7 @@ Creator • Tools • Edukasi
 
 </a>
 
-<!-- WHATSAPP -->
+<!-- WhatsApp -->
 
 <a class="btn" href="https://wa.me/6283124254787" target="_blank">
 
@@ -237,12 +208,12 @@ Creator • Tools • Edukasi
 
 </a>
 
-<!-- JASA BIO LINK -->
+<!-- Bio Link -->
 
 <a class="btn" href="/jasa-bio-link/" target="_blank">
 
 <div class="icon">
-<img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
+<img src="https://cdn-icons-png.flaticon.com/512/535/535239.png">
 </div>
 
 <span>Jasa Bio Link</span>
@@ -253,7 +224,7 @@ Creator • Tools • Edukasi
 TinyBless Content
 </div>
 
-<!-- TOOLS -->
+<!-- Tools -->
 
 <a class="btn" href="/tools/" target="_blank">
 
@@ -265,7 +236,7 @@ TinyBless Content
 
 </a>
 
-<!-- TIPS -->
+<!-- Tips -->
 
 <a class="btn" href="/tips/" target="_blank">
 
@@ -277,7 +248,7 @@ TinyBless Content
 
 </a>
 
-<!-- IPA -->
+<!-- Edukasi -->
 
 <a class="btn" href="/edukasi/ipa/" target="_blank">
 
