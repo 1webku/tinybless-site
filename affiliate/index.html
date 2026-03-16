@@ -37,7 +37,7 @@ padding:40px 18px;
 
 .container{
 width:100%;
-max-width:700px;
+max-width:760px;
 text-align:center;
 }
 
@@ -54,34 +54,46 @@ margin-bottom:14px;
 }
 
 h1{
-font-size:24px;
+font-size:26px;
 margin-bottom:6px;
 }
 
 .bio{
 font-size:15px;
-margin-bottom:28px;
+margin-bottom:30px;
 }
 
-/* FEATURED */
+/* FEATURED PRODUCT */
 
 .featured{
 background:white;
-border-radius:20px;
-padding:20px;
-margin-bottom:30px;
-box-shadow:0 10px 28px rgba(0,0,0,0.18);
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,0.2);
+margin-bottom:35px;
 }
 
-.featured h2{
-font-size:18px;
+.featured img{
+width:100%;
+height:220px;
+object-fit:contain;
+background:#f5f5f5;
+padding:20px;
+}
+
+.featured-content{
+padding:20px;
+}
+
+.featured-content h2{
+font-size:20px;
 margin-bottom:8px;
 }
 
-.featured p{
+.featured-content p{
 font-size:14px;
 color:#555;
-margin-bottom:12px;
+margin-bottom:14px;
 }
 
 /* GRID */
@@ -98,15 +110,20 @@ gap:20px;
 background:white;
 border-radius:18px;
 overflow:hidden;
-box-shadow:0 8px 22px rgba(0,0,0,0.18);
+box-shadow:0 10px 24px rgba(0,0,0,0.18);
+transition:0.2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
 }
 
 .card img{
 width:100%;
-height:150px;
+height:160px;
 object-fit:contain;
-background:#f5f5f5;
-padding:10px;
+background:#f7f7f7;
+padding:12px;
 }
 
 .card-content{
@@ -130,7 +147,7 @@ margin-bottom:10px;
 display:inline-block;
 background:#2b7a78;
 color:white;
-padding:8px 18px;
+padding:9px 18px;
 border-radius:22px;
 text-decoration:none;
 font-weight:600;
@@ -139,17 +156,23 @@ font-size:14px;
 
 /* MOBILE */
 
-@media (max-width:600px){
+@media (max-width:650px){
 
 .grid{
 grid-template-columns:1fr;
 }
 
+.featured img{
+height:180px;
 }
+
+}
+
+/* FOOTER */
 
 .footer{
 display:inline-block;
-margin-top:30px;
+margin-top:35px;
 font-size:14px;
 font-weight:600;
 color:#000;
@@ -169,16 +192,22 @@ text-decoration:none;
 <h1>TinyBless Affiliate</h1>
 
 <p class="bio">
-Rekomendasi produk terbaik untuk produktivitas
+Rekomendasi produk terbaik untuk produktivitas & creator tools
 </p>
 
-<!-- FEATURED -->
+<!-- FEATURED PRODUCT -->
 
 <div class="featured">
 
+<img src="/img/keyboard.jpg">
+
+<div class="featured-content">
+
 <h2>⭐ Mechanical Keyboard</h2>
 
-<p>Keyboard nyaman untuk produktivitas dan gaming.</p>
+<p>
+Keyboard nyaman untuk kerja, belajar, dan gaming.
+</p>
 
 <a class="product-btn" href="/go/keyboard.html" target="_blank">
 Lihat Produk
@@ -186,7 +215,9 @@ Lihat Produk
 
 </div>
 
-<!-- GRID -->
+</div>
+
+<!-- GRID PRODUK -->
 
 <div class="grid">
 
@@ -195,14 +226,12 @@ Lihat Produk
 <div class="card-content">
 <h3>📱 Universal Car Holder 360°</h3>
 <p>Holder HP mobil dengan rotasi 360° dan kunci stabil.</p>
-<a class="product-btn" href="/go/carholder.html" target="_blank">
-Beli
-</a>
+<a class="product-btn" href="/go/carholder.html" target="_blank">Beli</a>
 </div>
 </div>
 
 <div class="card">
-<img src="../img/mouse.jpg">
+<img src="/img/mouse.jpg">
 <div class="card-content">
 <h3>🖱 Wireless Mouse</h3>
 <p>Mouse wireless tanpa suara klik.</p>
@@ -220,7 +249,7 @@ Beli
 </div>
 
 <div class="card">
-<img src="../img/webcam.jpg">
+<img src="/img/webcam.jpg">
 <div class="card-content">
 <h3>📷 Webcam</h3>
 <p>Webcam HD untuk meeting.</p>
@@ -229,7 +258,7 @@ Beli
 </div>
 
 <div class="card">
-<img src="../img/tripod.jpg">
+<img src="/img/tripod.jpg">
 <div class="card-content">
 <h3>📱 Tripod HP</h3>
 <p>Tripod stabil untuk TikTok & YouTube.</p>
@@ -238,7 +267,7 @@ Beli
 </div>
 
 <div class="card">
-<img src="../img/microphone.jpg">
+<img src="/img/microphone.jpg">
 <div class="card-content">
 <h3>🎙 Condenser Mic</h3>
 <p>Mic podcast yang dipakai YouTuber.</p>
