@@ -20,6 +20,8 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 }
 
+/* BACKGROUND */
+
 body{
 
 background:
@@ -38,13 +40,15 @@ padding:40px 18px;
 
 }
 
+/* CONTAINER */
+
 .container{
 width:100%;
 max-width:420px;
 text-align:center;
 }
 
-/* avatar */
+/* AVATAR */
 
 .avatar{
 width:95px;
@@ -73,7 +77,10 @@ margin-bottom:28px;
 
 .btn{
 
-display:flex;
+display:grid;
+
+grid-template-columns:60px 1fr 60px;
+
 align-items:center;
 
 background:white;
@@ -87,8 +94,6 @@ margin:14px 0;
 box-shadow:0 6px 18px rgba(0,0,0,0.18);
 
 text-decoration:none;
-
-padding-left:12px;
 
 transition:.25s;
 
@@ -114,7 +119,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 
-flex-shrink:0;
+margin-left:6px;
 
 }
 
@@ -123,11 +128,9 @@ width:26px;
 height:26px;
 }
 
-/* TEXT CENTER */
+/* TEXT */
 
 .btn span{
-
-flex:1;
 
 text-align:center;
 
@@ -190,6 +193,8 @@ Creator • Tools • Edukasi
 
 <span>TikTok</span>
 
+<div></div>
+
 </a>
 
 <!-- WhatsApp -->
@@ -202,6 +207,8 @@ Creator • Tools • Edukasi
 
 <span>WhatsApp</span>
 
+<div></div>
+
 </a>
 
 <!-- BIO LINK -->
@@ -213,6 +220,8 @@ Creator • Tools • Edukasi
 </div>
 
 <span>Jasa Bio Link</span>
+
+<div></div>
 
 </a>
 
@@ -230,6 +239,8 @@ TinyBless Content
 
 <span>Tools Creator</span>
 
+<div></div>
+
 </a>
 
 <!-- TIPS -->
@@ -242,9 +253,11 @@ TinyBless Content
 
 <span>Tips Digital</span>
 
+<div></div>
+
 </a>
 
-<!-- EDUKASI -->
+<!-- IPA -->
 
 <a class="btn" href="/edukasi/ipa/" target="_blank">
 
@@ -253,6 +266,8 @@ TinyBless Content
 </div>
 
 <span>Infografis IPA</span>
+
+<div></div>
 
 </a>
 
