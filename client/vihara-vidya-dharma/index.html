@@ -15,7 +15,7 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* 🌸 BACKGROUND PASTI MUNCUL */
+/* 🌸 BACKGROUND FIX (PNG - SUDAH BENAR) */
 .bg{
 position:fixed;
 top:0;
@@ -26,7 +26,7 @@ object-fit:cover;
 z-index:-2;
 }
 
-/* OVERLAY TIPIS */
+/* overlay ringan biar teks kebaca */
 .overlay{
 position:fixed;
 top:0;
@@ -37,7 +37,7 @@ background:rgba(0,0,0,0.2);
 z-index:-1;
 }
 
-/* CONTAINER */
+/* container */
 .container{
 max-width:420px;
 width:100%;
@@ -46,7 +46,7 @@ padding:40px 20px;
 text-align:center;
 }
 
-/* AVATAR */
+/* avatar */
 .avatar{
 width:90px;
 height:90px;
@@ -56,22 +56,24 @@ margin-bottom:14px;
 border:3px solid #fff;
 }
 
-/* 🔥 TEXT SUDAH FIX KONTRAS */
+/* teks */
 .nama-cn{
 font-size:30px;
 font-weight:700;
-color:#0d3b3f;
+color:#ffffff;
 letter-spacing:4px;
 margin-bottom:4px;
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
 }
 
 .nama-id{
 font-size:15px;
-color:#1f555a;
+color:#ffffff;
 margin-bottom:18px;
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
 }
 
-/* SLIDER */
+/* slider */
 .slider{
 overflow:hidden;
 margin-bottom:20px;
@@ -96,7 +98,7 @@ border:2px solid #fff;
 100%{transform:translateX(-50%);}
 }
 
-/* BUTTON */
+/* tombol */
 .btn{
 position:relative;
 display:flex;
@@ -115,7 +117,7 @@ text-decoration:none;
 box-shadow:0 6px 18px rgba(0,0,0,0.4);
 }
 
-/* ICON */
+/* icon */
 .icon{
 position:absolute;
 left:12px;
@@ -128,33 +130,37 @@ justify-content:center;
 color:#fff;
 }
 
-/* WARNA */
+/* warna icon */
 .icon1{background:#ff9800;}
 .icon2{background:#4caf50;}
 .icon3{background:#e1306c;}
 .icon4{background:#2196f3;}
 
-/* MAP */
-.map iframe{
-width:100%;
-height:200px;
-border:0;
-border-radius:12px;
+/* map */
+.map{
 margin-top:20px;
 }
 
-/* ALAMAT */
+.map iframe{
+width:100%;
+height:220px;
+border:0;
+border-radius:14px;
+}
+
+/* alamat */
 .alamat{
 margin-top:10px;
 font-size:14px;
-color:#0d3b3f;
+color:#ffffff;
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
 }
 
-/* FOOTER */
+/* footer */
 .credit{
 margin-top:25px;
 font-size:12px;
-color:#0d3b3f;
+color:#ffffff;
 text-decoration:none;
 }
 
@@ -163,8 +169,8 @@ text-decoration:none;
 
 <body>
 
-<!-- 🌸 BG GAMBAR -->
-<img src="img/bg-teratai.jpg" class="bg">
+<!-- 🌸 BG PASTI MUNCUL -->
+<img src="img/bg-teratai.png" class="bg">
 
 <!-- overlay -->
 <div class="overlay"></div>
@@ -192,8 +198,9 @@ text-decoration:none;
 <a class="btn"><div class="icon icon3">📷</div>Instagram</a>
 <a class="btn"><div class="icon icon4">📞</div>Hubungi Pengurus</a>
 
+<!-- MAP -->
 <div class="map">
-<iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&z=15&output=embed"></iframe>
 </div>
 
 <div class="alamat">
