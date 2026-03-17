@@ -8,9 +8,9 @@
 
 <title>Vihara Vidya Dharma Purnama</title>
 
-<!-- FONT MANDARIN (PALING MIRIP KALIGRAFI WEB) -->
+<!-- FONT MANDARIN -->
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,12 +21,12 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* BACKGROUND KOLAM TERATAI */
+/* BACKGROUND KOLAM TERATAI (REAL FEEL) */
 
 body{
 background:
-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-url("https://images.unsplash.com/photo-1502082553048-f009c37129b9");
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url("https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea");
 
 background-size:cover;
 background-position:center;
@@ -56,16 +56,18 @@ border:3px solid #fff;
 box-shadow:0 8px 25px rgba(0,0,0,0.7);
 }
 
-/* MANDARIN (TEXT, BUKAN GAMBAR) */
+/* MANDARIN KALIGRAFI */
 
 .nama-cn{
-font-family:'Noto Serif SC', serif;
-font-size:36px;
-font-weight:700;
+font-family:'Ma Shan Zheng', cursive;
+font-size:42px;
 color:#fff;
 letter-spacing:6px;
 margin-bottom:6px;
-text-shadow:0 2px 10px rgba(0,0,0,0.8);
+
+text-shadow:
+0 2px 6px rgba(0,0,0,0.8),
+0 0 12px rgba(255,255,255,0.2);
 }
 
 /* INDONESIA */
@@ -76,7 +78,7 @@ color:#ddd;
 margin-bottom:20px;
 }
 
-/* SLIDER AUTO 1:1 */
+/* SLIDER */
 
 .slider{
 overflow:hidden;
@@ -98,20 +100,23 @@ border-radius:16px;
 border:2px solid rgba(255,255,255,0.7);
 }
 
-/* ANIMASI */
+/* ANIMATION */
 
 @keyframes scroll{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
 }
 
-/* BUTTON AQUA TERANG */
+/* BUTTON DENGAN ICON BULAT */
 
 .btn{
-display:block;
+display:flex;
+align-items:center;
+gap:12px;
+
 background:linear-gradient(180deg,#9af0f5,#2fd1dc);
 border-radius:40px;
-padding:16px;
+padding:14px 18px;
 margin:12px 0;
 
 font-weight:700;
@@ -121,6 +126,19 @@ text-decoration:none;
 box-shadow:
 0 8px 25px rgba(0,0,0,0.5),
 inset 0 3px 6px rgba(255,255,255,0.7);
+}
+
+/* ICON BULAT */
+
+.icon{
+width:34px;
+height:34px;
+border-radius:50%;
+background:#ffffffcc;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:16px;
 }
 
 /* MAP */
@@ -161,12 +179,12 @@ text-decoration:none;
 
 <img src="img/avatar-kwan-im.jpg" class="avatar">
 
-<!-- NAMA (TEXT) -->
+<!-- NAMA -->
 
 <div class="nama-cn">聞道雷藏寺</div>
 <div class="nama-id">Vihara Vidya Dharma Purnama</div>
 
-<!-- SLIDER AUTO -->
+<!-- SLIDER -->
 
 <div class="slider">
 <div class="slider-track">
@@ -184,16 +202,35 @@ text-decoration:none;
 
 <!-- BUTTON -->
 
-<a class="btn">Jadwal Puja</a> <a class="btn">Kegiatan Umat</a> <a class="btn">Instagram</a> <a class="btn">Hubungi Pengurus</a>
+<a class="btn">
+<div class="icon">📅</div>
+Jadwal Puja
+</a>
 
-<!-- MAP -->
+<a class="btn">
+<div class="icon">🏯</div>
+Kegiatan Umat
+</a>
+
+<a class="btn">
+<div class="icon">📷</div>
+Instagram
+</a>
+
+<a class="btn">
+<div class="icon">📞</div>
+Hubungi Pengurus
+</a>
+
+<!-- MAP (SUDAH SESUAI ALAMAT) -->
 
 <div class="map">
-<iframe src="https://maps.google.com/maps?q=vihara&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
 </div>
 
 <div class="alamat">
-Alamat Vihara Vidya Dharma Purnama
+Jln. Kantor No. 2 A, Kota Cirebon, Jawa Barat  
+Telp. (0231) 8805812
 </div>
 
 <!-- FOOTER -->
