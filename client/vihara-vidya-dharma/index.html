@@ -15,38 +15,26 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* 🌸 BACKGROUND FIX (PNG - SUDAH BENAR) */
-.bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:-2;
+/* 🌸 BACKGROUND (IKUT SCROLL, PASTI MUNCUL) */
+body{
+min-height:100vh;
+
+background-image:url("img/bg-teratai.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+padding:40px 20px;
 }
 
-/* overlay ringan biar teks kebaca */
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.2);
-z-index:-1;
-}
-
-/* container */
+/* CONTAINER */
 .container{
 max-width:420px;
-width:100%;
 margin:auto;
-padding:40px 20px;
 text-align:center;
 }
 
-/* avatar */
+/* AVATAR */
 .avatar{
 width:90px;
 height:90px;
@@ -56,24 +44,22 @@ margin-bottom:14px;
 border:3px solid #fff;
 }
 
-/* teks */
+/* TEXT */
 .nama-cn{
-font-size:30px;
+font-size:28px;
 font-weight:700;
-color:#ffffff;
+color:#0d3b3f;
 letter-spacing:4px;
 margin-bottom:4px;
-text-shadow:0 2px 6px rgba(0,0,0,0.6);
 }
 
 .nama-id{
 font-size:15px;
-color:#ffffff;
+color:#1f555a;
 margin-bottom:18px;
-text-shadow:0 2px 6px rgba(0,0,0,0.6);
 }
 
-/* slider */
+/* SLIDER */
 .slider{
 overflow:hidden;
 margin-bottom:20px;
@@ -98,7 +84,7 @@ border:2px solid #fff;
 100%{transform:translateX(-50%);}
 }
 
-/* tombol */
+/* BUTTON */
 .btn{
 position:relative;
 display:flex;
@@ -114,29 +100,29 @@ font-weight:700;
 color:#043c40;
 text-decoration:none;
 
-box-shadow:0 6px 18px rgba(0,0,0,0.4);
+box-shadow:0 6px 18px rgba(0,0,0,0.3);
 }
 
-/* icon */
+/* ICON */
 .icon{
 position:absolute;
 left:12px;
-width:36px;
-height:36px;
+width:34px;
+height:34px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 color:#fff;
+font-size:14px;
 }
 
-/* warna icon */
 .icon1{background:#ff9800;}
 .icon2{background:#4caf50;}
 .icon3{background:#e1306c;}
 .icon4{background:#2196f3;}
 
-/* map */
+/* MAP */
 .map{
 margin-top:20px;
 }
@@ -145,22 +131,23 @@ margin-top:20px;
 width:100%;
 height:220px;
 border:0;
-border-radius:14px;
+border-radius:12px;
 }
 
-/* alamat */
+/* ALAMAT */
 .alamat{
 margin-top:10px;
 font-size:14px;
-color:#ffffff;
-text-shadow:0 2px 6px rgba(0,0,0,0.6);
+color:#0d3b3f;
+line-height:1.5;
 }
 
-/* footer */
+/* FOOTER */
 .credit{
+display:block;
 margin-top:25px;
 font-size:12px;
-color:#ffffff;
+color:#0d3b3f;
 text-decoration:none;
 }
 
@@ -168,12 +155,6 @@ text-decoration:none;
 </head>
 
 <body>
-
-<!-- 🌸 BG PASTI MUNCUL -->
-<img src="img/bg-teratai.png" class="bg">
-
-<!-- overlay -->
-<div class="overlay"></div>
 
 <div class="container">
 
@@ -184,28 +165,45 @@ text-decoration:none;
 
 <div class="slider">
 <div class="slider-track">
+
 <img src="img/altar-utama.jpg">
 <img src="img/bagi-takjil1.jpg">
 <img src="img/bagi-takjil2.jpg">
+
 <img src="img/altar-utama.jpg">
 <img src="img/bagi-takjil1.jpg">
 <img src="img/bagi-takjil2.jpg">
+
 </div>
 </div>
 
-<a class="btn"><div class="icon icon1">📅</div>Jadwal Puja</a>
-<a class="btn"><div class="icon icon2">🏯</div>Kegiatan Umat</a>
-<a class="btn"><div class="icon icon3">📷</div>Instagram</a>
-<a class="btn"><div class="icon icon4">📞</div>Hubungi Pengurus</a>
+<a class="btn">
+<div class="icon icon1">📅</div>
+Jadwal Puja
+</a>
 
-<!-- MAP -->
+<a class="btn">
+<div class="icon icon2">🏯</div>
+Kegiatan Umat
+</a>
+
+<a class="btn">
+<div class="icon icon3">📷</div>
+Instagram
+</a>
+
+<a class="btn">
+<div class="icon icon4">📞</div>
+Hubungi Pengurus
+</a>
+
 <div class="map">
 <iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&z=15&output=embed"></iframe>
 </div>
 
 <div class="alamat">
-Jln. Kantor No. 2 A, Kota Cirebon<br>
-Telp. (0231) 8805812
+Jln. Kantor No. 2 A, Kota Cirebon, Jawa Barat<br>
+Indonesia • Telp. (0231) 8805812
 </div>
 
 <a class="credit" href="https://tinybless.my.id">
