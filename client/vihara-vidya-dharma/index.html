@@ -15,26 +15,34 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* 🌸 BG TERATAI JELAS (TIDAK GELAP) */
-body{
-min-height:100vh;
+/* 🌸 BACKGROUND FIX (PAKAI IMG, BUKAN CSS) */
+.bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+}
 
-background-image:url("img/bg-teratai.jpg");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-
-display:flex;
-justify-content:center;
-align-items:flex-start;
-
-padding:40px 20px;
+/* OVERLAY TIPIS */
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.2);
+z-index:-1;
 }
 
 /* CONTAINER */
 .container{
 max-width:420px;
 width:100%;
+margin:auto;
+padding:40px 20px;
 text-align:center;
 }
 
@@ -52,14 +60,14 @@ border:3px solid #fff;
 .nama-cn{
 font-size:30px;
 font-weight:700;
-color:#ffffff;
+color:#fff;
 letter-spacing:4px;
 margin-bottom:4px;
 }
 
 .nama-id{
 font-size:15px;
-color:#f0f0f0;
+color:#eee;
 margin-bottom:18px;
 }
 
@@ -107,70 +115,35 @@ text-decoration:none;
 box-shadow:0 6px 18px rgba(0,0,0,0.4);
 }
 
-/* ICON BULAT */
+/* ICON */
 .icon{
 position:absolute;
 left:12px;
-
 width:36px;
 height:36px;
 border-radius:50%;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 color:#fff;
-font-size:16px;
-
-box-shadow:0 2px 6px rgba(0,0,0,0.3);
 }
 
-/* WARNA ICON */
+/* WARNA */
 .icon1{background:#ff9800;}
 .icon2{background:#4caf50;}
+.icon3{background:#e1306c;}
 .icon4{background:#2196f3;}
-
-/* INSTAGRAM */
-.icon3{
-background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);
-}
-
-.icon3 svg{
-width:18px;
-height:18px;
-fill:white;
-}
-
-/* MAP */
-.map iframe{
-width:100%;
-height:200px;
-border:0;
-border-radius:12px;
-margin-top:20px;
-}
-
-/* ALAMAT */
-.alamat{
-margin-top:10px;
-font-size:14px;
-color:#ffffff;
-line-height:1.5;
-}
-
-/* FOOTER */
-.credit{
-margin-top:25px;
-font-size:12px;
-color:#ffffff;
-text-decoration:none;
-}
 
 </style>
 </head>
 
 <body>
+
+<!-- 🌸 BACKGROUND GAMBAR -->
+<img src="img/bg-teratai.jpg" class="bg">
+
+<!-- OVERLAY TIPIS -->
+<div class="overlay"></div>
 
 <div class="container">
 
@@ -181,58 +154,19 @@ text-decoration:none;
 
 <div class="slider">
 <div class="slider-track">
-
 <img src="img/altar-utama.jpg">
 <img src="img/bagi-takjil1.jpg">
 <img src="img/bagi-takjil2.jpg">
-
 <img src="img/altar-utama.jpg">
 <img src="img/bagi-takjil1.jpg">
 <img src="img/bagi-takjil2.jpg">
-
 </div>
 </div>
 
-<a class="btn">
-<div class="icon icon1">📅</div>
-Jadwal Puja
-</a>
-
-<a class="btn">
-<div class="icon icon2">🏯</div>
-Kegiatan Umat
-</a>
-
-<a class="btn">
-<div class="icon icon3">
-<svg viewBox="0 0 24 24">
-<path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 
-0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 
-4a6 6 0 110 12 6 6 0 010-12zm0 
-2.2A3.8 3.8 0 1015.8 12 3.8 3.8 0 0012 
-8.2zm4.5-2.3a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/>
-</svg>
-</div>
-Instagram
-</a>
-
-<a class="btn">
-<div class="icon icon4">📞</div>
-Hubungi Pengurus
-</a>
-
-<div class="map">
-<iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-</div>
-
-<div class="alamat">
-Jln. Kantor No. 2 A, Kota Cirebon, Jawa Barat<br>
-Indonesia • Telp. (0231) 8805812
-</div>
-
-<a class="credit" href="https://tinybless.my.id">
-by tinybless.my.id
-</a>
+<a class="btn"><div class="icon icon1">📅</div>Jadwal Puja</a>
+<a class="btn"><div class="icon icon2">🏯</div>Kegiatan Umat</a>
+<a class="btn"><div class="icon icon3">📷</div>Instagram</a>
+<a class="btn"><div class="icon icon4">📞</div>Hubungi Pengurus</a>
 
 </div>
 
