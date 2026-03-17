@@ -8,8 +8,6 @@
 
 <title>Vihara Vidya Dharma Purnama</title>
 
-<!-- FONT MANDARIN -->
-
 <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 
 <style>
@@ -21,12 +19,12 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* BACKGROUND KOLAM TERATAI (REAL FEEL) */
+/* BACKGROUND LOTUS (FIX) */
 
 body{
 background:
-linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-url("https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea");
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1470163395405-d2b80e7450ed");
 
 background-size:cover;
 background-position:center;
@@ -47,99 +45,93 @@ text-align:center;
 /* AVATAR */
 
 .avatar{
-width:95px;
-height:95px;
+width:90px;
+height:90px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:16px;
+margin-bottom:14px;
 border:3px solid #fff;
-box-shadow:0 8px 25px rgba(0,0,0,0.7);
+box-shadow:0 6px 18px rgba(0,0,0,0.6);
 }
 
-/* MANDARIN KALIGRAFI */
+/* KALIGRAFI PROPORSIONAL */
 
 .nama-cn{
 font-family:'Ma Shan Zheng', cursive;
-font-size:42px;
+font-size:36px;
 color:#fff;
-letter-spacing:6px;
+letter-spacing:4px;
 margin-bottom:6px;
-
-text-shadow:
-0 2px 6px rgba(0,0,0,0.8),
-0 0 12px rgba(255,255,255,0.2);
 }
 
 /* INDONESIA */
 
 .nama-id{
-font-size:16px;
+font-size:15px;
 color:#ddd;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 /* SLIDER */
 
 .slider{
-overflow:hidden;
+display:flex;
+gap:10px;
+justify-content:center;
 margin-bottom:20px;
 }
 
-.slider-track{
-display:flex;
-gap:12px;
-animation:scroll 14s linear infinite;
-}
-
 .slider img{
-width:110px;
-height:110px;
-aspect-ratio:1/1;
+width:95px;
+height:95px;
 object-fit:cover;
-border-radius:16px;
-border:2px solid rgba(255,255,255,0.7);
+border-radius:14px;
+border:2px solid #fff;
 }
 
-/* ANIMATION */
-
-@keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-}
-
-/* BUTTON DENGAN ICON BULAT */
+/* BUTTON */
 
 .btn{
 display:flex;
 align-items:center;
-gap:12px;
+justify-content:center;
 
-background:linear-gradient(180deg,#9af0f5,#2fd1dc);
+background:linear-gradient(180deg,#8be9ee,#2cc9d3);
 border-radius:40px;
-padding:14px 18px;
+padding:14px;
 margin:12px 0;
 
 font-weight:700;
 color:#043c40;
 text-decoration:none;
 
-box-shadow:
-0 8px 25px rgba(0,0,0,0.5),
-inset 0 3px 6px rgba(255,255,255,0.7);
+box-shadow:0 6px 20px rgba(0,0,0,0.4);
 }
 
 /* ICON BULAT */
 
 .icon{
-width:34px;
-height:34px;
+width:32px;
+height:32px;
 border-radius:50%;
-background:#ffffffcc;
+margin-right:10px;
+
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:16px;
+
+font-size:14px;
+color:white;
 }
+
+/* ICON COLORS */
+
+.icon-puja{background:#ff9800;}
+.icon-umat{background:#4caf50;}
+.icon-ig{
+background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);
+}
+.icon-telp{background:#2196f3;}
 
 /* MAP */
 
@@ -147,23 +139,25 @@ font-size:16px;
 width:100%;
 height:200px;
 border:0;
-border-radius:14px;
+border-radius:12px;
 margin-top:20px;
 }
+
+/* ALAMAT (2 BARIS) */
 
 .alamat{
 margin-top:10px;
 font-size:14px;
 color:#fff;
+line-height:1.5;
 }
 
 /* FOOTER */
 
 .credit{
-margin-top:30px;
+margin-top:25px;
 font-size:12px;
 color:#fff;
-opacity:0.9;
 text-decoration:none;
 }
 
@@ -175,65 +169,45 @@ text-decoration:none;
 
 <div class="container">
 
-<!-- AVATAR -->
-
 <img src="img/avatar-kwan-im.jpg" class="avatar">
-
-<!-- NAMA -->
 
 <div class="nama-cn">聞道雷藏寺</div>
 <div class="nama-id">Vihara Vidya Dharma Purnama</div>
 
-<!-- SLIDER -->
-
 <div class="slider">
-<div class="slider-track">
-
 <img src="img/altar-utama.jpg">
 <img src="img/bagi-takjil1.jpg">
 <img src="img/bagi-takjil2.jpg">
-
-<img src="img/altar-utama.jpg">
-<img src="img/bagi-takjil1.jpg">
-<img src="img/bagi-takjil2.jpg">
-
 </div>
-</div>
-
-<!-- BUTTON -->
 
 <a class="btn">
-<div class="icon">📅</div>
+<div class="icon icon-puja">📅</div>
 Jadwal Puja
 </a>
 
 <a class="btn">
-<div class="icon">🏯</div>
+<div class="icon icon-umat">🏯</div>
 Kegiatan Umat
 </a>
 
 <a class="btn">
-<div class="icon">📷</div>
+<div class="icon icon-ig">📷</div>
 Instagram
 </a>
 
 <a class="btn">
-<div class="icon">📞</div>
+<div class="icon icon-telp">📞</div>
 Hubungi Pengurus
 </a>
-
-<!-- MAP (SUDAH SESUAI ALAMAT) -->
 
 <div class="map">
 <iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
 </div>
 
 <div class="alamat">
-Jln. Kantor No. 2 A, Kota Cirebon, Jawa Barat  
+Jln. Kantor No. 2 A, Kota Cirebon, Jawa Barat<br>
 Telp. (0231) 8805812
 </div>
-
-<!-- FOOTER -->
 
 <a class="credit" href="https://tinybless.my.id">
 by tinybless.my.id
