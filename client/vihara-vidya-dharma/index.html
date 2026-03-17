@@ -15,7 +15,7 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* 🌸 BACKGROUND FIX (PAKAI IMG, BUKAN CSS) */
+/* 🌸 BACKGROUND PASTI MUNCUL */
 .bg{
 position:fixed;
 top:0;
@@ -23,7 +23,7 @@ left:0;
 width:100%;
 height:100%;
 object-fit:cover;
-z-index:-1;
+z-index:-2;
 }
 
 /* OVERLAY TIPIS */
@@ -56,18 +56,18 @@ margin-bottom:14px;
 border:3px solid #fff;
 }
 
-/* TEXT */
+/* 🔥 TEXT SUDAH FIX KONTRAS */
 .nama-cn{
 font-size:30px;
 font-weight:700;
-color:#fff;
+color:#0d3b3f;
 letter-spacing:4px;
 margin-bottom:4px;
 }
 
 .nama-id{
 font-size:15px;
-color:#eee;
+color:#1f555a;
 margin-bottom:18px;
 }
 
@@ -134,15 +134,39 @@ color:#fff;
 .icon3{background:#e1306c;}
 .icon4{background:#2196f3;}
 
+/* MAP */
+.map iframe{
+width:100%;
+height:200px;
+border:0;
+border-radius:12px;
+margin-top:20px;
+}
+
+/* ALAMAT */
+.alamat{
+margin-top:10px;
+font-size:14px;
+color:#0d3b3f;
+}
+
+/* FOOTER */
+.credit{
+margin-top:25px;
+font-size:12px;
+color:#0d3b3f;
+text-decoration:none;
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- 🌸 BACKGROUND GAMBAR -->
+<!-- 🌸 BG GAMBAR -->
 <img src="img/bg-teratai.jpg" class="bg">
 
-<!-- OVERLAY TIPIS -->
+<!-- overlay -->
 <div class="overlay"></div>
 
 <div class="container">
@@ -167,6 +191,19 @@ color:#fff;
 <a class="btn"><div class="icon icon2">🏯</div>Kegiatan Umat</a>
 <a class="btn"><div class="icon icon3">📷</div>Instagram</a>
 <a class="btn"><div class="icon icon4">📞</div>Hubungi Pengurus</a>
+
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&output=embed"></iframe>
+</div>
+
+<div class="alamat">
+Jln. Kantor No. 2 A, Kota Cirebon<br>
+Telp. (0231) 8805812
+</div>
+
+<a class="credit" href="https://tinybless.my.id">
+by tinybless.my.id
+</a>
 
 </div>
 
