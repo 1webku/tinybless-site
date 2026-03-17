@@ -8,6 +8,8 @@
 
 <title>Vihara Vidya Dharma Purnama</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
 
 *{
@@ -17,12 +19,12 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* BACKGROUND LOTUS (ONLINE) */
+/* BACKGROUND KOLAM TERATAI */
 
 body{
 background:
-linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b");
 
 background-size:cover;
 background-position:center;
@@ -43,21 +45,32 @@ text-align:center;
 /* AVATAR */
 
 .avatar{
-width:90px;
-height:90px;
+width:95px;
+height:95px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:14px;
-border:3px solid white;
+margin-bottom:16px;
+border:3px solid #fff;
 box-shadow:0 6px 18px rgba(0,0,0,0.6);
 }
 
-/* NAMA */
+/* MANDARIN */
 
-.logo-nama{
-width:100%;
-max-width:280px;
-margin:0 auto 20px;
+.nama-cn{
+font-family:'Noto Serif SC', serif;
+font-size:34px;
+font-weight:700;
+color:#fff;
+letter-spacing:6px;
+margin-bottom:6px;
+}
+
+/* INDONESIA */
+
+.nama-id{
+font-size:16px;
+color:#ddd;
+margin-bottom:20px;
 }
 
 /* SLIDER 1:1 */
@@ -65,7 +78,7 @@ margin:0 auto 20px;
 .slider{
 display:flex;
 overflow-x:auto;
-gap:10px;
+gap:12px;
 margin-bottom:20px;
 }
 
@@ -73,10 +86,10 @@ margin-bottom:20px;
 width:110px;
 height:110px;
 aspect-ratio:1/1;
-border-radius:14px;
 object-fit:cover;
+border-radius:14px;
 flex-shrink:0;
-border:2px solid rgba(255,255,255,0.6);
+border:2px solid #fff;
 }
 
 /* BUTTON AQUA */
@@ -111,17 +124,13 @@ font-size:14px;
 color:#fff;
 }
 
-/* FOOTER HITAM */
+/* FOOTER */
 
 .credit{
-display:block;
 margin-top:30px;
 font-size:12px;
-color:#000;
-background:rgba(255,255,255,0.7);
-padding:6px 10px;
-border-radius:10px;
-text-decoration:none;
+color:#fff;
+opacity:0.8;
 }
 
 </style>
@@ -138,7 +147,8 @@ text-decoration:none;
 
 <!-- NAMA -->
 
-<img src="img/nama-vihara.jpg" class="logo-nama">
+<div class="nama-cn">聞道叢林寺</div>
+<div class="nama-id">Vihara Vidya Dharma Purnama</div>
 
 <!-- SLIDER -->
 
@@ -164,9 +174,9 @@ Alamat Vihara Vidya Dharma Purnama
 
 <!-- FOOTER -->
 
-<a class="credit" href="https://tinybless.my.id">
+<div class="credit">
 tinybless.my.id
-</a>
+</div>
 
 </div>
 
