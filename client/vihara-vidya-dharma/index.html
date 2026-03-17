@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="id">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,12 +15,11 @@ box-sizing:border-box;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
 }
 
-/* BACKGROUND LOTUS (TANPA BANGUNAN) */
-
+/* 🌸 BACKGROUND LOTUS LEBIH SPIRITUAL */
 body{
 background:
-linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-url("https://images.unsplash.com/photo-1502082553048-f009c37129b9");
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
 
 background-size:cover;
 background-position:center;
@@ -33,7 +30,6 @@ padding:40px 20px;
 }
 
 /* CONTAINER */
-
 .container{
 max-width:420px;
 width:100%;
@@ -41,7 +37,6 @@ text-align:center;
 }
 
 /* AVATAR */
-
 .avatar{
 width:90px;
 height:90px;
@@ -51,8 +46,7 @@ margin-bottom:14px;
 border:3px solid #fff;
 }
 
-/* MANDARIN NORMAL */
-
+/* TEXT */
 .nama-cn{
 font-size:30px;
 font-weight:700;
@@ -61,16 +55,13 @@ letter-spacing:4px;
 margin-bottom:4px;
 }
 
-/* INDONESIA */
-
 .nama-id{
 font-size:15px;
 color:#ddd;
 margin-bottom:18px;
 }
 
-/* SLIDER AUTO 1:1 */
-
+/* SLIDER */
 .slider{
 overflow:hidden;
 margin-bottom:20px;
@@ -85,21 +76,17 @@ animation:scroll 12s linear infinite;
 .slider img{
 width:95px;
 height:95px;
-aspect-ratio:1/1;
 object-fit:cover;
 border-radius:14px;
 border:2px solid #fff;
 }
-
-/* ANIMASI */
 
 @keyframes scroll{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
 }
 
-/* BUTTON RAPI */
-
+/* BUTTON */
 .btn{
 position:relative;
 display:flex;
@@ -108,8 +95,8 @@ justify-content:center;
 
 background:linear-gradient(180deg,#8be9ee,#2cc9d3);
 border-radius:40px;
-height:54px;
-margin:12px 0;
+height:56px;
+margin:14px 0;
 
 font-weight:700;
 color:#043c40;
@@ -118,14 +105,13 @@ text-decoration:none;
 box-shadow:0 6px 18px rgba(0,0,0,0.4);
 }
 
-/* ICON BULAT DI KIRI UJUNG */
-
+/* 🔵 ICON BULAT LEBIH RAPI */
 .icon{
 position:absolute;
-left:10px;
+left:12px;
 
-width:32px;
-height:32px;
+width:36px;
+height:36px;
 border-radius:50%;
 
 display:flex;
@@ -133,18 +119,28 @@ align-items:center;
 justify-content:center;
 
 color:#fff;
-font-size:14px;
+font-size:16px;
+
+box-shadow:0 2px 6px rgba(0,0,0,0.3);
 }
 
 /* WARNA ICON */
-
 .icon1{background:#ff9800;}
 .icon2{background:#4caf50;}
-.icon3{background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);}
 .icon4{background:#2196f3;}
 
-/* MAP */
+/* 📷 INSTAGRAM SVG */
+.icon3{
+background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);
+}
 
+.icon3 svg{
+width:18px;
+height:18px;
+fill:white;
+}
+
+/* MAP */
 .map iframe{
 width:100%;
 height:200px;
@@ -154,7 +150,6 @@ margin-top:20px;
 }
 
 /* ALAMAT */
-
 .alamat{
 margin-top:10px;
 font-size:14px;
@@ -163,7 +158,6 @@ line-height:1.5;
 }
 
 /* FOOTER */
-
 .credit{
 margin-top:25px;
 font-size:12px;
@@ -172,7 +166,6 @@ text-decoration:none;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -209,7 +202,16 @@ Kegiatan Umat
 </a>
 
 <a class="btn">
-<div class="icon icon3">📷</div>
+<div class="icon icon3">
+<!-- SVG Instagram -->
+<svg viewBox="0 0 24 24">
+<path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 
+0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 
+4a6 6 0 110 12 6 6 0 010-12zm0 
+2.2A3.8 3.8 0 1015.8 12 3.8 3.8 0 0012 
+8.2zm4.5-2.3a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/>
+</svg>
+</div>
 Instagram
 </a>
 
