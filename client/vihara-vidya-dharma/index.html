@@ -6,10 +6,19 @@
 
 <title>Vihara Vidya Dharma Purnama</title>
 
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="img/favicon-32x32.png">
+
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+}
 
+/* BACKGROUND */
 body{
 min-height:100vh;
 background-image:url("img/bg-teratai.png");
@@ -19,13 +28,20 @@ background-repeat:no-repeat;
 padding:40px 20px;
 }
 
-.container{max-width:420px;margin:auto;text-align:center;}
+/* CONTAINER */
+.container{
+max-width:420px;
+margin:auto;
+text-align:center;
+}
 
+/* AVATAR */
 .avatar{
 width:90px;height:90px;border-radius:50%;
 object-fit:cover;margin-bottom:14px;border:3px solid #fff;
 }
 
+/* JUDUL */
 .nama-cn{
 font-size:28px;font-weight:700;color:#fff;
 letter-spacing:4px;margin-bottom:4px;
@@ -48,7 +64,6 @@ width:95px;height:95px;
 object-fit:cover;border-radius:14px;
 border:2px solid #fff;
 }
-
 @keyframes scroll{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
@@ -56,39 +71,51 @@ border:2px solid #fff;
 
 /* BUTTON */
 .btn{
-position:relative;display:flex;
-align-items:center;justify-content:center;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
 
 background:linear-gradient(180deg,#8be9ee,#2cc9d3);
-border-radius:40px;height:56px;
-margin:14px 0;font-weight:700;
-color:#043c40;text-decoration:none;
+border-radius:40px;
+height:56px;
+margin:14px 0;
+
+font-weight:700;
+color:#043c40;
+text-decoration:none;
 
 box-shadow:0 6px 18px rgba(0,0,0,0.3);
 }
 
 /* ICON */
 .icon{
-position:absolute;left:12px;
-width:34px;height:34px;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
+position:absolute;
+left:12px;
+width:34px;height:34px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 color:#fff;
 }
 
+/* ICON COLORS */
 .icon1{background:#ff9800;}
 .icon2{background:#4caf50;}
+.icon3{background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);}
 .icon4{background:#25D366;}
-
-.icon3{
-background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);
-}
+.icon5{background:#ff5722;} /* donasi */
 
 .icon svg{width:18px;height:18px;fill:#fff;}
 
 /* MAP */
 .map{margin-top:20px;}
-.map iframe{width:100%;height:220px;border:0;border-radius:12px;}
+.map iframe{
+width:100%;height:220px;border:0;border-radius:12px;
+}
 
+/* TEXT */
 .alamat{
 margin-top:12px;font-size:14px;color:#fff;
 text-shadow:0 2px 6px rgba(0,0,0,0.6);
@@ -110,9 +137,12 @@ z-index:999;
 }
 
 .modal-content{
-background:rgba(255,255,255,0.92);
-border-radius:16px;padding:20px;
-max-width:320px;width:90%;text-align:center;
+background:rgba(255,255,255,0.95);
+border-radius:16px;
+padding:20px;
+max-width:340px;
+width:90%;
+text-align:center;
 animation:fadeIn 0.3s ease;
 }
 
@@ -122,16 +152,21 @@ to{opacity:1;transform:scale(1);}
 }
 
 .modal h3{margin-bottom:10px;color:#043c40;}
-.modal p{font-size:14px;margin-bottom:10px;color:#333;white-space:pre-line;}
+.modal p{white-space:pre-line;color:#333;font-size:14px;}
 
 .close{
-margin-top:10px;background:#ccc;
-padding:8px;border-radius:8px;cursor:pointer;
+margin-top:12px;
+background:#ccc;
+padding:8px;
+border-radius:8px;
+cursor:pointer;
 }
 
 .wa-link{
-display:block;margin:6px 0;
-color:#25D366;font-weight:bold;
+display:block;
+margin:6px 0;
+color:#25D366;
+font-weight:bold;
 text-decoration:none;
 }
 
@@ -149,7 +184,6 @@ text-decoration:none;
 
 <div class="slider">
 <div class="slider-track">
-
 <img src="img/altar-utama.jpg">
 <img src="img/bagi-takjil1.jpg">
 <img src="img/bagi-takjil2.jpg">
@@ -161,14 +195,19 @@ text-decoration:none;
 <img src="img/bagi-takjil2.jpg">
 <img src="img/gedung-vihara.jpg">
 <img src="img/puja-bakti.jpg">
-
 </div>
 </div>
 
-<!-- PUJA -->
+<!-- JADWAL KEBAKTIAN -->
 <a class="btn" onclick="openModal('puja')">
 <div class="icon icon1">📅</div>
-Jadwal Puja
+Jadwal Kebaktian
+</a>
+
+<!-- DONASI -->
+<a class="btn" onclick="openModal('donasi')">
+<div class="icon icon5">💰</div>
+Donasi
 </a>
 
 <!-- KEGIATAN -->
@@ -182,8 +221,7 @@ Kegiatan Umat
 <div class="icon icon3">
 <svg viewBox="0 0 24 24">
 <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 
-0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 
-4a6 6 0 110 12 6 6 0 010-12z"/>
+0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 4a6 6 0 110 12 6 6 0 010-12z"/>
 </svg>
 </div>
 Instagram
@@ -219,40 +257,50 @@ Telp. (0231) 8805812
 
 <script>
 function openModal(type){
-let content='';
+let c='';
 
 if(type==='puja'){
-content=`<h3>🙏 Puja Hari Minggu</h3>
-<p>Setiap Minggu
+c=`<h3>🙏 Puja Bakti / Kebaktian</h3>
+<p>Setiap Hari Minggu
 ⏰ 14.30 WIB – selesai
 
 Mari meluangkan waktu untuk berdoa, memperdalam Dharma, dan menemukan ketenangan batin 🌸</p>`;
 }
 
+if(type==='donasi'){
+c=`<h3>🙏 Donasi / Dana</h3>
+<p>Dana kebajikan Anda sangat berarti untuk mendukung kegiatan vihara dan pelayanan umat 🙏
+
+🏦 Bank BCA
+Yayasan Vidya Dharma Purnama
+No. Rek: 1341290088
+
+Terima kasih atas kebaikan dan dukungan Anda 🌸</p>`;
+}
+
 if(type==='kegiatan'){
-content=`<h3>Kegiatan Umat</h3>
+c=`<h3>Kegiatan Umat</h3>
 <p>Terbuka untuk Umum 🙏
 
 💃 Line Dance
-Setiap Senin
+Setiap Hari Senin
 ⏰ 07.00 WIB – selesai
 
 🧘 Senam Jantung Sehat
-Setiap Rabu
+Setiap Hari Rabu
 ⏰ 07.00 WIB – selesai
 
 Mari hidup sehat, bahagia, dan penuh kebersamaan 🌸</p>`;
 }
 
 if(type==='wa'){
-content=`<h3>Hubungi Pengurus</h3>
-<a class="wa-link" href="https://wa.me/6287728986398" target="_blank">📱 0877-2898-6398</a>
-<a class="wa-link" href="https://wa.me/62818142848" target="_blank">📱 0818-1428-48</a>`;
+c=`<h3>Hubungi Pengurus</h3>
+<a class="wa-link" href="https://wa.me/6287728986398" target="_blank">Ketua Vihara - Bpk. Akok Komari Gunawan</a>
+<a class="wa-link" href="https://wa.me/62818142848" target="_blank">Tang Cu - Bpk. Kuo Thuan</a>`;
 }
 
-content += `<div class="close" onclick="closeModal()">Tutup</div>`;
-
-document.getElementById("modalContent").innerHTML=content;
+c+=`<div class="close" onclick="closeModal()">Tutup</div>`;
+document.getElementById("modalContent").innerHTML=c;
 document.getElementById("modal").style.display="flex";
 }
 
