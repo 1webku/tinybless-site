@@ -6,17 +6,6 @@
 
 <title>Vihara Vidya Dharma Purnama</title>
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Vihara Vidya Dharma Purnama">
-<meta property="og:description" content="🙏 Jadwal Kebaktian, Kegiatan Umat, dan Informasi Vihara">
-<meta property="og:image" content="https://tinybless.my.id/client/vihara-vidya-dharma/img/og-depan-vihara.jpg?v=2">
-<meta property="og:url" content="https://tinybless.my.id/client/vihara-vidya-dharma/">
-<meta property="og:type" content="website">
-
-<!-- TELEGRAM / WA SUPPORT -->
-<meta name="twitter:card" content="summary_large_image">
-  
-<!-- FAVICON FIX -->
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png?v=2">
 
 <style>
@@ -25,10 +14,7 @@
 
 body{
 min-height:100vh;
-background-image:url("img/bg-teratai.png");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
+background:url("img/bg-teratai.png") center/cover no-repeat;
 padding:40px 20px;
 }
 
@@ -52,15 +38,9 @@ text-shadow:0 3px 10px rgba(0,0,0,0.7);
 
 /* SLIDER */
 .slider{overflow:hidden;margin-bottom:20px;}
-.slider-track{
-display:flex;gap:10px;
-animation:scroll 16s linear infinite;
-}
-.slider img{
-width:95px;height:95px;
-object-fit:cover;border-radius:14px;
-border:2px solid #fff;
-}
+.slider-track{display:flex;gap:10px;animation:scroll 16s linear infinite;}
+.slider img{width:95px;height:95px;object-fit:cover;border-radius:14px;border:2px solid #fff;}
+
 @keyframes scroll{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
@@ -68,22 +48,30 @@ border:2px solid #fff;
 
 /* BUTTON */
 .btn{
-position:relative;display:flex;
-align-items:center;justify-content:center;
-
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
 background:linear-gradient(180deg,#8be9ee,#2cc9d3);
-border-radius:40px;height:56px;
-margin:14px 0;font-weight:700;
-color:#043c40;text-decoration:none;
-
+border-radius:40px;
+height:56px;
+margin:14px 0;
+font-weight:700;
+color:#043c40;
+text-decoration:none;
 box-shadow:0 6px 18px rgba(0,0,0,0.3);
+transition:0.25s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 26px rgba(0,0,0,0.35);
 }
 
 .icon{
 position:absolute;left:12px;
 width:34px;height:34px;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-color:#fff;
+display:flex;align-items:center;justify-content:center;color:#fff;
 }
 
 .icon1{background:#ff9800;}
@@ -108,8 +96,7 @@ text-shadow:0 2px 6px rgba(0,0,0,0.6);
 
 .credit{
 display:block;margin-top:25px;
-font-size:12px;color:#fff;opacity:0.8;
-text-decoration:none;
+font-size:12px;color:#fff;opacity:0.8;text-decoration:none;
 }
 
 /* MODAL */
@@ -122,21 +109,37 @@ z-index:999;
 }
 
 .modal-content{
-background:#fff;
-border-radius:16px;
+background:rgba(255,255,255,0.95);
+border-radius:18px;
 padding:20px;
 max-width:340px;width:90%;
 text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,0.35);
+animation:fadeIn 0.3s ease;
 }
 
-.modal h3{margin-bottom:10px;color:#043c40;}
-.modal p{white-space:pre-line;color:#333;}
+@keyframes fadeIn{
+from{opacity:0;transform:scale(0.9);}
+to{opacity:1;transform:scale(1);}
+}
+
+.modal h3{
+margin-bottom:12px;
+color:#043c40;
+}
+
+.modal p{
+white-space:pre-line;
+color:#333;
+line-height:1.7;
+margin-bottom:8px;
+}
 
 .close{
 margin-top:12px;
 background:#ccc;
-padding:8px;
-border-radius:8px;
+padding:10px;
+border-radius:10px;
 cursor:pointer;
 }
 
@@ -144,13 +147,13 @@ cursor:pointer;
 .wa-link{
 display:block;
 margin:10px 0;
-padding:10px;
-border-radius:10px;
-
-background:rgba(37,211,102,0.15);
+padding:12px;
+border-radius:12px;
+background:#e6f4ea;
 color:#25D366;
 font-weight:600;
 text-decoration:none;
+line-height:1.5;
 }
 
 .wa-link:hover{
@@ -203,7 +206,7 @@ Kegiatan Umat
 
 <a class="btn" href="https://www.instagram.com/wendao_temple?igsh=M2RkM3NsdjR3N3Fr" target="_blank">
 <div class="icon icon3">
-<svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7z"/></svg>
+<svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7z"/></svg>
 </div>
 Instagram
 </a>
@@ -238,61 +241,71 @@ let c='';
 
 if(type==='puja'){
 c=`<h3>🙏 Puja Bakti / Kebaktian</h3>
-<p>Setiap Hari Minggu
-⏰ 14.30 WIB – selesai
+
+<p>Setiap Hari Minggu  
+⏰ 14.30 WIB – selesai  
 
 Mari meluangkan waktu untuk berdoa, memperdalam Dharma, dan menemukan ketenangan batin 🌸</p>`;
 }
 
 if(type==='donasi'){
-c=`<h3>🙏 Donasi</h3>
-<p>Dana kebajikan Anda sangat berarti 🙏
+c=`<h3>🙏 Donasi / Dana Kebajikan</h3>
 
-Bank BCA
-Yayasan Vidya Dharma Purnama
-No. Rek: 1341290088
+<p>Setiap dana yang Anda berikan akan membantu mendukung kegiatan vihara, pelayanan umat, dan penyebaran kebajikan 🙏  
 
-Terima kasih atas kebaikan Anda 🌸</p>`;
+Terima kasih semoga segala kebajikan membawa berkah, kesehatan, dan kebahagiaan bagi anda sekeluarga 🌸</p>
+
+<p>
+🏦 Bank BCA  
+Yayasan Vidya Dharma Purnama  
+No. Rek: <b>1341290088</b>
+</p>`;
 }
 
 if(type==='kegiatan'){
 c=`<h3>Kegiatan Umat</h3>
-<p>Terbuka untuk Umum 🙏
 
-💃 Line Dance
-Setiap Hari Senin
-⏰ 07.00 WIB – selesai
+<p>Terbuka untuk Umum 🙏  
 
-🧘 Senam Jantung Sehat
-Setiap Hari Rabu
-⏰ 07.00 WIB – selesai
+💃 Line Dance  
+Setiap Hari Senin  
+⏰ 07.00 WIB – selesai  
 
-Mari hidup sehat dan bahagia 🌸</p>`;
+🧘 Senam Jantung Sehat  
+Setiap Hari Rabu  
+⏰ 07.00 WIB – selesai  
+
+Mari hidup sehat, bahagia, dan penuh kebersamaan 🌸</p>`;
 }
 
 if(type==='wa'){
 c=`<h3>📱 Hubungi via WhatsApp</h3>
 
 <a class="wa-link" href="https://wa.me/62818142848" target="_blank">
-Tang Cu  
-Bpk. Kuo Thuan 
+Tang Cu Bpk. Kuo Thuan  
 (klik untuk chat)
 </a>
 
 <a class="wa-link" href="https://wa.me/6285316389968" target="_blank">
-Wakil Tang Cu  
-Bpk. Yos / Xing Xiang  
+Wakil Tang Cu Bpk. Yos / Xing Xiang  
 (klik untuk chat)
 </a>`;
 }
 
 c+=`<div class="close" onclick="closeModal()">Tutup</div>`;
+
 document.getElementById("modalContent").innerHTML=c;
 document.getElementById("modal").style.display="flex";
 }
 
 function closeModal(){
 document.getElementById("modal").style.display="none";
+}
+
+window.onclick = function(e){
+if(e.target.id === "modal"){
+closeModal();
+}
 }
 </script>
 
