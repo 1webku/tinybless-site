@@ -2,72 +2,74 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://tinybless.my.id/</loc>
-<priority>1.0</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/</loc>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/creator/</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/creator/</loc>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/umkm/</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/umkm/</loc>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/affiliate/</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/affiliate/</loc>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/jasa-bio-link/</loc>
-<priority>0.9</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/jasa-bio-link/</loc>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/bio-link-creator/</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/bio-link-creator/</loc>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/bio-link-umkm/</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/bio-link-umkm/</loc>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/bio-link-affiliate/</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/bio-link-affiliate/</loc>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/tools/</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/tools/</loc>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/tips/</loc>
-<priority>0.7</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/tips/</loc>
+    <priority>0.7</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/tips/link-bio-instagram.html</loc>
-<priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/tips/link-bio-instagram.html</loc>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/edukasi/</loc>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/edukasi/</loc>
+    <priority>0.7</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/edukasi/ipa/</loc>
-</url>
+  <url>
+    <loc>https://tinybless.my.id/edukasi/ipa/</loc>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-<loc>https://tinybless.my.id/client/vihara-vidya-dharma/</loc>
-</url> 
-  
+  <url>
+    <loc>https://tinybless.my.id/client/vihara-vidya-dharma/</loc>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
-
