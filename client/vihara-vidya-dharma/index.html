@@ -42,6 +42,48 @@
 </script>
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png?v=2">
 
+ .video-thumb{
+  display:block;
+  position:relative;
+  margin:15px 0;
+  border-radius:16px;
+  overflow:hidden;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.video-thumb img{
+  width:100%;
+  display:block;
+}
+
+.play-button{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:40px;
+  background:rgba(255,0,0,0.9);
+  color:#fff;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.5);
+}
+
+.video-title{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:10px;
+  font-size:13px;
+  color:#fff;
+  background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  font-weight:600;
+}
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
@@ -207,32 +249,16 @@ color:#fff;
 <div class="nama-cn">聞道雷藏寺</div>
 <div class="nama-id">Vihara Vidya Dharma Purnama</div>
 
-<!-- 🎥 VIDEO BUTTON MENARIK -->
-<a href="https://www.youtube.com/live/AtGuur9pTX8" target="_blank" 
-   style="
-   display:block;
-   margin:15px 0;
-   padding:16px;
-   border-radius:16px;
-   background:linear-gradient(45deg,#ff0000,#cc0000);
-   color:#fff;
-   font-weight:700;
-   text-decoration:none;
-   box-shadow:0 8px 22px rgba(0,0,0,0.35);
-   position:relative;
-   overflow:hidden;
-   ">
+<!-- 🎥 THUMBNAIL VIDEO STYLE YOUTUBE -->
+<a href="https://www.youtube.com/live/AtGuur9pTX8" target="_blank" class="video-thumb">
 
-   ▶️ Saksikan Peresmian Vihara Vidya Dharma Purnama oleh Dharmaraja Lian Sheng
+  <img src="https://img.youtube.com/vi/AtGuur9pTX8/maxresdefault.jpg" alt="Video Vihara">
 
-   <div style="
-     font-size:12px;
-     opacity:0.9;
-     margin-top:6px;
-     font-weight:500;
-   ">
-     Klik untuk menonton video lengkap di YouTube
-   </div>
+  <div class="play-button">▶</div>
+
+  <div class="video-title">
+    Saksikan Peresmian Vihara Vidya Dharma Purnama oleh Dharmaraja Lian Sheng
+  </div>
 
 </a>
 <!-- 🎥 END -->
