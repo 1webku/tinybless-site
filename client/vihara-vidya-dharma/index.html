@@ -390,6 +390,18 @@ style="display:block;margin-top:12px;padding:12px;border-radius:12px;background:
 </a>`;
 }
 
+/* ⭐ LETAKKAN DI SINI (WAJIB DI LUAR SEMUA if) */
+c += `
+<div class="close" onclick="closeModal()" style="
+margin-top:15px;
+background:#ccc;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+">
+Tutup
+</div>`;
+ 
 document.getElementById("modalContent").innerHTML=c;
 document.getElementById("modal").style.display="flex";
 }
