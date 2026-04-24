@@ -2,73 +2,179 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- HOME -->
   <url>
     <loc>https://tinybless.my.id/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>1.0</priority>
   </url>
 
+  <!-- CORE PAGES -->
   <url>
     <loc>https://tinybless.my.id/creator/</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://tinybless.my.id/umkm/</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://tinybless.my.id/affiliate/</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.9</priority>
   </url>
 
+  <!-- BIO LINK -->
   <url>
     <loc>https://tinybless.my.id/jasa-bio-link/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://tinybless.my.id/bio-link-creator/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://tinybless.my.id/bio-link-umkm/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://tinybless.my.id/bio-link-affiliate/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
 
+  <!-- TOOLS -->
   <url>
     <loc>https://tinybless.my.id/tools/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.8</priority>
   </url>
 
+  <!-- TIPS -->
   <url>
     <loc>https://tinybless.my.id/tips/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.7</priority>
   </url>
 
+  <!-- ARTIKEL TIPS -->
   <url>
     <loc>https://tinybless.my.id/tips/link-bio-instagram.html</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
+    <loc>https://tinybless.my.id/tips/menambah-followers-instagram.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/ide-konten-tiktok-pemula.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/link-bio-tiktok.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/link-bio-instagram-gratis.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/link-bio-whatsapp.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/bio-instagram-menarik.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/masuk-fyp-tiktok.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/ide-konten-reels.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/hashtag-instagram.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/kesalahan-content-creator.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/ide-konten-tiktok-viral.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/waktu-posting-instagram.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/cara-membuat-toko-online.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tinybless.my.id/tips/alat-content-creator-pemula.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- EDUKASI -->
+  <url>
     <loc>https://tinybless.my.id/edukasi/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://tinybless.my.id/edukasi/ipa/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.6</priority>
   </url>
 
+  <!-- CLIENT -->
   <url>
     <loc>https://tinybless.my.id/client/vihara-vidya-dharma/</loc>
+    <lastmod>2026-04-24</lastmod>
     <priority>0.9</priority>
   </url>
 
