@@ -12,6 +12,13 @@
       background: linear-gradient(to bottom, #fdf6f0, #e6fffa);
       margin: 0;
       padding: 16px;
+      transition: all 0.3s ease;
+    }
+
+    /* DARK MODE */
+    body.dark {
+      background: #0f172a;
+      color: #e2e8f0;
     }
 
     .card {
@@ -21,7 +28,11 @@
       max-width: 420px;
       margin: 0 auto 20px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    body.dark .card {
+      background: rgba(30, 41, 59, 0.9);
     }
 
     .img {
@@ -42,6 +53,29 @@
       margin-bottom: 10px;
     }
 
+    .toggle-dark, .toggle-focus {
+      position: fixed;
+      top: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      z-index: 99;
+    }
+
+    .toggle-dark {
+      right: 10px;
+      background: #334155;
+      color: white;
+    }
+
+    .toggle-focus {
+      left: 10px;
+      background: #4fd1c5;
+      color: white;
+    }
+
     .hidden {
       display: none;
     }
@@ -52,81 +86,112 @@
     }
 
     h3 {
-      margin-top: 10px;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
     p {
-      line-height: 1.6;
-      font-size: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 12px;
     }
 
     .makna {
       margin-top: 12px;
-      padding: 12px;
+      padding: 14px;
       background: #eef7f6;
       border-radius: 12px;
-      font-size: 14px;
+      font-size: 15px;
+      line-height: 1.6;
     }
+
+    body.dark .makna {
+      background: #1e293b;
+    }
+
+    /* FOCUS MODE */
+    .focus p {
+      font-size: 19px;
+      line-height: 2;
+    }
+
+    .focus h3 {
+      font-size: 22px;
+    }
+
   </style>
 
 </head>
 
 <body>
 
-  <!-- 🌿 WEJANGAN 1 -->
+<button class="toggle-dark" onclick="toggleDark()">🌙 Mode</button> <button class="toggle-focus" onclick="toggleFocus()">🧘 Fokus</button>
+
+  <!-- WEJANGAN 1 -->
 
   <div class="card">
     <img src="img/wejangan1.jpg" class="img">
 
 ```
-<button onclick="toggleText(1)" class="btn">
-  🌐 Lihat Terjemahan
-</button>
+<button onclick="toggleText(1)" class="btn">🌐 Lihat Terjemahan</button>
 
 <div id="text1" class="hidden">
+
   <h3>Kematian Tidak Perlu Dipersiapkan</h3>
-  <p>
-    Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja...<br><br>
-    Apa yang perlu dipersiapkan? Ini adalah <b>Ketidakkekalan (Anitya)</b>...
-  </p>
+
+  <p>Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?</p>
+
+  <p>Apa yang perlu dipersiapkan, karena ini adalah <b>Ketidakkekalan (Anitya)</b>!</p>
+
+  <p>Mempersiapkannya pun sudah terlambat!...</p>
+
+  <p>Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.</p>
+
+  <p>Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.</p>
+
+  <p>Apa lagi yang perlu kau persiapkan?</p>
 
   <div class="makna">
     <b>Makna:</b><br>
-    Persiapan sejati adalah latihan dan kebajikan setiap hari.
+    Wejangan ini bukan berarti kita harus mengabaikan kematian.<br><br>
+    Maknanya adalah bahwa persiapan sejati bukanlah sesuatu yang dilakukan mendadak saat ajal tiba,
+    melainkan hasil dari latihan spiritual dan perbuatan baik yang dilakukan secara konsisten setiap hari.<br><br>
+    Karena kematian bisa datang kapan saja (ketidakkekalan), maka setiap momen kehidupan yang dijalani
+    dengan sadar dan baik adalah bentuk persiapan yang sesungguhnya.
   </div>
+
 </div>
 ```
 
   </div>
 
-  <!-- 🌿 WEJANGAN 2 -->
+  <!-- WEJANGAN 2 -->
 
   <div class="card">
     <img src="img/wejangan2.jpg" class="img">
 
 ```
-<button onclick="toggleText(2)" class="btn">
-  🌐 Lihat Terjemahan
-</button>
+<button onclick="toggleText(2)" class="btn">🌐 Lihat Terjemahan</button>
 
 <div id="text2" class="hidden">
+
   <h3>Hakikat Kehidupan</h3>
 
-  <p>
-    Jika suatu hari ada yang bertanya:<br><br>
+  <p>Jika suatu hari nanti ada seseorang yang bertanya:</p>
 
-    "Lu Sheng-yen telah pergi, apa yang dia tinggalkan?"<br><br>
+  <p>"Lu Sheng-yen telah pergi, apa yang dia tinggalkan?"</p>
 
-    Para siswa menjawab:<br><br>
+  <p>Para siswa dapat menjawab demikian:</p>
 
-    "Dia meninggalkan setumpuk buku, yang di dalamnya terdapat <b>Hakikat Kehidupan</b>."
-  </p>
+  <p>"Dia meninggalkan setumpuk buku, yang di dalamnya terdapat Hakikat Kehidupan."</p>
 
   <div class="makna">
     <b>Makna:</b><br>
     Seorang guru sejati tetap hidup melalui ajarannya.<br><br>
-    Cara terbaik menghormati guru adalah mempraktikkan Dharma setiap hari.
+    Bagi para murid, cara terbaik untuk menghormati guru dan mempersiapkan diri adalah
+    dengan mempelajari dan mempraktikkan ajaran (Dharma) tersebut secara konsisten.
   </div>
+
 </div>
 ```
 
@@ -136,6 +201,14 @@
     function toggleText(id) {
       const box = document.getElementById("text" + id);
       box.classList.toggle("show");
+    }
+
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+    }
+
+    function toggleFocus() {
+      document.body.classList.toggle("focus");
     }
   </script>
 
