@@ -142,22 +142,14 @@ display:none;align-items:center;justify-content:center;
 z-index:999;
 }
 
-.modal p{
-white-space:normal;
-line-height:1.6;
-margin-bottom:12px;
-}
- 
 .modal-content{
 background:rgba(255,255,255,0.95);
 border-radius:18px;
 padding:20px;
-max-width:340px;
-width:90%;
+max-width:340px;width:90%;
 text-align:center;
 box-shadow:0 20px 40px rgba(0,0,0,0.35);
 animation:fadeIn 0.3s ease;
-
 }
 
 @keyframes fadeIn{
@@ -287,11 +279,6 @@ Donasi
 Kegiatan Umum
 </a>
 
-<a class="btn" onclick="openModal('wejangan')">
-<div class="icon icon1">📖</div>
-Wejangan Mula Guru
-</a>
- 
 <a class="btn" href="https://www.instagram.com/wendao_temple?igsh=M2RkM3NsdjR3N3Fr" target="_blank">
 <div class="icon icon3">
 <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7z"/></svg>
@@ -391,20 +378,6 @@ Wakil Tang Cu Bpk. Yos / Xing Xiang
 </a>`;
 }
 
-if(type==='wejangan'){
-c=`
-
-<img src="img/wejangan-1.jpg"
-style="width:100%;border-radius:16px;margin-bottom:10px;cursor:pointer;"
-onclick="showTerjemahan()">
-
-<div style="font-size:13px;color:#666;text-align:center;">
-👉 Klik gambar untuk baca terjemahan
-</div>
-
-`;
-} 
-
 <!-- ⭐ TAMBAHAN REVIEW (LETakkan di sini) -->
 if(type==='review'){
 c=`<h3>🙏 Dukungan Anda Berarti</h3>
@@ -440,37 +413,6 @@ document.getElementById("modal").style.display="none";
 window.onclick = function(e){
 if(e.target.id === "modal"){
 closeModal();
-}
-}
-
-// ✅ TARUH DI LUAR (INI PENTING BANGET)
-function showTerjemahan(){
-document.getElementById("modalContent").innerHTML = `
-
-<div style="text-align:left;line-height:1.6;font-size:15px;">
-
-<p><b>Kematian Tidak Perlu Dipersiapkan</b></p>
-
-<p>Sama sekali tidak perlu dipersiapkan, jika waktunya mati ya mati saja, mempersiapkan apa?</p>
-
-<p>Apa yang perlu dipersiapkan, karena ini adalah Ketidakkekalan (Anitya)!</p>
-
-<p>Mempersiapkannya pun sudah terlambat!...</p>
-
-<p>Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.</p>
-
-<p>Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.</p>
-
-<p>Apa lagi yang perlu kau persiapkan?</p>
-
-<p><b>Makna:</b></p>
-
-<p>Wejangan ini mengajarkan bahwa persiapan sejati adalah kehidupan sehari-hari yang penuh kesadaran dan kebajikan.</p>
-
-</div>
-
-<div class="close" onclick="openModal('wejangan')">Kembali</div>
-`;
 }
 }
 </script>
