@@ -15,11 +15,11 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       border-radius: 20px;
       padding: 16px;
       max-width: 420px;
-      margin: auto;
+      margin: 0 auto 20px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       backdrop-filter: blur(10px);
     }
@@ -73,49 +73,68 @@
 
 <body>
 
+  <!-- 🌿 WEJANGAN 1 -->
+
   <div class="card">
+    <img src="img/wejangan1.jpg" class="img">
 
 ```
-<!-- Gambar -->
-<img src="img/wejangan1.jpg" class="img">
-
-<!-- Tombol -->
-<button onclick="toggleText()" class="btn">
+<button onclick="toggleText(1)" class="btn">
   🌐 Lihat Terjemahan
 </button>
 
-<!-- Konten -->
-<div id="textBox" class="hidden">
-
+<div id="text1" class="hidden">
   <h3>Kematian Tidak Perlu Dipersiapkan</h3>
-
   <p>
-    Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?<br><br>
-
-    Apa yang perlu dipersiapkan, karena ini adalah <b>Ketidakkekalan (Anitya)</b>!<br><br>
-
-    Mempersiapkannya pun sudah terlambat!...<br><br>
-
-    Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.<br><br>
-
-    Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.<br><br>
-
-    Apa lagi yang perlu kau persiapkan?
+    Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja...<br><br>
+    Apa yang perlu dipersiapkan? Ini adalah <b>Ketidakkekalan (Anitya)</b>...
   </p>
 
   <div class="makna">
     <b>Makna:</b><br>
-    Persiapan sejati bukan dilakukan saat ajal tiba, tetapi dari latihan dan kebajikan yang dilakukan setiap hari selama hidup.
+    Persiapan sejati adalah latihan dan kebajikan setiap hari.
+  </div>
+</div>
+```
+
   </div>
 
+  <!-- 🌿 WEJANGAN 2 -->
+
+  <div class="card">
+    <img src="img/wejangan2.jpg" class="img">
+
+```
+<button onclick="toggleText(2)" class="btn">
+  🌐 Lihat Terjemahan
+</button>
+
+<div id="text2" class="hidden">
+  <h3>Hakikat Kehidupan</h3>
+
+  <p>
+    Jika suatu hari ada yang bertanya:<br><br>
+
+    "Lu Sheng-yen telah pergi, apa yang dia tinggalkan?"<br><br>
+
+    Para siswa menjawab:<br><br>
+
+    "Dia meninggalkan setumpuk buku, yang di dalamnya terdapat <b>Hakikat Kehidupan</b>."
+  </p>
+
+  <div class="makna">
+    <b>Makna:</b><br>
+    Seorang guru sejati tetap hidup melalui ajarannya.<br><br>
+    Cara terbaik menghormati guru adalah mempraktikkan Dharma setiap hari.
+  </div>
 </div>
 ```
 
   </div>
 
   <script>
-    function toggleText() {
-      const box = document.getElementById("textBox");
+    function toggleText(id) {
+      const box = document.getElementById("text" + id);
       box.classList.toggle("show");
     }
   </script>
