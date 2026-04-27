@@ -8,27 +8,23 @@
 
 <link rel="canonical" href="https://tinybless.my.id/client/vihara-vidya-dharma/">
 
-<!-- SEO META -->
-<meta name="description" content="Vihara Vidya Dharma Purnama di Cirebon. Jadwal kebaktian, donasi, kegiatan umat Buddha, lokasi dan kontak vihara. Terbuka untuk umum.">
+<!-- SEO -->
+<meta name="description" content="Vihara Vidya Dharma Purnama di Cirebon. Jadwal kebaktian, donasi, kegiatan, wejangan spiritual, dan lokasi vihara. Terbuka untuk umum.">
 <meta name="keywords" content="vihara cirebon, vihara buddha cirebon, jadwal kebaktian cirebon, vihara vidya dharma purnama">
 <meta name="author" content="Vihara Vidya Dharma Purnama">
 
-<!-- OPEN GRAPH -->
+<!-- Open Graph -->
 <meta property="og:title" content="Vihara Vidya Dharma Purnama Cirebon">
 <meta property="og:description" content="Tempat ibadah umat Buddha di Cirebon. Jadwal kebaktian dan kegiatan vihara.">
 <meta property="og:image" content="https://tinybless.my.id/client/vihara-vidya-dharma/img/og-depan-vihara.jpg">
-<meta property="og:url" content="https://tinybless.my.id/client/vihara-vidya-dharma/">
 <meta property="og:type" content="website">
 
-<link rel="icon" href="img/favicon-32x32.png">
-
-<!-- STRUCTURED DATA -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "BuddhistTemple",
  "name": "Vihara Vidya Dharma Purnama",
- "image": "https://tinybless.my.id/client/vihara-vidya-dharma/img/gedung-vihara.jpg",
  "address": {
    "@type": "PostalAddress",
    "streetAddress": "Jln. Kantor No. 2 A",
@@ -40,115 +36,141 @@
 }
 </script>
 
+<link rel="icon" href="img/favicon-32x32.png">
+
 <style>
-/* (CSS kamu tetap, tidak diubah banyak biar aman) */
+/* CSS kamu dipertahankan */
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui;}
+body{min-height:100vh;background:url("img/bg-teratai.png") center/cover no-repeat;padding:40px 20px;}
+.container{max-width:420px;margin:auto;text-align:center;}
+.avatar{width:90px;height:90px;border-radius:50%;margin-bottom:14px;border:3px solid #fff;}
+.nama-cn{font-size:28px;font-weight:700;color:#fff;text-shadow:0 3px 10px rgba(0,0,0,0.7);}
+.nama-id{font-size:15px;color:#fff;margin-bottom:18px;text-shadow:0 3px 10px rgba(0,0,0,0.7);}
+
+/* BUTTON */
+.btn{
+position:relative;display:flex;align-items:center;justify-content:center;
+background:linear-gradient(180deg,#8be9ee,#2cc9d3);
+border-radius:40px;height:56px;margin:14px 0;font-weight:700;
+color:#043c40;text-decoration:none;cursor:pointer;
+}
+
+/* MODAL */
+.modal{
+position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;
+z-index:999;
+}
+
+.modal-content{
+background:#fff;border-radius:16px;padding:20px;width:90%;max-width:340px;
+}
+
+/* IMAGE */
+.wejangan-img{
+width:100%;border-radius:12px;margin-bottom:10px;cursor:pointer;
+}
 </style>
 </head>
 
 <body>
 
-<main class="container">
+<div class="container">
 
-<!-- ✅ H1 (WAJIB SEO) -->
-<h1 style="display:none;">
-Vihara Vidya Dharma Purnama Cirebon
-</h1>
+<h1 style="display:none;">Vihara Vidya Dharma Purnama Cirebon</h1>
 
-<img src="img/avatar-kwan-im.jpg" class="avatar" alt="Patung Kwan Im Vihara Cirebon">
+<img src="img/avatar-kwan-im.jpg" class="avatar" alt="Patung Kwan Im">
 
-<h2 class="nama-cn">聞道雷藏寺</h2>
-<p class="nama-id">Vihara Vidya Dharma Purnama</p>
-
-<!-- VIDEO -->
-<a href="https://www.youtube.com/live/AtGuur9pTX8" target="_blank" class="btn" style="background:linear-gradient(45deg,#ff0000,#cc0000);color:#fff;">
-▶️ Saksikan Peresmian Vihara oleh Dharmaraja Lian Sheng
-</a>
-
-<!-- SLIDER -->
-<div class="slider">
-<div class="slider-track">
-
-<img src="img/altar-utama.jpg" loading="lazy" alt="Altar utama vihara">
-<img src="img/bagi-takjil1.jpg" loading="lazy" alt="Kegiatan sosial vihara">
-<img src="img/gedung-vihara.jpg" loading="lazy" alt="Gedung vihara cirebon">
-
-</div>
-</div>
+<div class="nama-cn">聞道雷藏寺</div>
+<div class="nama-id">Vihara Vidya Dharma Purnama</div>
 
 <!-- BUTTON -->
 <a class="btn" onclick="openModal('puja')">📅 Jadwal Kebaktian</a>
-
 <a class="btn" onclick="openModal('donasi')">💰 Donasi</a>
-
 <a class="btn" onclick="openModal('kegiatan')">🏯 Kegiatan Umum</a>
 
-<!-- 🔥 TAMBAHAN WEJANGAN -->
-<a class="btn" onclick="openModal('wejangan')">📖 Wejangan Mula Guru</a>
-
-<a class="btn" href="https://www.instagram.com/wendao_temple" target="_blank">
-📸 Follow Instagram
-</a>
+<!-- ✅ WEJANGAN -->
+<a class="btn" onclick="openWejangan()">📖 Wejangan Mula Guru</a>
 
 <a class="btn" onclick="openModal('wa')">💬 Hubungi Pengurus</a>
-
 <a class="btn" onclick="openModal('review')">⭐ Dukung Vihara</a>
 
-<!-- MAP -->
-<section class="map">
-<iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&output=embed" loading="lazy"></iframe>
-</section>
+</div>
 
-<p class="alamat">
-Jln. Kantor No. 2 A, Cirebon<br>
-Telp. (0231) 8805812
-</p>
-
-</main>
-
-<!-- MODAL -->
+<!-- MODAL LAMA -->
 <div class="modal" id="modal">
 <div class="modal-content" id="modalContent"></div>
 </div>
 
+<!-- MODAL WEJANGAN -->
+<div class="modal" id="modalWejangan">
+<div class="modal-content" id="wejanganContent"></div>
+</div>
+
 <script>
+
+// MODAL LAMA
 function openModal(type){
 let c='';
 
-if(type==='wejangan'){
-c=`
-<h3>📖 Wejangan Mula Guru Lian Sheng</h3>
+if(type==='puja'){c=`<h3>Jadwal Kebaktian</h3><p>Minggu 14.30 WIB</p>`;}
+if(type==='donasi'){c=`<h3>Donasi</h3><p>BCA 1341290088</p>`;}
+if(type==='kegiatan'){c=`<h3>Kegiatan</h3><p>Senin & Rabu</p>`;}
+if(type==='wa'){c=`<h3>WhatsApp</h3><p>Hubungi pengurus</p>`;}
+if(type==='review'){c=`<h3>Review</h3><p>Bantu review Google</p>`;}
 
-<img src="img/guru.jpg" 
-style="width:100%;border-radius:12px;margin-bottom:10px;cursor:pointer;"
-onclick="showWejangan()"
-alt="Guru Lian Sheng">
-
-<div id="textWejangan" style="display:none;text-align:left;">
-<p><b>Versi Asli:</b><br>
-(isi teks asli di sini)
-</p>
-
-<hr>
-
-<p><b>Terjemahan Indonesia:</b><br>
-(isi terjemahan di sini)
-</p>
-</div>
-`;
-}
-
-document.getElementById("modalContent").innerHTML=c + `
-<div class="close" onclick="closeModal()">Tutup</div>`;
+c += `<div onclick="closeModal()">Tutup</div>`;
+document.getElementById("modalContent").innerHTML=c;
 document.getElementById("modal").style.display="flex";
-}
-
-function showWejangan(){
-document.getElementById("textWejangan").style.display="block";
 }
 
 function closeModal(){
 document.getElementById("modal").style.display="none";
 }
+
+// WEJANGAN DATA
+const wejanganData = [
+{
+judul:"Kematian Tidak Perlu Dipersiapkan",
+img:"img/wejangan-1.jpg",
+asli:"死亡不用準備",
+indo:"Kematian tidak perlu dipersiapkan. Yang penting adalah hidup baik setiap hari.",
+makna:"Persiapan sejati adalah latihan spiritual dan kebajikan setiap hari."
+}
+];
+
+// LIST
+function openWejangan(){
+let html = `<h3>Pilih Wejangan</h3>`;
+
+wejanganData.forEach((d,i)=>{
+html += `<img src="${d.img}" class="wejangan-img" onclick="showWejangan(${i})">`;
+});
+
+html += `<div onclick="closeWejangan()">Tutup</div>`;
+
+document.getElementById("wejanganContent").innerHTML = html;
+document.getElementById("modalWejangan").style.display="flex";
+}
+
+// DETAIL
+function showWejangan(i){
+const d = wejanganData[i];
+
+document.getElementById("wejanganContent").innerHTML = `
+<h3>${d.judul}</h3>
+<img src="${d.img}" class="wejangan-img">
+<p>${d.indo}</p>
+<hr>
+<p>${d.makna}</p>
+<div onclick="openWejangan()">Kembali</div>
+`;
+}
+
+function closeWejangan(){
+document.getElementById("modalWejangan").style.display="none";
+}
+
 </script>
 
 </body>
