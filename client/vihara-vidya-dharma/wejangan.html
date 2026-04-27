@@ -1,39 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-
- <!-- ✅ TAMBAHKAN DI SINI -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>Wejangan Harian</title>
 
   <style>
-    <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #fdf6f0, #e6fffa);
-    padding: 12px; /* ✅ update */
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fdf6f0, #e6fffa);
+      margin: 0;
+      padding: 16px;
+    }
 
-  .card {
-    background: rgba(255, 255, 255, 0.75);
-    border-radius: 20px;
-    padding: 12px; /* ✅ update */
-    max-width: 100%; /* ✅ penting untuk HP */
-    margin: auto;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    backdrop-filter: blur(10px);
-  }
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 16px;
+      max-width: 420px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      backdrop-filter: blur(10px);
+    }
 
-  .img {
-    width: 100%;
-    border-radius: 15px;
-  }
-</style>
-    
+    .img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 12px;
+    }
+
     .btn {
-      margin-top: 10px;
       width: 100%;
       padding: 12px;
       border-radius: 999px;
@@ -42,6 +39,7 @@
       color: white;
       font-weight: bold;
       cursor: pointer;
+      margin-bottom: 10px;
     }
 
     .hidden {
@@ -50,56 +48,68 @@
 
     .show {
       display: block;
-      margin-top: 15px;
+      margin-top: 10px;
+    }
+
+    h3 {
+      margin-top: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 14px;
     }
 
     .makna {
-      margin-top: 10px;
-      padding: 10px;
-      background: #f7fafc;
-      border-radius: 10px;
+      margin-top: 12px;
+      padding: 12px;
+      background: #eef7f6;
+      border-radius: 12px;
       font-size: 14px;
     }
   </style>
+
 </head>
 
 <body>
 
   <div class="card">
-    
-    <!-- Gambar -->
-    <img src="img/wejangan1.jpg" class="img">
 
-    <!-- Tombol -->
-    <button onclick="toggleText()" class="btn">
-      🌐 Lihat Terjemahan
-    </button>
+```
+<!-- Gambar -->
+<img src="img/wejangan1.jpg" class="img">
 
-    <!-- Teks Terjemahan -->
-    <div id="textBox" class="hidden">
+<!-- Tombol -->
+<button onclick="toggleText()" class="btn">
+  🌐 Lihat Terjemahan
+</button>
 
-      <h3>Kematian Tidak Perlu Dipersiapkan</h3>
+<!-- Konten -->
+<div id="textBox" class="hidden">
 
-      <p>
-        Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?<br><br>
+  <h3>Kematian Tidak Perlu Dipersiapkan</h3>
 
-        Apa yang perlu dipersiapkan, karena ini adalah <b>Ketidakkekalan (Anitya)</b>!<br><br>
+  <p>
+    Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?<br><br>
 
-        Mempersiapkannya pun sudah terlambat!...<br><br>
+    Apa yang perlu dipersiapkan, karena ini adalah <b>Ketidakkekalan (Anitya)</b>!<br><br>
 
-        Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.<br><br>
+    Mempersiapkannya pun sudah terlambat!...<br><br>
 
-        Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.<br><br>
+    Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.<br><br>
 
-        Apa lagi yang perlu kau persiapkan?
-      </p>
+    Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.<br><br>
 
-      <div class="makna">
-        <b>Makna:</b><br>
-        Persiapan sejati bukan dilakukan saat ajal tiba, tetapi dari latihan dan kebajikan yang dilakukan setiap hari.
-      </div>
+    Apa lagi yang perlu kau persiapkan?
+  </p>
 
-    </div>
+  <div class="makna">
+    <b>Makna:</b><br>
+    Persiapan sejati bukan dilakukan saat ajal tiba, tetapi dari latihan dan kebajikan yang dilakukan setiap hari.
+  </div>
+
+</div>
+```
 
   </div>
 
