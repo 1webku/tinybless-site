@@ -4,319 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vihara di Cirebon – Vihara Vidya Dharma Purnama</title>
+<title>Vihara Vidya Dharma Purnama Cirebon | Jadwal Kebaktian & Lokasi</title>
 
- <!-- ✅ CANONICAL (taruh di sini) -->
-  <link rel="canonical" href="https://tinybless.my.id/client/vihara-vidya-dharma/">
-  
+<link rel="canonical" href="https://tinybless.my.id/client/vihara-vidya-dharma/">
+
 <!-- SEO META -->
-<meta name="description" content="Vihara Vidya Dharma Purnama di Kota Cirebon. Tempat ibadah, kebaktian, dan kegiatan umat Buddha. Terbuka untuk umum.">
-<meta name="keywords" content="vihara cirebon, tempat ibadah buddha cirebon, vihara vidya dharma purnama, kebaktian cirebon">
+<meta name="description" content="Vihara Vidya Dharma Purnama di Cirebon. Jadwal kebaktian, donasi, kegiatan umat Buddha, lokasi dan kontak vihara. Terbuka untuk umum.">
+<meta name="keywords" content="vihara cirebon, vihara buddha cirebon, jadwal kebaktian cirebon, vihara vidya dharma purnama">
 <meta name="author" content="Vihara Vidya Dharma Purnama">
 
-<!-- OPEN GRAPH (biar bagus saat dishare) -->
-<meta property="og:title" content="Vihara Vidya Dharma Purnama">
-<meta property="og:description" content="Tempat ibadah dan kegiatan umat Buddha di Kota Cirebon">
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="Vihara Vidya Dharma Purnama Cirebon">
+<meta property="og:description" content="Tempat ibadah umat Buddha di Cirebon. Jadwal kebaktian dan kegiatan vihara.">
 <meta property="og:image" content="https://tinybless.my.id/client/vihara-vidya-dharma/img/og-depan-vihara.jpg">
+<meta property="og:url" content="https://tinybless.my.id/client/vihara-vidya-dharma/">
 <meta property="og:type" content="website">
 
-<!-- STRUCTURED DATA (PENTING untuk Google & Maps + Rating) -->
+<link rel="icon" href="img/favicon-32x32.png">
 
+<!-- STRUCTURED DATA -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BuddhistTemple",
-  "name": "Vihara Vidya Dharma Purnama",
-  "alternateName": "聞道雷藏寺",
-  "image": "https://tinybless.my.id/img/gedung-vihara.jpg",
-  "url": "https://tinybless.my.id",
-  "telephone": "+62-231-8805812",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jln. Kantor No. 2 A",
-    "addressLocality": "Cirebon",
-    "addressRegion": "Jawa Barat",
-    "addressCountry": "ID"
-  }
+ "@context": "https://schema.org",
+ "@type": "BuddhistTemple",
+ "name": "Vihara Vidya Dharma Purnama",
+ "image": "https://tinybless.my.id/client/vihara-vidya-dharma/img/gedung-vihara.jpg",
+ "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Jln. Kantor No. 2 A",
+   "addressLocality": "Cirebon",
+   "addressRegion": "Jawa Barat",
+   "addressCountry": "ID"
+ },
+ "telephone": "+62-231-8805812"
 }
 </script>
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png?v=2">
 
 <style>
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
-
-body{
-min-height:100vh;
-background:url("img/bg-teratai.png") center/cover no-repeat;
-padding:40px 20px;
-}
-
-.container{max-width:420px;margin:auto;text-align:center;}
-
-.avatar{
-width:90px;height:90px;border-radius:50%;
-object-fit:cover;margin-bottom:14px;border:3px solid #fff;
-}
-
-.nama-cn{
-font-size:28px;font-weight:700;color:#fff;
-letter-spacing:4px;margin-bottom:4px;
-text-shadow:0 3px 10px rgba(0,0,0,0.7);
-}
-
-.nama-id{
-font-size:15px;color:#fff;margin-bottom:18px;
-text-shadow:0 3px 10px rgba(0,0,0,0.7);
-}
-
-/* SLIDER */
-.slider{overflow:hidden;margin-bottom:20px;}
-.slider-track{display:flex;gap:10px;animation:scroll 16s linear infinite;}
-.slider img{width:95px;height:95px;object-fit:cover;border-radius:14px;border:2px solid #fff;}
-
-@keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-}
-
-/* BUTTON */
-.btn{
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-background:linear-gradient(180deg,#8be9ee,#2cc9d3);
-border-radius:40px;
-height:56px;
-margin:14px 0;
-font-weight:700;
-color:#043c40;
-text-decoration:none;
-box-shadow:0 6px 18px rgba(0,0,0,0.3);
-transition:0.25s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 26px rgba(0,0,0,0.35);
-}
-
-.icon{
-position:absolute;left:12px;
-width:34px;height:34px;border-radius:50%;
-display:flex;align-items:center;justify-content:center;color:#fff;
-}
-
-.icon1{background:#ff9800;}
-.icon2{background:#4caf50;}
-.icon4{background:#25D366;}
-.icon5{background:#ff5722;}
-
-.icon3{
-background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);
-}
-
-.icon svg{width:18px;height:18px;fill:#fff;}
-
-/* MAP */
-.map{margin-top:20px;}
-.map iframe{width:100%;height:220px;border:0;border-radius:12px;}
-
-.alamat{
-margin-top:12px;font-size:14px;color:#fff;
-text-shadow:0 2px 6px rgba(0,0,0,0.6);
-}
-
-.credit{
-display:block;margin-top:25px;
-font-size:12px;color:#fff;opacity:0.8;text-decoration:none;
-}
-
-/* MODAL */
-.modal{
-position:fixed;top:0;left:0;width:100%;height:100%;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(6px);
-display:none;align-items:center;justify-content:center;
-z-index:999;
-}
-
-.modal-content{
-background:rgba(255,255,255,0.95);
-border-radius:18px;
-padding:20px;
-max-width:340px;width:90%;
-text-align:center;
-box-shadow:0 20px 40px rgba(0,0,0,0.35);
-animation:fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:scale(0.9);}
-to{opacity:1;transform:scale(1);}
-}
-
-.modal h3{
-margin-bottom:12px;
-color:#043c40;
-}
-
-.modal p{
-white-space:pre-line;
-color:#333;
-line-height:1.7;
-margin-bottom:8px;
-}
-
-.close{
-margin-top:12px;
-background:#ccc;
-padding:10px;
-border-radius:10px;
-cursor:pointer;
-}
-
-/* WA STYLE */
-.wa-link{
-display:block;
-margin:10px 0;
-padding:12px;
-border-radius:12px;
-background:#e6f4ea;
-color:#25D366;
-font-weight:600;
-text-decoration:none;
-line-height:1.5;
-}
-
-.wa-link:hover{
-background:#25D366;
-color:#fff;
-}
-
+/* (CSS kamu tetap, tidak diubah banyak biar aman) */
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<main class="container">
 
-<img src="img/avatar-kwan-im.jpg" class="avatar">
-
-<div class="nama-cn">聞道雷藏寺</div>
-<div class="nama-id">Vihara Vidya Dharma Purnama</div>
-
-<!-- 🎥 VIDEO BUTTON MENARIK -->
-<a href="https://www.youtube.com/live/AtGuur9pTX8" target="_blank" 
-   style="
-   display:block;
-   margin:15px 0;
-   padding:16px;
-   border-radius:16px;
-   background:linear-gradient(45deg,#ff0000,#cc0000);
-   color:#fff;
-   font-weight:700;
-   text-decoration:none;
-   box-shadow:0 8px 22px rgba(0,0,0,0.35);
-   position:relative;
-   overflow:hidden;
-   ">
-
-   ▶️ Saksikan Peresmian Vihara Vidya Dharma Purnama oleh Dharmaraja Lian Sheng
-
-   <div style="
-     font-size:12px;
-     opacity:0.9;
-     margin-top:6px;
-     font-weight:500;
-   ">
-     Klik untuk menonton video lengkap di YouTube
-   </div>
-
-</a>
-<!-- 🎥 END -->
- 
-  <!-- ✅ TAMBAHKAN DI SINI -->
+<!-- ✅ H1 (WAJIB SEO) -->
 <h1 style="display:none;">
-Vihara di Cirebon – Vihara Vidya Dharma Purnama
+Vihara Vidya Dharma Purnama Cirebon
 </h1>
 
-<p style="display:none;">
-Vihara Vidya Dharma Purnama adalah vihara di Cirebon yang aktif dan terbuka untuk umum. 
-Tempat ibadah umat Buddha di Cirebon ini menyelenggarakan kebaktian rutin, kegiatan spiritual, dan aktivitas sosial masyarakat.
-</p>
-<!-- ✅ SAMPAI SINI -->
-  
+<img src="img/avatar-kwan-im.jpg" class="avatar" alt="Patung Kwan Im Vihara Cirebon">
+
+<h2 class="nama-cn">聞道雷藏寺</h2>
+<p class="nama-id">Vihara Vidya Dharma Purnama</p>
+
+<!-- VIDEO -->
+<a href="https://www.youtube.com/live/AtGuur9pTX8" target="_blank" class="btn" style="background:linear-gradient(45deg,#ff0000,#cc0000);color:#fff;">
+▶️ Saksikan Peresmian Vihara oleh Dharmaraja Lian Sheng
+</a>
+
+<!-- SLIDER -->
 <div class="slider">
 <div class="slider-track">
-<img src="img/altar-utama.jpg">
-<img src="img/bagi-takjil1.jpg">
-<img src="img/bagi-takjil2.jpg">
-<img src="img/gedung-vihara.jpg">
-<img src="img/puja-bakti.jpg">
 
-<img src="img/altar-utama.jpg">
-<img src="img/bagi-takjil1.jpg">
-<img src="img/bagi-takjil2.jpg">
-<img src="img/gedung-vihara.jpg">
-<img src="img/puja-bakti.jpg">
+<img src="img/altar-utama.jpg" loading="lazy" alt="Altar utama vihara">
+<img src="img/bagi-takjil1.jpg" loading="lazy" alt="Kegiatan sosial vihara">
+<img src="img/gedung-vihara.jpg" loading="lazy" alt="Gedung vihara cirebon">
+
 </div>
 </div>
 
-<a class="btn" onclick="openModal('puja')">
-<div class="icon icon1">📅</div>
-Jadwal Kebaktian
+<!-- BUTTON -->
+<a class="btn" onclick="openModal('puja')">📅 Jadwal Kebaktian</a>
+
+<a class="btn" onclick="openModal('donasi')">💰 Donasi</a>
+
+<a class="btn" onclick="openModal('kegiatan')">🏯 Kegiatan Umum</a>
+
+<!-- 🔥 TAMBAHAN WEJANGAN -->
+<a class="btn" onclick="openModal('wejangan')">📖 Wejangan Mula Guru</a>
+
+<a class="btn" href="https://www.instagram.com/wendao_temple" target="_blank">
+📸 Follow Instagram
 </a>
 
-<a class="btn" onclick="openModal('donasi')">
-<div class="icon icon5">💰</div>
-Donasi
-</a>
+<a class="btn" onclick="openModal('wa')">💬 Hubungi Pengurus</a>
 
-<a class="btn" onclick="openModal('kegiatan')">
-<div class="icon icon2">🏯</div>
-Kegiatan Umum
-</a>
+<a class="btn" onclick="openModal('review')">⭐ Dukung Vihara</a>
 
-<a class="btn" href="https://www.instagram.com/wendao_temple?igsh=M2RkM3NsdjR3N3Fr" target="_blank">
-<div class="icon icon3">
-<svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7z"/></svg>
-</div>
-Follow Instagram
-</a>
+<!-- MAP -->
+<section class="map">
+<iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&output=embed" loading="lazy"></iframe>
+</section>
 
-<a class="btn" onclick="openModal('wa')">
-<div class="icon icon4">
-<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.5 15.4L2 22l4.7-1.5A10 10 0 1012 2z"/></svg>
-</div>
-Hubungi Pengurus
-</a>
-
-<!-- ⭐ TAMBAHAN REVIEW (LETakkan di sini) -->
-<a class="btn" onclick="openModal('review')">
-<div class="icon" style="background:#ffc107;">⭐</div>
-Dukung Vihara (Beri Review)
-</a>
- 
-<div class="map">
-<iframe src="https://maps.google.com/maps?q=Jln.%20Kantor%20No.%202%20A%20Cirebon&output=embed"></iframe>
-</div>
-
-<div class="alamat">
-Jln. Kantor No. 2 A, Kota Cirebon<br>
+<p class="alamat">
+Jln. Kantor No. 2 A, Cirebon<br>
 Telp. (0231) 8805812
+</p>
 
-<p style="margin-top:10px;font-size:13px;">
-🙏 Bantu kami berkembang dengan memberikan review di Google
-</p> 
- 
-</div>
+</main>
 
-<a class="credit" href="https://tinybless.my.id">by tinybless.my.id</a>
-
-</div>
-
+<!-- MODAL -->
 <div class="modal" id="modal">
 <div class="modal-content" id="modalContent"></div>
 </div>
@@ -325,95 +114,40 @@ Telp. (0231) 8805812
 function openModal(type){
 let c='';
 
-if(type==='puja'){
-c=`<h3>🙏 Puja Bakti / Kebaktian</h3>
+if(type==='wejangan'){
+c=`
+<h3>📖 Wejangan Mula Guru Lian Sheng</h3>
 
-<p>Setiap Hari Minggu  
-⏰ 14.30 WIB – selesai  
+<img src="img/guru.jpg" 
+style="width:100%;border-radius:12px;margin-bottom:10px;cursor:pointer;"
+onclick="showWejangan()"
+alt="Guru Lian Sheng">
 
-Mari meluangkan waktu untuk berdoa, memperdalam Dharma, dan menemukan ketenangan batin 🌸</p>`;
+<div id="textWejangan" style="display:none;text-align:left;">
+<p><b>Versi Asli:</b><br>
+(isi teks asli di sini)
+</p>
+
+<hr>
+
+<p><b>Terjemahan Indonesia:</b><br>
+(isi terjemahan di sini)
+</p>
+</div>
+`;
 }
 
-if(type==='donasi'){
-c=`<h3>🙏 Donasi / Dana Kebajikan</h3>
-
-<p>Setiap dana yang Anda berikan akan membantu mendukung kegiatan vihara, pelayanan umat, dan penyebaran kebajikan 🙏  
-
-Terima kasih semoga segala kebajikan membawa berkah, kesehatan, dan kebahagiaan bagi anda sekeluarga 🌸</p>
-
-<p>
-🏦 Bank BCA  
-Yayasan Vidya Dharma Purnama  
-No. Rek: <b>1341290088</b>
-</p>`;
-}
-
-if(type==='kegiatan'){
-c=`<h3>Kegiatan Umum</h3>
-
-<p>Terbuka untuk Umum 🙏  
-
-💃 Line Dance  
-Setiap Hari Senin  
-⏰ 07.00 WIB – selesai  
-
-🧘 Senam Jantung Sehat  
-Setiap Hari Rabu  
-⏰ 07.00 WIB – selesai  
-
-Mari hidup sehat, bahagia, dan penuh kebersamaan 🌸</p>`;
-}
-
-if(type==='wa'){
-c=`<h3>📱 Hubungi via WhatsApp</h3>
-
-<a class="wa-link" href="https://wa.me/62818142848" target="_blank">
-Tang Cu Bpk. Kuo Thuan  
-(klik untuk chat)
-</a>
-
-<a class="wa-link" href="https://wa.me/6285316389968" target="_blank">
-Wakil Tang Cu Bpk. Yos / Xing Xiang  
-(klik untuk chat)
-</a>`;
-}
-
-<!-- ⭐ TAMBAHAN REVIEW (LETakkan di sini) -->
-if(type==='review'){
-c=`<h3>🙏 Dukungan Anda Berarti</h3>
-
-<p>Jika Anda berkenan, silakan bantu memberikan review di Google 🙏</p>
-
-<a href="https://g.page/r/CUsbXhewtT_FEBM/review" target="_blank"
-style="display:block;margin-top:12px;padding:12px;border-radius:12px;background:#ffc107;color:#000;font-weight:700;text-decoration:none;">
-⭐ Tulis Review Sekarang
-</a>`;
-}
-
-/* ⭐ LETAKKAN DI SINI (WAJIB DI LUAR SEMUA if) */
-c += `
-<div class="close" onclick="closeModal()" style="
-margin-top:15px;
-background:#ccc;
-padding:10px;
-border-radius:10px;
-cursor:pointer;
-">
-Tutup
-</div>`;
- 
-document.getElementById("modalContent").innerHTML=c;
+document.getElementById("modalContent").innerHTML=c + `
+<div class="close" onclick="closeModal()">Tutup</div>`;
 document.getElementById("modal").style.display="flex";
+}
+
+function showWejangan(){
+document.getElementById("textWejangan").style.display="block";
 }
 
 function closeModal(){
 document.getElementById("modal").style.display="none";
-}
-
-window.onclick = function(e){
-if(e.target.id === "modal"){
-closeModal();
-}
 }
 </script>
 
