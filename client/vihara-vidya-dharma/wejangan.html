@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Wejangan Harian</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fef6f9, #e6fffa);
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 15px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .btn {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #4fd1c5, #63b3ed);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .show {
+      display: block;
+      margin-top: 15px;
+    }
+
+    .makna {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f7fafc;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    
+    <!-- Gambar -->
+    <img src="wejangan1.jpg" class="img">
+
+    <!-- Tombol -->
+    <button onclick="toggleText()" class="btn">
+      🌐 Lihat Terjemahan
+    </button>
+
+    <!-- Teks Terjemahan -->
+    <div id="textBox" class="hidden">
+
+      <h3>Kematian Tidak Perlu Dipersiapkan</h3>
+
+      <p>
+        Sama sekali tidak perlu dipersiapkan, jika waktunya mati ya mati saja, mempersiapkan apa?<br><br>
+
+        Apa yang perlu dipersiapkan, karena ini adalah <b>Ketidakkekalan (Anitya)</b>!<br><br>
+
+        Mempersiapkannya pun sudah terlambat!...<br><br>
+
+        Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.<br><br>
+
+        Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.<br><br>
+
+        Apa lagi yang perlu kau persiapkan?
+      </p>
+
+      <div class="makna">
+        <b>Makna:</b><br>
+        Persiapan sejati bukan dilakukan saat ajal tiba, tetapi dari latihan dan kebajikan yang dilakukan setiap hari.
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function toggleText() {
+      const box = document.getElementById("textBox");
+      box.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
