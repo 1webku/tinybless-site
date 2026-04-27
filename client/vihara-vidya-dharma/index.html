@@ -158,8 +158,6 @@ text-align:center;
 box-shadow:0 20px 40px rgba(0,0,0,0.35);
 animation:fadeIn 0.3s ease;
 
-max-height:80vh;   /* 🔥 biar bisa scroll */
-overflow-y:auto;   /* 🔥 aktifkan scroll */
 }
 
 @keyframes fadeIn{
@@ -440,10 +438,16 @@ document.getElementById("modal").style.display="none";
 }
 
 window.onclick = function(e){
+if(e.target.id === "modal"){
+closeModal();
+}
+}
+
+// ✅ TARUH DI LUAR (INI PENTING BANGET)
 function showTerjemahan(){
 document.getElementById("modalContent").innerHTML = `
 
-<div style="text-align:left;line-height:1.6;">
+<div style="text-align:left;line-height:1.6;font-size:15px;">
 
 <p><b>Kematian Tidak Perlu Dipersiapkan</b></p>
 
@@ -461,16 +465,12 @@ document.getElementById("modalContent").innerHTML = `
 
 <p><b>Makna:</b></p>
 
-<p>Wejangan ini mengajarkan bahwa persiapan sejati bukan dilakukan saat akhir, tetapi melalui kehidupan sehari-hari yang penuh kesadaran dan kebajikan.</p>
+<p>Wejangan ini mengajarkan bahwa persiapan sejati adalah kehidupan sehari-hari yang penuh kesadaran dan kebajikan.</p>
 
 </div>
 
 <div class="close" onclick="openModal('wejangan')">Kembali</div>
 `;
-}
- 
-if(e.target.id === "modal"){
-closeModal();
 }
 }
 </script>
