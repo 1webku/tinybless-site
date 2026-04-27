@@ -394,36 +394,17 @@ Wakil Tang Cu Bpk. Yos / Xing Xiang
 }
 
 if(type==='wejangan'){
-c=`<h3>📖 Wejangan/Artikel spiritual Mula Guru</h3>
-
-<div style="font-size:13px;color:#666;margin-bottom:8px;">
-👉 Klik gambar untuk membaca terjemahan
-</div>
+c=`
 
 <img src="img/wejangan-1.jpg"
-style="width:100%;border-radius:12px;margin-bottom:10px;cursor:pointer;"
-onclick="this.nextElementSibling.style.display='block'">
+style="width:100%;border-radius:16px;margin-bottom:10px;cursor:pointer;"
+onclick="showTerjemahan()">
 
-<p style="display:none;text-align:left;">
-<b>Kematian Tidak Perlu Dipersiapkan</b><br><br>
+<div style="font-size:13px;color:#666;text-align:center;">
+👉 Klik gambar untuk baca terjemahan
+</div>
 
-<p>Sama sekali tidak perlu dipersiapkan, jika waktunya mati ya mati saja, mempersiapkan apa?</p>
-
-Apa yang perlu dipersiapkan, karena ini adalah Ketidakkekalan (Anitya)!<br><br>
-
-Mempersiapkannya pun sudah terlambat!...<br><br>
-
-Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.<br><br>
-
-Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.<br><br>
-
-Apa lagi yang perlu kau persiapkan?<br><br>
-
-<b>Makna:</b><br>
-Wejangan ini bukan berarti kita harus mengabaikan kematian. Sebaliknya, maknanya adalah bahwa persiapan sejati bukanlah sesuatu yang dilakukan mendadak saat ajal tiba, melainkan hasil dari latihan spiritual dan perbuatan baik yang dilakukan setiap hari.<br><br>
-
-Karena kematian bisa datang kapan saja (ketidakkekalan), maka setiap momen kehidupan yang dijalani dengan sadar dan baik adalah bentuk persiapan yang sesungguhnya.
-</p>`;
+`;
 } 
 
 <!-- ⭐ TAMBAHAN REVIEW (LETakkan di sini) -->
@@ -459,6 +440,35 @@ document.getElementById("modal").style.display="none";
 }
 
 window.onclick = function(e){
+function showTerjemahan(){
+document.getElementById("modalContent").innerHTML = `
+
+<div style="text-align:left;line-height:1.6;">
+
+<p><b>Kematian Tidak Perlu Dipersiapkan</b></p>
+
+<p>Sama sekali tidak perlu dipersiapkan, jika waktunya mati ya mati saja, mempersiapkan apa?</p>
+
+<p>Apa yang perlu dipersiapkan, karena ini adalah Ketidakkekalan (Anitya)!</p>
+
+<p>Mempersiapkannya pun sudah terlambat!...</p>
+
+<p>Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.</p>
+
+<p>Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.</p>
+
+<p>Apa lagi yang perlu kau persiapkan?</p>
+
+<p><b>Makna:</b></p>
+
+<p>Wejangan ini mengajarkan bahwa persiapan sejati bukan dilakukan saat akhir, tetapi melalui kehidupan sehari-hari yang penuh kesadaran dan kebajikan.</p>
+
+</div>
+
+<div class="close" onclick="openModal('wejangan')">Kembali</div>
+`;
+}
+ 
 if(e.target.id === "modal"){
 closeModal();
 }
