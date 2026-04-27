@@ -142,14 +142,24 @@ display:none;align-items:center;justify-content:center;
 z-index:999;
 }
 
+.modal p{
+white-space:normal;     /* 🔥 ganti dari pre-line */
+line-height:1.6;
+margin-bottom:10px;
+} 
+ 
 .modal-content{
 background:rgba(255,255,255,0.95);
 border-radius:18px;
 padding:20px;
-max-width:340px;width:90%;
+max-width:340px;
+width:90%;
 text-align:center;
 box-shadow:0 20px 40px rgba(0,0,0,0.35);
 animation:fadeIn 0.3s ease;
+
+max-height:80vh;   /* 🔥 biar bisa scroll */
+overflow-y:auto;   /* 🔥 aktifkan scroll */
 }
 
 @keyframes fadeIn{
