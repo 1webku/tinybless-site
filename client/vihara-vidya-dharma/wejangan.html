@@ -2,215 +2,193 @@
 
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wejangan Harian</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wejangan Harian</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #fdf6f0, #e6fffa);
-      margin: 0;
-      padding: 16px;
-      transition: all 0.3s ease;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdf6f0;
+  overflow-x: hidden;
+}
 
-    /* DARK MODE */
-    body.dark {
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+/* SWIPE */
+.container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  height: 100vh;
+}
 
-    .card {
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 20px;
-      padding: 16px;
-      max-width: 420px;
-      margin: 0 auto 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
+.slide {
+  min-width: 100%;
+  scroll-snap-align: start;
+  padding: 16px;
+  box-sizing: border-box;
+}
 
-    body.dark .card {
-      background: rgba(30, 41, 59, 0.9);
-    }
+/* CARD */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 16px;
+  max-width: 420px;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 
-    .img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 12px;
-    }
+.img {
+  width: 100%;
+  border-radius: 15px;
+}
 
-    .btn {
-      width: 100%;
-      padding: 12px;
-      border-radius: 999px;
-      border: none;
-      background: linear-gradient(135deg, #4fd1c5, #63b3ed);
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      margin-bottom: 10px;
-    }
+/* BUTTON */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg,#4fd1c5,#63b3ed);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .toggle-dark, .toggle-focus {
-      position: fixed;
-      top: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 12px;
-      z-index: 99;
-    }
+/* TEXT */
+.hidden { display: none; }
+.show { display: block; }
 
-    .toggle-dark {
-      right: 10px;
-      background: #334155;
-      color: white;
-    }
+p {
+  font-size: 16px;
+  line-height: 1.7;
+}
 
-    .toggle-focus {
-      left: 10px;
-      background: #4fd1c5;
-      color: white;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .show {
-      display: block;
-      margin-top: 10px;
-    }
-
-    h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-
-    .makna {
-      margin-top: 12px;
-      padding: 14px;
-      background: #eef7f6;
-      border-radius: 12px;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    body.dark .makna {
-      background: #1e293b;
-    }
-
-    /* FOCUS MODE */
-    .focus p {
-      font-size: 19px;
-      line-height: 2;
-    }
-
-    .focus h3 {
-      font-size: 22px;
-    }
-
-  </style>
+.makna {
+  background: #eef7f6;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+</style>
 
 </head>
 
 <body>
 
-<button class="toggle-dark" onclick="toggleDark()">🌙 Mode</button> <button class="toggle-focus" onclick="toggleFocus()">🧘 Fokus</button>
+<div class="container">
 
-  <!-- WEJANGAN 1 -->
+<!-- WEJANGAN 1 -->
 
-  <div class="card">
-    <img src="img/wejangan1.jpg" class="img">
+<div class="slide">
+<div class="card">
+<img src="img/wejangan1.jpg" class="img">
 
-```
 <button onclick="toggleText(1)" class="btn">🌐 Lihat Terjemahan</button>
 
 <div id="text1" class="hidden">
+<h3>Kematian Tidak Perlu Dipersiapkan</h3>
 
-  <h3>Kematian Tidak Perlu Dipersiapkan</h3>
+<p>Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?</p>
+<p>Apa yang perlu dipersiapkan, karena ini adalah <b>Ketidakkekalan (Anitya)</b>!</p>
+<p>Mempersiapkannya pun sudah terlambat!...</p>
+<p>Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.</p>
+<p>Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.</p>
+<p>Apa lagi yang perlu kau persiapkan?</p>
 
-  <p>Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?</p>
-
-  <p>Apa yang perlu dipersiapkan, karena ini adalah <b>Ketidakkekalan (Anitya)</b>!</p>
-
-  <p>Mempersiapkannya pun sudah terlambat!...</p>
-
-  <p>Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.</p>
-
-  <p>Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.</p>
-
-  <p>Apa lagi yang perlu kau persiapkan?</p>
-
-  <div class="makna">
-    <b>Makna:</b><br>
-    Wejangan ini bukan berarti kita harus mengabaikan kematian.<br><br>
-    Maknanya adalah bahwa persiapan sejati bukanlah sesuatu yang dilakukan mendadak saat ajal tiba,
-    melainkan hasil dari latihan spiritual dan perbuatan baik yang dilakukan secara konsisten setiap hari.<br><br>
-    Karena kematian bisa datang kapan saja (ketidakkekalan), maka setiap momen kehidupan yang dijalani
-    dengan sadar dan baik adalah bentuk persiapan yang sesungguhnya.
-  </div>
-
+<div class="makna">
+Persiapan sejati adalah latihan spiritual dan kebajikan setiap hari.
 </div>
-```
+</div>
+</div>
+</div>
 
-  </div>
+<!-- WEJANGAN 2 -->
 
-  <!-- WEJANGAN 2 -->
+<div class="slide">
+<div class="card">
+<img src="img/wejangan2.jpg" class="img">
 
-  <div class="card">
-    <img src="img/wejangan2.jpg" class="img">
-
-```
 <button onclick="toggleText(2)" class="btn">🌐 Lihat Terjemahan</button>
 
 <div id="text2" class="hidden">
+<h3>Hakikat Kehidupan</h3>
 
-  <h3>Hakikat Kehidupan</h3>
+<p>Jika suatu hari nanti ada seseorang yang bertanya:</p>
+<p>"Lu Sheng-yen telah pergi, apa yang dia tinggalkan?"</p>
+<p>Para siswa dapat menjawab demikian:</p>
+<p>"Dia meninggalkan setumpuk buku, yang di dalamnya terdapat Hakikat Kehidupan."</p>
 
-  <p>Jika suatu hari nanti ada seseorang yang bertanya:</p>
+<div class="makna">
+Seorang guru sejati tetap hidup melalui ajarannya.
+</div>
+</div>
+</div>
+</div>
 
-  <p>"Lu Sheng-yen telah pergi, apa yang dia tinggalkan?"</p>
+<!-- WEJANGAN 3 -->
 
-  <p>Para siswa dapat menjawab demikian:</p>
+<div class="slide">
+<div class="card">
+<img src="img/wejangan3.jpg" class="img">
 
-  <p>"Dia meninggalkan setumpuk buku, yang di dalamnya terdapat Hakikat Kehidupan."</p>
+<button onclick="toggleText(3)" class="btn">🌐 Lihat Terjemahan</button>
 
-  <div class="makna">
-    <b>Makna:</b><br>
-    Seorang guru sejati tetap hidup melalui ajarannya.<br><br>
-    Bagi para murid, cara terbaik untuk menghormati guru dan mempersiapkan diri adalah
-    dengan mempelajari dan mempraktikkan ajaran (Dharma) tersebut secara konsisten.
-  </div>
+<div id="text3" class="hidden">
+<h3>Kesadaran dalam Seteguk Air</h3>
+
+<p>Buddha Sakyamuni pernah bersabda:</p>
+
+<p>"Dalam seteguk air bersih, terdapat 84.000 makhluk kecil (mikroorganisme). Jika tidak melafalkan mantra, maka itu sama saja dengan membunuh makhluk hidup."</p>
+
+<p>Oleh karena itu, Mula Guru Lian Sheng mengajarkan bahwa dalam kehidupan sehari-hari harus membentuk Mudra Penyeberangan Samudra dan melafalkan mantra:</p>
+
+<p><b>Om. Ah-pe-la-hum. Kan-cha-la. So-ha.</b></p>
+
+<p>Memberi manfaat bagi makhluk hidup, jasa yang tak terhingga, kasih sayang yang tanpa batas.</p>
+
+<div class="makna">
+Kesadaran + mantra + welas asih adalah inti praktik.
+</div>
+</div>
+</div>
+</div>
+
+<!-- WEJANGAN 4 -->
+
+<div class="slide">
+<div class="card">
+<img src="img/wejangan4.jpg" class="img">
+
+<button onclick="toggleText(4)" class="btn">🌐 Lihat Terjemahan</button>
+
+<div id="text4" class="hidden">
+<h3>Sutra Raja Agung Avalokitesvara</h3>
+
+<p>Sutra Raja Agung Avalokitesvara (Kao Wang Kuan Shi Yin Zhen Jing) yang dilafalkan di dalam sekte kita adalah sebuah kitab suci yang luar biasa.</p>
+
+<p>Kalian semua tahu bahwa dalam Aliran Tanah Suci, orang-orang melafalkan "Namo Amituofo" setiap hari.</p>
+
+<p>Namun, satu Sutra Raja Agung ini setara dengan kumpulan seluruh pelafalan nama Buddha.</p>
+
+<p>Jika kamu melafalkannya, kekuatannya melampaui pelafalan mereka selama seratus tahun.</p>
+
+<div class="makna">
+Dorongan untuk tekun melafalkan sutra karena mengandung kekuatan seluruh Buddha.
+</div>
+</div>
+</div>
+</div>
 
 </div>
-```
 
-  </div>
-
-  <script>
-    function toggleText(id) {
-      const box = document.getElementById("text" + id);
-      box.classList.toggle("show");
-    }
-
-    function toggleDark() {
-      document.body.classList.toggle("dark");
-    }
-
-    function toggleFocus() {
-      document.body.classList.toggle("focus");
-    }
-  </script>
+<script>
+function toggleText(id){
+  document.getElementById("text"+id).classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
