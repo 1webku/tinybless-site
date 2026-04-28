@@ -60,10 +60,7 @@ body {
 .hidden { display: none; }
 .show { display: block; }
 
-p {
-  font-size: 16px;
-  line-height: 1.7;
-}
+p { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
 
 .makna {
   background: #eef7f6;
@@ -72,7 +69,7 @@ p {
   margin-top: 10px;
 }
 
-/* NAV BUTTON */
+/* NAV */
 .nav-btn {
   position: fixed;
   top: 50%;
@@ -111,6 +108,22 @@ p {
   background: #4fd1c5;
 }
 
+/* HOME */
+.home-btn {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4fd1c5;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 100;
+}
+
 /* HINT */
 .hint {
   position: fixed;
@@ -125,20 +138,19 @@ p {
 
 <body>
 
-<button class="nav-btn prev" onclick="prevSlide()">‹</button> <button class="nav-btn next" onclick="nextSlide()">›</button>
+<button class="home-btn" onclick="goHome()">🏠 Home</button> <button class="nav-btn prev" onclick="prevSlide()">‹</button> <button class="nav-btn next" onclick="nextSlide()">›</button>
 
 <div id="container" class="container">
 
 <!-- WEJANGAN 1 -->
 
-<div class="slide">
-<div class="card">
+<div class="slide"><div class="card">
 <img src="img/wejangan1.jpg" class="img">
 <button onclick="toggleText(1)" class="btn">🌐 Lihat Terjemahan</button>
 <div id="text1" class="hidden">
 <h3>Kematian Tidak Perlu Dipersiapkan</h3>
 
-<p>Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?</p>
+<p>Sama sekali tidak perlu dipersiapkan, jika waktunya mati ya mati saja, mempersiapkan apa?</p>
 <p>Apa yang perlu dipersiapkan, karena ini adalah Ketidakkekalan (Anitya)!</p>
 <p>Mempersiapkannya pun sudah terlambat!...</p>
 <p>Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.</p>
@@ -146,19 +158,16 @@ p {
 <p>Apa lagi yang perlu kau persiapkan?</p>
 
 <div class="makna">
-Wejangan ini bukan berarti kita harus mengabaikan kematian.
-Maknanya adalah bahwa persiapan sejati bukan dilakukan mendadak saat ajal tiba,
-melainkan hasil dari latihan spiritual dan kebajikan setiap hari.
-Karena kematian bisa datang kapan saja, setiap momen hidup adalah persiapan.
+Wejangan ini bukan berarti kita harus mengabaikan kematian.  
+Maknanya adalah bahwa persiapan sejati bukanlah sesuatu yang dilakukan mendadak saat ajalnya tiba,  
+melainkan hasil dari akumulasi latihan spiritual dan perbuatan baik yang dilakukan secara konsisten setiap hari selama hidup.  
+Karena kematian bisa datang kapan saja (ketidakkekalan), maka setiap momen kehidupan yang dijalani dengan sadar dan baik adalah bentuk persiapan yang sesungguhnya.
 </div>
-</div>
-</div>
-</div>
+</div></div></div>
 
 <!-- WEJANGAN 2 -->
 
-<div class="slide">
-<div class="card">
+<div class="slide"><div class="card">
 <img src="img/wejangan2.jpg" class="img">
 <button onclick="toggleText(2)" class="btn">🌐 Lihat Terjemahan</button>
 <div id="text2" class="hidden">
@@ -170,17 +179,14 @@ Karena kematian bisa datang kapan saja, setiap momen hidup adalah persiapan.
 <p>"Dia meninggalkan setumpuk buku, yang di dalamnya terdapat Hakikat Kehidupan."</p>
 
 <div class="makna">
-Seorang guru sejati tetap hidup melalui ajarannya.
-Cara terbaik menghormati guru adalah mempelajari dan mempraktikkan Dharma secara konsisten.
+Seorang guru sejati tetap hidup melalui ajarannya.  
+Bagi para murid, cara terbaik untuk menghormati guru dan mempersiapkan diri adalah dengan mempelajari dan mempraktikkan ajaran (Dharma) tersebut secara konsisten.
 </div>
-</div>
-</div>
-</div>
+</div></div></div>
 
 <!-- WEJANGAN 3 -->
 
-<div class="slide">
-<div class="card">
+<div class="slide"><div class="card">
 <img src="img/wejangan3.jpg" class="img">
 <button onclick="toggleText(3)" class="btn">🌐 Lihat Terjemahan</button>
 <div id="text3" class="hidden">
@@ -188,26 +194,24 @@ Cara terbaik menghormati guru adalah mempelajari dan mempraktikkan Dharma secara
 <h3>Kesadaran dalam Seteguk Air</h3>
 
 <p>Buddha Sakyamuni pernah bersabda:</p>
-<p>"Dalam seteguk air bersih, terdapat 84.000 makhluk kecil (mikroorganisme). Jika tidak melafalkan mantra, maka itu sama saja dengan membunuh makhluk hidup."</p>
 
-<p>Oleh karena itu, Mula Guru Lian Sheng mengajarkan kepada para siswa bahwa dalam kehidupan sehari-hari harus membentuk Mudra Penyeberangan Samudra dan melafalkan Mantra:</p>
+<p>"Dalam seteguk air bersih, terdapat 84.000 makhluk kecil (mikroorganisme). jika tidak melafalkan mantra, maka itu sama saja dengan membunuh makhluk hidup."</p>
 
-<p><b>Om. Ah-pe-la-hum. Kan-cha-la. So-ha.</b></p>
+<p>Oleh karena itu, Mula Guru Lian Sheng mengajarkan kepada para siswa bahwa dalam kehidupan sehari-hari harus membentuk Mudra Penyeberangan Samudra (Ta Hai Chao Tu Shou Yin) dan melafalkan Mantra Kelahiran Kembali Manjusri:</p>
+
+<p><b>"Om. Ah-pe-la-hum. Kan-cha-la. So-ha."</b></p>
 
 <p>Memberi manfaat bagi makhluk hidup, jasa yang tak terhingga, kasih sayang yang tanpa batas.</p>
 
 <div class="makna">
-Mengajarkan kesadaran penuh bahwa tindakan sederhana pun melibatkan makhluk lain.
-Menggunakan mantra dan niat untuk menolong, membersihkan karma, dan melatih kasih sayang.
+Mengajarkan kita untuk memiliki kesadaran penuh bahwa tindakan sederhana seperti minum pun melibatkan interaksi dengan makhluk lain.  
+Menggunakan kekuatan mantra dan niat (Bodhicitta) untuk menyeberangkan, membersihkan karma, dan melatih kasih sayang.
 </div>
-</div>
-</div>
-</div>
+</div></div></div>
 
 <!-- WEJANGAN 4 -->
 
-<div class="slide">
-<div class="card">
+<div class="slide"><div class="card">
 <img src="img/wejangan4.jpg" class="img">
 <button onclick="toggleText(4)" class="btn">🌐 Lihat Terjemahan</button>
 <div id="text4" class="hidden">
@@ -216,20 +220,40 @@ Menggunakan mantra dan niat untuk menolong, membersihkan karma, dan melatih kasi
 
 <p>Sutra Raja Agung Avalokitesvara (Kao Wang Kuan Shi Yin Zhen Jing) yang dilafalkan di dalam sekte kita (True Buddha School) adalah sebuah kitab suci yang luar biasa.</p>
 
-<p>Kalian semua tahu bahwa dalam Aliran Tanah Suci, orang-orang melafalkan nama Buddha setiap hari, melafalkan "Namo Amituofo", baik enam suku kata maupun empat suku kata.</p>
+<p>Kalian semua tahu bahwa dalam Aliran Tanah Suci (Jing Tu Zong), orang-orang melafalkan nama Buddha setiap hari, melafalkan 'Namo Amituofo', baik enam suku kata maupun empat suku kata.</p>
 
-<p>Namun, satu kitab Sutra Raja Agung Avalokitesvara ini setara dengan ringkasan atau kumpulan dari seluruh pelafalan nama Buddha.</p>
+<p>Namun, satu kitab Sutra Raja Agung Avalokitesvara ini setara dengan ringkasan/kumpulan dari seluruh pelafalan nama Buddha.</p>
 
 <p>Jika kamu melafalkan Sutra Raja Agung ini, kekuatannya melampaui pelafalan mereka selama seratus tahun.</p>
 
 <div class="makna">
-Dorongan untuk menghargai dan tekun melafalkan sutra ini,
-karena mengandung kekuatan spiritual yang luar biasa dalam waktu relatif singkat.
+Dorongan bagi para murid untuk menghargai dan tekun melafalkan Sutra Raja Agung Avalokitesvara, karena di dalamnya terkandung kekuatan seluruh Buddha yang mampu memberikan hasil spiritual yang luar biasa dalam waktu yang relatif singkat.
 </div>
 
+</div></div></div>
+
+<!-- WEJANGAN 5 -->
+
+<div class="slide"><div class="card">
+<img src="img/wejangan5.jpg" class="img">
+<button onclick="toggleText(5)" class="btn">🌐 Lihat Terjemahan</button>
+<div id="text5" class="hidden">
+
+<h3>Berkah Terlahir sebagai Manusia</h3>
+
+<p>Buddha Sakyamuni pernah bersabda:</p>
+
+<p>Kita mampu terlahir di dunia Saha ini, mendapatkan tubuh manusia ini, dan pada saat yang sama dapat mendengarkan Dharma (Ajaran Buddha) serta mendengarkan Kebenaran, ini adalah berkah yang sangat besar.</p>
+
+<p>Setelah kamu mendapatkannya, jika kamu mampu benar-benar mendalami ajaran tersebut, memiliki kebijaksanaan sedalam samudra, dan mempelajari kebijaksanaan Sang Tathagata (Buddha), inilah yang disebut sebagai berkah yang tiada habisnya.</p>
+
+<div class="makna">
+Dalam filosofi Buddhis, terlahir sebagai manusia dianggap sangat sulit dan langka, tetapi bisa bertemu dan mendengar ajaran kebenaran (Dharma) adalah berkah ganda.  
+Pesan ini mengingatkan agar kita tidak menyia-nyiakan kesempatan hidup yang sekarang.  
+Karena inilah satu-satunya harta (berkah) yang benar-benar bisa kita bawa selamanya.
 </div>
-</div>
-</div>
+
+</div></div></div>
 
 </div>
 
@@ -239,7 +263,7 @@ karena mengandung kekuatan spiritual yang luar biasa dalam waktu relatif singkat
 <script>
 let index = 0;
 const container = document.getElementById("container");
-const total = 4;
+const total = 5;
 
 function nextSlide(){
   if(index < total-1){
@@ -254,6 +278,8 @@ function prevSlide(){
     index--;
     container.scrollTo({left: index * window.innerWidth});
     updateDots();
+  } else {
+    window.location.href="index.html";
   }
 }
 
@@ -272,6 +298,10 @@ updateDots();
 
 function toggleText(id){
   document.getElementById("text"+id).classList.toggle("show");
+}
+
+function goHome(){
+  window.location.href="index.html";
 }
 </script>
 
