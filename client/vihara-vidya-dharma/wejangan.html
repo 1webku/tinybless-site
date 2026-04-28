@@ -44,6 +44,7 @@ body {
   border-radius: 15px;
 }
 
+/* BUTTON */
 .btn {
   width: 100%;
   padding: 12px;
@@ -59,7 +60,10 @@ body {
 .hidden { display: none; }
 .show { display: block; }
 
-p { font-size: 16px; line-height: 1.7; }
+p {
+  font-size: 16px;
+  line-height: 1.7;
+}
 
 .makna {
   background: #eef7f6;
@@ -68,7 +72,7 @@ p { font-size: 16px; line-height: 1.7; }
   margin-top: 10px;
 }
 
-/* 🔥 PANAH */
+/* NAV BUTTON */
 .nav-btn {
   position: fixed;
   top: 50%;
@@ -86,7 +90,7 @@ p { font-size: 16px; line-height: 1.7; }
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* 🔵 DOT INDICATOR */
+/* DOT */
 .dots {
   position: fixed;
   bottom: 15px;
@@ -107,14 +111,13 @@ p { font-size: 16px; line-height: 1.7; }
   background: #4fd1c5;
 }
 
-/* ✋ HINT */
+/* HINT */
 .hint {
   position: fixed;
   bottom: 40px;
   width: 100%;
   text-align: center;
   font-size: 12px;
-  color: #666;
 }
 </style>
 
@@ -122,13 +125,11 @@ p { font-size: 16px; line-height: 1.7; }
 
 <body>
 
-<!-- PANAH -->
-
 <button class="nav-btn prev" onclick="prevSlide()">‹</button> <button class="nav-btn next" onclick="nextSlide()">›</button>
 
 <div id="container" class="container">
 
-<!-- SLIDE 1 -->
+<!-- WEJANGAN 1 -->
 
 <div class="slide">
 <div class="card">
@@ -136,18 +137,25 @@ p { font-size: 16px; line-height: 1.7; }
 <button onclick="toggleText(1)" class="btn">🌐 Lihat Terjemahan</button>
 <div id="text1" class="hidden">
 <h3>Kematian Tidak Perlu Dipersiapkan</h3>
+
 <p>Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?</p>
-<p>Apa yang perlu dipersiapkan, karena ini adalah <b>Ketidakkekalan (Anitya)</b>!</p>
+<p>Apa yang perlu dipersiapkan, karena ini adalah Ketidakkekalan (Anitya)!</p>
 <p>Mempersiapkannya pun sudah terlambat!...</p>
 <p>Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.</p>
 <p>Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.</p>
 <p>Apa lagi yang perlu kau persiapkan?</p>
-<div class="makna">Persiapan sejati adalah latihan spiritual dan kebajikan setiap hari.</div>
+
+<div class="makna">
+Wejangan ini bukan berarti kita harus mengabaikan kematian.
+Maknanya adalah bahwa persiapan sejati bukan dilakukan mendadak saat ajal tiba,
+melainkan hasil dari latihan spiritual dan kebajikan setiap hari.
+Karena kematian bisa datang kapan saja, setiap momen hidup adalah persiapan.
+</div>
 </div>
 </div>
 </div>
 
-<!-- SLIDE 2 -->
+<!-- WEJANGAN 2 -->
 
 <div class="slide">
 <div class="card">
@@ -155,52 +163,77 @@ p { font-size: 16px; line-height: 1.7; }
 <button onclick="toggleText(2)" class="btn">🌐 Lihat Terjemahan</button>
 <div id="text2" class="hidden">
 <h3>Hakikat Kehidupan</h3>
+
 <p>Jika suatu hari nanti ada seseorang yang bertanya:</p>
 <p>"Lu Sheng-yen telah pergi, apa yang dia tinggalkan?"</p>
 <p>Para siswa dapat menjawab demikian:</p>
 <p>"Dia meninggalkan setumpuk buku, yang di dalamnya terdapat Hakikat Kehidupan."</p>
-<div class="makna">Seorang guru sejati tetap hidup melalui ajarannya.</div>
+
+<div class="makna">
+Seorang guru sejati tetap hidup melalui ajarannya.
+Cara terbaik menghormati guru adalah mempelajari dan mempraktikkan Dharma secara konsisten.
+</div>
 </div>
 </div>
 </div>
 
-<!-- SLIDE 3 -->
+<!-- WEJANGAN 3 -->
 
 <div class="slide">
 <div class="card">
 <img src="img/wejangan3.jpg" class="img">
 <button onclick="toggleText(3)" class="btn">🌐 Lihat Terjemahan</button>
 <div id="text3" class="hidden">
+
 <h3>Kesadaran dalam Seteguk Air</h3>
+
 <p>Buddha Sakyamuni pernah bersabda:</p>
-<p>"Dalam seteguk air bersih, terdapat 84.000 makhluk kecil..."</p>
-<div class="makna">Kesadaran + welas asih.</div>
+<p>"Dalam seteguk air bersih, terdapat 84.000 makhluk kecil (mikroorganisme). Jika tidak melafalkan mantra, maka itu sama saja dengan membunuh makhluk hidup."</p>
+
+<p>Oleh karena itu, Mula Guru Lian Sheng mengajarkan kepada para siswa bahwa dalam kehidupan sehari-hari harus membentuk Mudra Penyeberangan Samudra dan melafalkan Mantra:</p>
+
+<p><b>Om. Ah-pe-la-hum. Kan-cha-la. So-ha.</b></p>
+
+<p>Memberi manfaat bagi makhluk hidup, jasa yang tak terhingga, kasih sayang yang tanpa batas.</p>
+
+<div class="makna">
+Mengajarkan kesadaran penuh bahwa tindakan sederhana pun melibatkan makhluk lain.
+Menggunakan mantra dan niat untuk menolong, membersihkan karma, dan melatih kasih sayang.
+</div>
 </div>
 </div>
 </div>
 
-<!-- SLIDE 4 -->
+<!-- WEJANGAN 4 -->
 
 <div class="slide">
 <div class="card">
 <img src="img/wejangan4.jpg" class="img">
 <button onclick="toggleText(4)" class="btn">🌐 Lihat Terjemahan</button>
 <div id="text4" class="hidden">
+
 <h3>Sutra Raja Agung Avalokitesvara</h3>
-<p>Sutra Raja Agung Avalokitesvara adalah kitab suci yang luar biasa.</p>
-<div class="makna">Kekuatan spiritual besar.</div>
+
+<p>Sutra Raja Agung Avalokitesvara (Kao Wang Kuan Shi Yin Zhen Jing) yang dilafalkan di dalam sekte kita (True Buddha School) adalah sebuah kitab suci yang luar biasa.</p>
+
+<p>Kalian semua tahu bahwa dalam Aliran Tanah Suci, orang-orang melafalkan nama Buddha setiap hari, melafalkan "Namo Amituofo", baik enam suku kata maupun empat suku kata.</p>
+
+<p>Namun, satu kitab Sutra Raja Agung Avalokitesvara ini setara dengan ringkasan atau kumpulan dari seluruh pelafalan nama Buddha.</p>
+
+<p>Jika kamu melafalkan Sutra Raja Agung ini, kekuatannya melampaui pelafalan mereka selama seratus tahun.</p>
+
+<div class="makna">
+Dorongan untuk menghargai dan tekun melafalkan sutra ini,
+karena mengandung kekuatan spiritual yang luar biasa dalam waktu relatif singkat.
+</div>
+
 </div>
 </div>
 </div>
 
 </div>
-
-<!-- DOT -->
 
 <div class="dots" id="dots"></div>
-
-<!-- HINT -->
-
 <div class="hint">← Geser atau gunakan tombol →</div>
 
 <script>
@@ -208,7 +241,6 @@ let index = 0;
 const container = document.getElementById("container");
 const total = 4;
 
-/* NAV */
 function nextSlide(){
   if(index < total-1){
     index++;
@@ -225,14 +257,12 @@ function prevSlide(){
   }
 }
 
-/* DOT */
 function updateDots(){
   document.querySelectorAll(".dot").forEach((d,i)=>{
     d.classList.toggle("active", i===index);
   });
 }
 
-/* INIT DOT */
 for(let i=0;i<total;i++){
   let dot=document.createElement("span");
   dot.className="dot";
@@ -240,7 +270,6 @@ for(let i=0;i<total;i++){
 }
 updateDots();
 
-/* TEXT */
 function toggleText(id){
   document.getElementById("text"+id).classList.toggle("show");
 }
