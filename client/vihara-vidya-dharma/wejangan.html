@@ -337,6 +337,22 @@ function updateDots(){
   });
 }
 updateDots();
+
+function toggleDark(){
+  document.body.classList.toggle("dark");
+
+  // simpan pilihan user
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("dark","true");
+  } else {
+    localStorage.setItem("dark","false");
+  }
+}
+
+// load saat buka halaman
+if(localStorage.getItem("dark") === "true"){
+  document.body.classList.add("dark");
+}  
 </script>
 
 </body>
