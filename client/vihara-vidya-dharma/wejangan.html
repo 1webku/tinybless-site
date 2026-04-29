@@ -379,6 +379,8 @@ if(localStorage.getItem("dark") === "true"){
 function shareWA(i){
   const item = wejanganData[i];
 
+  const url = "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?v=3";
+
   const text = `Wejangan Harian 🌿
 
 ${item.title}
@@ -389,7 +391,7 @@ Makna:
 ${item.makna}
 
 Baca lengkap:
-https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?v=2`;
+${url}`;
 
   const waUrl = "https://wa.me/?text=" + encodeURIComponent(text);
   window.open(waUrl, "_blank");
