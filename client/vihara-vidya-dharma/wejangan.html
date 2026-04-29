@@ -354,6 +354,26 @@ function toggleDark(){
 if(localStorage.getItem("dark") === "true"){
   document.body.classList.add("dark");
 }  
+
+function shareWA(i){
+  const item = wejanganData[i];
+
+  const text =
+`Wejangan Harian 🌿
+
+${item.title}
+
+${item.content.replace(/<br>/g,"\n")}
+
+Makna:
+${item.makna}
+
+Baca lengkap:
+https://tinybless.my.id/wejangan.html`;
+
+  const url = "https://wa.me/?text=" + encodeURIComponent(text);
+  window.open(url, "_blank");
+}  
 </script>
 
 </body>
