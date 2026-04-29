@@ -54,13 +54,12 @@ body {
   background: linear-gradient(135deg,#4fd1c5,#63b3ed);
   color: white;
   font-weight: bold;
-  cursor: pointer;
 }
 
 .hidden { display: none; }
 .show { display: block; }
 
-p { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
+p { font-size: 16px; line-height: 1.7; }
 
 .makna {
   background: #eef7f6;
@@ -80,8 +79,6 @@ p { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
   font-size: 20px;
   padding: 10px;
   border-radius: 50%;
-  cursor: pointer;
-  z-index: 99;
 }
 
 .prev { left: 10px; }
@@ -104,9 +101,7 @@ p { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
   border-radius: 50%;
 }
 
-.active {
-  background: #4fd1c5;
-}
+.active { background: #4fd1c5; }
 
 /* HOME */
 .home-btn {
@@ -119,9 +114,6 @@ p { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
   border: none;
   padding: 8px 14px;
   border-radius: 999px;
-  font-size: 13px;
-  cursor: pointer;
-  z-index: 100;
 }
 
 /* HINT */
@@ -140,143 +132,72 @@ p { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
 
 <button class="home-btn" onclick="goHome()">🏠 Home</button> <button class="nav-btn prev" onclick="prevSlide()">‹</button> <button class="nav-btn next" onclick="nextSlide()">›</button>
 
-<div id="container" class="container">
+<div id="container" class="container"></div>
+<div class="dots" id="dots"></div>
+<div class="hint">← Geser atau gunakan tombol →</div>
 
-<!-- WEJANGAN 1 -->
+<script>
+const wejanganData = [
 
-<div class="slide"><div class="card">
-<img src="img/wejangan1.jpg" class="img">
-<button onclick="toggleText(1)" class="btn">🌐 Lihat Terjemahan</button>
-<div id="text1" class="hidden">
-<h3>Kematian Tidak Perlu Dipersiapkan</h3>
+{
+img:"img/wejangan1.jpg",
+title:"Kematian Tidak Perlu Dipersiapkan",
+content:`Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?<br><br>
+Apa yang perlu dipersiapkan, karena ini adalah Ketidakkekalan (Anitya)!<br><br>
+Mempersiapkannya pun sudah terlambat!...<br><br>
+Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.<br><br>
+Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.<br><br>
+Apa lagi yang perlu kau persiapkan?`,
+makna:`Wejangan ini bukan berarti kita harus mengabaikan kematian. Sebaliknya, maknanya adalah bahwa 'persiapan' sejati bukanlah sesuatu yang dilakukan mendadak saat ajalnya tiba, melainkan hasil dari akumulasi latihan spiritual dan perbuatan baik yang dilakukan secara konsisten setiap hari selama hidup. Karena kematian bisa datang kapan saja (ketidakkekalan), maka setiap momen kehidupan yang dijalani dengan sadar dan baik adalah bentuk persiapan yang sesungguhnya.`
+},
 
-<p>Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?</p>
-<p>Apa yang perlu dipersiapkan, karena ini adalah Ketidakkekalan (Anitya)!</p>
-<p>Mempersiapkannya pun sudah terlambat!...</p>
-<p>Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.</p>
-<p>Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.</p>
-<p>Apa lagi yang perlu kau persiapkan?</p>
+{
+img:"img/wejangan2.jpg",
+title:"Hakikat Kehidupan",
+content:`Jika suatu hari nanti ada seseorang yang bertanya:<br>
+"Lu Sheng-yen telah pergi, apa yang dia tinggalkan?"<br>
+Para siswa dapat menjawab demikian:<br>
+"Dia meninggalkan setumpuk buku, yang di dalamnya terdapat Hakikat Kehidupan."`,
+makna:`Seorang guru sejati tetap hidup melalui ajarannya. Bagi para murid, cara terbaik untuk menghormati guru dan mempersiapkan diri adalah dengan mempelajari dan mempraktikkan ajaran (Dharma) tersebut secara konsisten.`
+},
 
-<div class="makna">
-Wejangan ini bukan berarti kita harus mengabaikan kematian.  
-Maknanya adalah bahwa persiapan sejati bukanlah sesuatu yang dilakukan mendadak saat ajalnya tiba,  
-melainkan hasil dari akumulasi latihan spiritual dan perbuatan baik yang dilakukan secara konsisten setiap hari selama hidup.  
-Karena kematian bisa datang kapan saja (ketidakkekalan), maka setiap momen kehidupan yang dijalani dengan sadar dan baik adalah bentuk persiapan yang sesungguhnya.
-</div>
-</div></div></div>
+{
+img:"img/wejangan3.jpg",
+title:"Kesadaran dalam Seteguk Air",
+content:`Buddha Sakyamuni pernah bersabda:<br><br>
+"Dalam seteguk air bersih, terdapat 84.000 makhluk kecil (mikroorganisme). jika tidak melafalkan mantra, maka itu sama saja dengan membunuh makhluk hidup."<br><br>
+Oleh karena itu, Mula Guru Lian Sheng mengajarkan kepada para siswa bahwa dalam kehidupan sehari-hari harus membentuk Mudra Penyeberangan Samudra (Ta Hai Chao Tu Shou Yin) dan melafalkan Mantra Kelahiran Kembali Manjusri:<br>
+"Om. Ah-pe-la-hum. Kan-cha-la. So-ha."<br><br>
+Memberi manfaat bagi makhluk hidup, jasa yang tak terhingga, kasih sayang yang tanpa batas.`,
+makna:`mengajarkan kita untuk memiliki kesadaran penuh bahwa tindakan sederhana seperti minum pun melibatkan interaksi dengan makhluk lain. Menggunakan kekuatan mantra dan niat (Bodhicitta) untuk menyeberangkan, membersihkan karma,& melatih kasih sayang.`
+},
 
-<!-- WEJANGAN 2 -->
+{
+img:"img/wejangan4.jpg",
+title:"Sutra Raja Agung Avalokitesvara",
+content:`Sutra Raja Agung Avalokitesvara (Kao Wang Kuan Shi Yin Zhen Jing) yang dilafalkan di dalam sekte kita (True Buddha School) adalah sebuah kitab suci yang luar biasa.<br><br>
+Kalian semua tahu bahwa dalam Aliran Tanah Suci (Jing Tu Zong), orang-orang melafalkan nama Buddha setiap hari, melafalkan 'Namo Amituofo', baik enam suku kata maupun empat suku kata.<br><br>
+Namun, satu kitab Sutra Raja Agung Avalokitesvara ini setara dengan ringkasan/kumpulan dari seluruh pelafalan nama Buddha.<br><br>
+Jika kamu melafalkan Sutra Raja Agung ini, kekuatannya melampaui pelafalan mereka selama seratus tahun.`,
+makna:`Dorongan bagi para murid untuk menghargai dan tekun melafalkan Sutra Raja Agung Avalokitesvara, karena di dalamnya terkandung kekuatan seluruh Buddha yang mampu memberikan hasil spiritual yang luar biasa dalam waktu yang relatif singkat.`
+},
 
-<div class="slide"><div class="card">
-<img src="img/wejangan2.jpg" class="img">
-<button onclick="toggleText(2)" class="btn">🌐 Lihat Terjemahan</button>
-<div id="text2" class="hidden">
-<h3>Hakikat Kehidupan</h3>
+{
+img:"img/wejangan5.jpg",
+title:"Berkah Terlahir sebagai Manusia",
+content:`Buddha Sakyamuni pernah bersabda:<br><br>
+Kita mampu terlahir di dunia Saha ini, mendapatkan tubuh manusia ini, dan pada saat yang sama dapat mendengarkan Dharma (Ajaran Buddha) serta mendengarkan Kebenaran, ini adalah berkah yang sangat besar.<br><br>
+Setelah kamu mendapatkannya, jika kamu mampu benar-benar mendalami ajaran tersebut, memiliki kebijaksanaan sedalam samudra, dan mempelajari kebijaksanaan Sang Tathagata (Buddha), inilah yang disebut sebagai berkah yang tiada habisnya.`,
+makna:`Dalam filosofi Buddhis, terlahir sebagai manusia dianggap sangat sulit dan langka, tetapi bisa bertemu dan mendengar ajaran kebenaran (Dharma) adalah berkah ganda. Pesan ini mengingatkan agar kita tidak menyia-nyiakan kesempatan hidup yang sekarang. Karena inilah satu-satunya harta (berkah) yang benar-benar bisa kita bawa selamanya.`
+},
 
-<p>Jika suatu hari nanti ada seseorang yang bertanya:</p>
-<p>"Lu Sheng-yen telah pergi, apa yang dia tinggalkan?"</p>
-<p>Para siswa dapat menjawab demikian:</p>
-<p>"Dia meninggalkan setumpuk buku, yang di dalamnya terdapat Hakikat Kehidupan."</p>
-
-<div class="makna">
-Seorang guru sejati tetap hidup melalui ajarannya.  
-Bagi para murid, cara terbaik untuk menghormati guru dan mempersiapkan diri adalah dengan mempelajari dan mempraktikkan ajaran (Dharma) tersebut secara konsisten.
-</div>
-</div></div></div>
-
-<!-- WEJANGAN 3 -->
-
-<div class="slide"><div class="card">
-<img src="img/wejangan3.jpg" class="img">
-<button onclick="toggleText(3)" class="btn">🌐 Lihat Terjemahan</button>
-<div id="text3" class="hidden">
-
-<h3>Kesadaran dalam Seteguk Air</h3>
-
-<p>Buddha Sakyamuni pernah bersabda:</p>
-
-<p>"Dalam seteguk air bersih, terdapat 84.000 makhluk kecil (mikroorganisme). jika tidak melafalkan mantra, maka itu sama saja dengan membunuh makhluk hidup."</p>
-
-<p>Oleh karena itu, Mula Guru Lian Sheng mengajarkan kepada para siswa bahwa dalam kehidupan sehari-hari harus membentuk Mudra Penyeberangan Samudra (Ta Hai Chao Tu Shou Yin) dan melafalkan Mantra Kelahiran Kembali Manjusri:</p>
-
-<p><b>"Om. Ah-pe-la-hum. Kan-cha-la. So-ha."</b></p>
-
-<p>Memberi manfaat bagi makhluk hidup, jasa yang tak terhingga, kasih sayang yang tanpa batas.</p>
-
-<div class="makna">
-Mengajarkan kita untuk memiliki kesadaran penuh bahwa tindakan sederhana seperti minum pun melibatkan interaksi dengan makhluk lain.  
-Menggunakan kekuatan mantra dan niat (Bodhicitta) untuk menyeberangkan, membersihkan karma, dan melatih kasih sayang.
-</div>
-</div></div></div>
-
-<!-- WEJANGAN 4 -->
-
-<div class="slide"><div class="card">
-<img src="img/wejangan4.jpg" class="img">
-<button onclick="toggleText(4)" class="btn">🌐 Lihat Terjemahan</button>
-<div id="text4" class="hidden">
-
-<h3>Sutra Raja Agung Avalokitesvara</h3>
-
-<p>Sutra Raja Agung Avalokitesvara (Kao Wang Kuan Shi Yin Zhen Jing) yang dilafalkan di dalam sekte kita (True Buddha School) adalah sebuah kitab suci yang luar biasa.</p>
-
-<p>Kalian semua tahu bahwa dalam Aliran Tanah Suci (Jing Tu Zong), orang-orang melafalkan nama Buddha setiap hari, melafalkan 'Namo Amituofo', baik enam suku kata maupun empat suku kata.</p>
-
-<p>Namun, satu kitab Sutra Raja Agung Avalokitesvara ini setara dengan ringkasan/kumpulan dari seluruh pelafalan nama Buddha.</p>
-
-<p>Jika kamu melafalkan Sutra Raja Agung ini, kekuatannya melampaui pelafalan mereka selama seratus tahun.</p>
-
-<div class="makna">
-Dorongan bagi para murid untuk menghargai dan tekun melafalkan Sutra Raja Agung Avalokitesvara, karena di dalamnya terkandung kekuatan seluruh Buddha yang mampu memberikan hasil spiritual yang luar biasa dalam waktu yang relatif singkat.
-</div>
-
-</div></div></div>
-
-<!-- WEJANGAN 5 -->
-
-<div class="slide"><div class="card">
-<img src="img/wejangan5.jpg" class="img">
-<button onclick="toggleText(5)" class="btn">🌐 Lihat Terjemahan</button>
-<div id="text5" class="hidden">
-
-<h3>Berkah Terlahir sebagai Manusia</h3>
-
-<p>Buddha Sakyamuni pernah bersabda:</p>
-
-<p>Kita mampu terlahir di dunia Saha ini, mendapatkan tubuh manusia ini, dan pada saat yang sama dapat mendengarkan Dharma (Ajaran Buddha) serta mendengarkan Kebenaran, ini adalah berkah yang sangat besar.</p>
-
-<p>Setelah kamu mendapatkannya, jika kamu mampu benar-benar mendalami ajaran tersebut, memiliki kebijaksanaan sedalam samudra, dan mempelajari kebijaksanaan Sang Tathagata (Buddha), inilah yang disebut sebagai berkah yang tiada habisnya.</p>
-
-<div class="makna">
-Dalam filosofi Buddhis, terlahir sebagai manusia dianggap sangat sulit dan langka, tetapi bisa bertemu dan mendengar ajaran kebenaran (Dharma) adalah berkah ganda.  
-Pesan ini mengingatkan agar kita tidak menyia-nyiakan kesempatan hidup yang sekarang.  
-Karena inilah satu-satunya harta (berkah) yang benar-benar bisa kita bawa selamanya.
-</div>
-
-</div></div></div>
-
-<!-- WEJANGAN 6 -->
-
-<div class="slide"><div class="card">
-<img src="img/wejangan6.jpg" class="img">
-
-<button onclick="toggleText(6)" class="btn">
-  🌐 Lihat Terjemahan
-</button>
-
-<div id="text6" class="hidden">
-
-<h3>Kekuatan Karma dan Kebiasaan</h3>
-
-<p>Ada orang bertanya kepadaku:</p>
-
-<p>Kejahatan yang diperbuat kakek-nenek, mengapa cucunya yang menerima balasannya (karma)? Sebab-akibat (Hukum Karma) macam apa ini? Di mana letak keadilan sebab-akibatnya?</p>
-
-<p>Saya menjawab:</p>
-
-<p>Cucu laki-laki itulah sang kakek, cucu perempuan itulah sang nenek. Tidakkah kamu memahami hubungan sebab-akibat dan balasan karma yang seperti ini?</p>
-
-<p>
+{
+img:"img/wejangan6.jpg",
+title:"Kekuatan Karma dan Kebiasaan",
+content:`Ada orang bertanya kepadaku:<br><br>
+Kejahatan yang diperbuat kakek-nenek, mengapa cucunya yang menerima balasannya (karma)? Sebab-akibat (Hukum Karma) macam apa ini? Di mana letak keadilan sebab-akibatnya?<br><br>
+Saya menjawab:<br><br>
+Cucu laki-laki itulah sang kakek, cucu perempuan itulah sang nenek. Tidakkah kamu memahami hubungan sebab-akibat dan balasan karma yang seperti ini?<br><br>
 Orang-orang di dunia terlalu bodoh dan tidak sadar.<br>
 Lintas generasi tetap tidak tercerahkan.<br>
 Baru hari ini menyadari diri sendiri.<br>
@@ -284,56 +205,53 @@ Semuanya adalah perbuatan dari kehidupan lampau.<br>
 Jika kehidupan sekarang tidak lagi melatih diri (berkultivasi).<br>
 Kehidupan mendatang akan tetap sama seperti dulu.<br>
 Memiliki anak cucu yang banyak.<br>
-Hanya akan mengundang malapetaka di mana-mana.</p>
+Hanya akan mengundang malapetaka di mana-mana.`,
+makna:`Tidak ada karma yang salah sasaran, ini adalah tanggung jawab pribadi. Kita tidak bisa menyalahkan leluhur atau nasib, karena bisa jadi diri kita di masa lalulah yang membentuk kondisi kita sekarang. Cara untuk memutus lingkaran setan ini hanyalah dengan melatih diri dan berbuat kebajikan agar tidak mewariskan atau membawa kembali karma buruk di masa depan.`
+},
 
-<div class="makna">
-Tidak ada karma yang salah sasaran, ini adalah tanggung jawab pribadi. 
-Kita tidak bisa menyalahkan leluhur atau nasib, karena bisa jadi diri kita di masa lalulah yang membentuk kondisi kita sekarang. 
-Cara untuk memutus lingkaran ini adalah dengan melatih diri dan berbuat kebajikan agar tidak membawa kembali karma buruk di masa depan.
-</div>
+{
+img:"img/wejangan7.jpg",
+title:"Sadhana ada pada Hati, bukan pada Formalitas",
+content:`Artinya, dalam melatih diri, hal pertama yang harus dilakukan adalah menaklukkan hati. Secara lahiriah, kamu mungkin berpura-pura menunjukkan sikap menjaga sila (peraturan), perilaku tidak terlihat menyimpang, dan penampilan luar tampak agung serta suci.<br><br>
+Namun, di dalam hati, kamu diam-diam masih terus memikirkan khayalan penuh nafsu keinginan.<br>
+Hal seperti ini, di mata saya, bisa langsung terlihat jelas dalam sekali pandang.`,
+makna:`Jangan hanya mengejar pengakuan orang lain dengan terlihat suci secara formalitas. Tuhan/Buddha/Semesta melihat apa yang ada di dalam hati, bukan apa yang dipamerkan di permukaan.`
+},
 
-</div></div></div>  
+{
+img:"img/wejangan8.jpg",
+title:"Cahaya Hati",
+content:`Anda belajar Buddha, artinya harus melakukan praktik nyata (Sadhana).<br><br>
+Anda harus mendapatkan 'Cahaya Hati' dalam dirimu sendiri agar terpancar keluar. Cahaya Hati milik Guru tidak mungkin bisa menyinari dirimu selamanya; kamu sendiri juga memiliki Cahaya Hati yang harus dipancarkan.<br><br>
+Apa yang disebut sebagai 'Cahaya Hati muncul dengan sendirinya', adalah pelita yang kamu nyalakan sendiri, dan bukan pelita yang dinyalakan oleh Guru untukmu.`,
+makna:`Jadilah "pelita bagi diri sendiri". Guru menunjukkan jalannya, tetapi kita sendirilah yang harus berjalan dan memastikan pelita di dalam hati kita menyala melalui kedisiplinan dalam melatih batin setiap hari.`
+}
 
-<!-- WEJANGAN 7 -->
+];
 
-<div class="slide"><div class="card">
-<img src="img/wejangan7.jpg" class="img">
-
-<button onclick="toggleText(7)" class="btn">
-  🌐 Lihat Terjemahan
-</button>
-
-<div id="text7" class="hidden">
-
-<h3>Sadhana ada pada Hati, bukan pada Formalitas</h3>
-
-<p>
-Artinya, dalam melatih diri, hal pertama yang harus dilakukan adalah menaklukkan hati. 
-Secara lahiriah, kamu mungkin berpura-pura menunjukkan sikap menjaga sila (peraturan), 
-perilaku tidak terlihat menyimpang, dan penampilan luar tampak agung serta suci.
-</p>
-
-<p>
-Namun, di dalam hati, kamu diam-diam masih terus memikirkan khayalan penuh nafsu keinginan.
-Hal seperti ini, di mata saya, bisa langsung terlihat jelas dalam sekali pandang.
-</p>
-
-<div class="makna">
-Jangan hanya mengejar pengakuan orang lain dengan terlihat suci secara formalitas.
-Tuhan/Buddha/Semesta melihat apa yang ada di dalam hati, bukan apa yang dipamerkan di permukaan.
-</div>
-
-</div></div></div>
-  
-</div>
-
-<div class="dots" id="dots"></div>
-<div class="hint">← Geser atau gunakan tombol →</div>
-
-<script>
 let index = 0;
 const container = document.getElementById("container");
-const total = 7;
+const total = wejanganData.length;
+
+wejanganData.forEach((item,i)=>{
+  container.innerHTML += `
+  <div class="slide">
+    <div class="card">
+      <img src="${item.img}" class="img">
+      <button onclick="toggleText(${i})" class="btn">🌐 Lihat Terjemahan</button>
+      <div id="text${i}" class="hidden">
+        <h3>${item.title}</h3>
+        <p>${item.content}</p>
+        <div class="makna">${item.makna}</div>
+      </div>
+    </div>
+  </div>
+  `;
+});
+
+function toggleText(i){
+  document.getElementById("text"+i).classList.toggle("show");
+}
 
 function nextSlide(){
   if(index < total-1){
@@ -353,26 +271,23 @@ function prevSlide(){
   }
 }
 
+function goHome(){
+  window.location.href="index.html";
+}
+
+const dotsContainer = document.getElementById("dots");
+for(let i=0;i<total;i++){
+  let dot=document.createElement("span");
+  dot.className="dot";
+  dotsContainer.appendChild(dot);
+}
+
 function updateDots(){
   document.querySelectorAll(".dot").forEach((d,i)=>{
     d.classList.toggle("active", i===index);
   });
 }
-
-for(let i=0;i<total;i++){
-  let dot=document.createElement("span");
-  dot.className="dot";
-  document.getElementById("dots").appendChild(dot);
-}
 updateDots();
-
-function toggleText(id){
-  document.getElementById("text"+id).classList.toggle("show");
-}
-
-function goHome(){
-  window.location.href="index.html";
-}
 </script>
 
 </body>
