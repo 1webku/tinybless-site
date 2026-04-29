@@ -150,10 +150,13 @@ body.dark .btn {
 
 <body>
 
-<button class="home-btn" onclick="goHome()">🏠 Home</button> <button class="nav-btn prev" onclick="prevSlide()">‹</button> <button class="nav-btn next" onclick="nextSlide()">›</button>
-<button class="home-btn" onclick="toggleDark()" style="top:50px;">
-🌙 Mode
-</button>
+<div class="top-bar">
+  <button onclick="goHome()" class="top-btn">🏠 Home</button>
+  <button onclick="toggleDark()" class="top-btn">🌙 Mode</button>
+</div>
+
+<button class="nav-btn prev" onclick="prevSlide()">‹</button>
+<button class="nav-btn next" onclick="nextSlide()">›</button>
   
 <div id="container" class="container"></div>
 <div class="dots" id="dots"></div>
