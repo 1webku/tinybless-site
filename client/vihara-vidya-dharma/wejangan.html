@@ -288,6 +288,7 @@ wejanganData.forEach((item,i)=>{
     <div class="card">
       <img src="${item.img}" class="img">
       <button onclick="toggleText(${i})" class="btn">🌐 Lihat Terjemahan</button>
+      <button onclick="shareWA(${i})" class="btn">📤 Share ke WhatsApp</button>
       <div id="text${i}" class="hidden">
         <h3>${item.title}</h3>
         <p>${item.content}</p>
