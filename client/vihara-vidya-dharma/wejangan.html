@@ -12,25 +12,23 @@
 <meta property="og:type" content="website">
 
 <style>
-body {margin:0;font-family:Arial;background:#fdf6f0;}
+body{margin:0;font-family:Arial;background:#fdf6f0;}
 .container{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;height:100vh;}
-.slide{min-width:100%;scroll-snap-align:start;padding:16px;}
-.card{background:white;border-radius:20px;padding:16px;max-width:420px;margin:auto;box-shadow:0 10px 25px rgba(0,0,0,0.1);padding-bottom:60px;}
+.slide{min-width:100%;padding:16px;}
+.card{background:#fff;border-radius:20px;padding:16px;max-width:420px;margin:auto;}
 .img{width:100%;border-radius:15px;}
-.btn{width:100%;padding:12px;margin-top:10px;border-radius:999px;border:none;background:linear-gradient(135deg,#4fd1c5,#63b3ed);color:white;font-weight:bold;}
-.hidden{display:none;} .show{display:block;}
+.btn{width:100%;padding:12px;margin-top:10px;border-radius:999px;border:none;background:linear-gradient(135deg,#4fd1c5,#63b3ed);color:#fff;font-weight:bold;cursor:pointer;}
+.hidden{display:none;}
+.show{display:block;}
 .makna{background:#eef7f6;padding:12px;border-radius:12px;margin-top:10px;}
-.nav-btn{position:fixed;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:white;border:none;font-size:20px;padding:10px;border-radius:50%;}
-.prev{left:10px;} .next{right:10px;}
+.nav-btn{position:fixed;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:10px;border-radius:50%;}
+.prev{left:10px;}
+.next{right:10px;}
 .dots{position:fixed;bottom:15px;width:100%;text-align:center;}
-.dot{width:8px;height:8px;margin:4px;background:#ccc;border-radius:50%;display:inline-block;}
+.dot{width:8px;height:8px;background:#ccc;display:inline-block;border-radius:50%;margin:4px;}
 .active{background:#4fd1c5;}
-.hint{position:fixed;bottom:5px;width:100%;text-align:center;font-size:12px;opacity:0.7;}
-body.dark{background:#0f172a;color:#e2e8f0;}
-body.dark .card{background:#1e293b;}
-body.dark .makna{background:#1f2937;}
-.top-bar{position:fixed;top:10px;left:50%;transform:translateX(-50%);width:320px;display:flex;justify-content:space-between;z-index:100;}
-.top-btn{background:linear-gradient(135deg,#4fd1c5,#63b3ed);color:white;border:none;padding:8px 14px;border-radius:999px;}
+.top-bar{position:fixed;top:10px;left:50%;transform:translateX(-50%);width:320px;display:flex;justify-content:space-between;}
+.top-btn{background:linear-gradient(135deg,#4fd1c5,#63b3ed);color:#fff;border:none;padding:8px 14px;border-radius:999px;}
 </style>
 </head>
 
@@ -45,15 +43,13 @@ body.dark .makna{background:#1f2937;}
 <button class="nav-btn next" onclick="nextSlide()">›</button>
 
 <div id="container" class="container"></div>
-<div class="dots" id="dots"></div>
-<div class="hint">← Geser atau gunakan tombol →</div>
+<div id="dots" class="dots"></div>
 
 <script>
 
+/* ===== DATA (ISI FULL KAMU DI SINI TANPA KOMA KOSONG) ===== */
 const wejanganData = [
-/* === SEMUA DATA KAMU UTUH (TIDAK DIUBAH) === */
 
-/* 1 */
 {
 img:"img/wejangan1.jpg",
 title:"Kematian Tidak Perlu Dipersiapkan",
@@ -63,12 +59,9 @@ Mempersiapkannya pun sudah terlambat!...<br><br>
 Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.<br><br>
 Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.<br><br>
 Apa lagi yang perlu kau persiapkan?`,
-makna:`Wejangan ini bukan berarti kita harus mengabaikan kematian. Sebaliknya, maknanya adalah bahwa 'persiapan' sejati bukanlah sesuatu yang dilakukan mendadak saat ajalnya tiba.`
+makna:`Wejangan ini bukan berarti kita harus mengabaikan kematian. Sebaliknya, maknanya adalah bahwa 'persiapan' sejati bukanlah sesuatu yang dilakukan mendadak saat ajalnya tiba, melainkan hasil dari akumulasi latihan spiritual dan perbuatan baik yang dilakukan secara konsisten setiap hari selama hidup. Karena kematian bisa datang kapan saja (ketidakkekalan), maka setiap momen kehidupan yang dijalani dengan sadar dan baik adalah bentuk persiapan yang sesungguhnya.`
 },
 
-/* 2–15 */
-/* ⚠️ SEMUA DATA LAINNYA SAMA PERSIS DENGAN MILIKMU */
-/* (tidak aku ulang di sini karena panjang, tapi kamu tinggal tempel TANPA ADA KOMA KOSONG DAN TANPA DUPLIKASI SCRIPT) */
 {
 img:"img/wejangan2.jpg",
 title:"Hakikat Kehidupan",
@@ -245,47 +238,53 @@ Dengan cara ini, kekuatan penyeberangan akan bekerja.
 (Penekunan metode ini memerlukan abhiseka).`,
   makna: `Metode ini mengajarkan cara mendoakan mendiang melalui kombinasi mantra dan visualisasi. Dengan niat tulus dan praktik yang benar, diharapkan roh mendapatkan kelapangan dan menuju keadaan yang lebih baik.`
 }
-  
+
 ];
 
-let index=0;
-const container=document.getElementById("container");
-const total=wejanganData.length;
 
-/* RENDER */
+/* ===== RENDER ===== */
+let index = 0;
+const container = document.getElementById("container");
+const total = wejanganData.length;
+
 wejanganData.forEach((item,i)=>{
-const slide=document.createElement("div");
-slide.className="slide";
-slide.innerHTML=`
+container.innerHTML += `
+<div class="slide">
 <div class="card">
 <img src="${item.img}" class="img">
-<button onclick="toggleText(${i})" class="btn">🌐 Lihat Terjemahan</button>
-<button onclick="shareWA(${i})" class="btn">📤 Share ke WhatsApp</button>
+
+<button class="btn" onclick="toggleText(${i})">🌐 Lihat Terjemahan</button>
+<button class="btn" onclick="shareWA(${i})">📤 Share ke WhatsApp</button>
+
 <div id="text${i}" class="hidden">
 <h3>${item.title}</h3>
 <p>${item.content}</p>
 <div class="makna">${item.makna}</div>
 </div>
-</div>`;
-container.appendChild(slide);
+
+</div>
+</div>
+`;
 });
 
+
+/* ===== FUNCTION ===== */
 function toggleText(i){
 document.getElementById("text"+i).classList.toggle("show");
 }
 
 function nextSlide(){
-if(index<total-1){
+if(index < total-1){
 index++;
-container.scrollTo({left:index*window.innerWidth});
+container.scrollTo({left:index * window.innerWidth});
 updateDots();
 }
 }
 
 function prevSlide(){
-if(index>0){
+if(index > 0){
 index--;
-container.scrollTo({left:index*window.innerWidth});
+container.scrollTo({left:index * window.innerWidth});
 updateDots();
 }else{
 location.href="index.html";
@@ -296,11 +295,13 @@ function goHome(){
 location.href="index.html";
 }
 
-const dotsContainer=document.getElementById("dots");
+
+/* DOT */
+const dots = document.getElementById("dots");
 for(let i=0;i<total;i++){
 let d=document.createElement("span");
 d.className="dot";
-dotsContainer.appendChild(d);
+dots.appendChild(d);
 }
 
 function updateDots(){
@@ -310,24 +311,33 @@ d.classList.toggle("active",i===index);
 }
 updateDots();
 
+
+/* DARK */
 function toggleDark(){
 document.body.classList.toggle("dark");
-localStorage.setItem("dark",document.body.classList.contains("dark"));
 }
 
-if(localStorage.getItem("dark")==="true"){
-document.body.classList.add("dark");
-}
 
+/* ===== SHARE WA (SUDAH FIX) ===== */
 function shareWA(i){
-const item=wejanganData[i];
-const url="https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?v="+Date.now();
-const text="Wejangan Harian 🌿\n\n"+item.title+"\n\nBaca lengkap:\n"+url;
+const item = wejanganData[i];
+
+const url = "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?v=" + Date.now();
+
+const text =
+"Wejangan Harian 🌿\n\n" +
+item.title + "\n\n" +
+"Baca lengkap:\n" + url;
 
 if(navigator.share){
-navigator.share({title:"Wejangan Harian",text,url});
+navigator.share({
+title:"Wejangan Harian",
+text:text
+}).catch(()=>{
+window.open("https://wa.me/?text=" + encodeURIComponent(text),"_blank");
+});
 }else{
-location.href="https://wa.me/?text="+encodeURIComponent(text);
+window.open("https://wa.me/?text=" + encodeURIComponent(text),"_blank");
 }
 }
 
