@@ -456,12 +456,7 @@ function shareWA(i){
 
   const url = "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?v=" + Date.now();
 
-  const text = `Wejangan Harian 🌿
-
-${item.title}
-
-Baca lengkap:
-${url}`;
+  const text = "Wejangan Harian 🌿\n\n" + item.title + "\n\nBaca lengkap:\n" + url;
 
   if (navigator.share) {
     navigator.share({
