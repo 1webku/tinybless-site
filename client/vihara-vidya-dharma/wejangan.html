@@ -460,16 +460,20 @@ function shareWA(i){
 
 ${item.title}
 
-${item.content.replace(/<br>/g,"\n")}
-
-Makna:
-${item.makna}
-
 Baca lengkap:
 ${url}`;
 
-  const waUrl = "https://wa.me/?text=" + encodeURIComponent(text);
-  window.open(waUrl, "_blank");
+  // 🔥 PAKAI SHARE SYSTEM HP (tidak paksa WA Business)
+  if (navigator.share) {
+    navigator.share({
+      title: "Wejangan Harian",
+      text: text,
+      url: url
+    });
+  } else {
+    // fallback kalau tidak support
+    window.open("https://wa.me/?text=" + encodeURIComponent(text));
+  }
 }
   
 </script>
