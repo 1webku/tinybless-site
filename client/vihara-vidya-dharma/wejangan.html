@@ -15,90 +15,89 @@
 body{margin:0;font-family:Arial;background:#fdf6f0;}
 
 .container{
-display:flex;
-overflow-x:auto;
-scroll-snap-type:x mandatory;
-height:100vh;
-position:relative;
-z-index:1;
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  height:100vh;
 }
 
-.slide{min-width:100%;padding:16px;}
+.slide{
+  min-width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  scroll-snap-align:center;
+}
 
 .card{
-background:#fff;
-border-radius:20px;
-padding:16px;
-max-width:420px;
-margin:auto;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  background:#fff;
+  border-radius:20px;
+  padding:16px;
+  max-width:420px;
+  width:100%;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .img{width:100%;border-radius:15px;}
 
 .btn{
-width:100%;
-padding:12px;
-margin-top:10px;
-border-radius:999px;
-border:none;
-background:linear-gradient(135deg,#4fd1c5,#63b3ed);
-color:#fff;
-font-weight:bold;
-cursor:pointer;
-position:relative;
-z-index:10;
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:999px;
+  border:none;
+  background:linear-gradient(135deg,#4fd1c5,#63b3ed);
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
 }
 
 .hidden{display:none;}
 .show{display:block;}
 
 .makna{
-background:#eef7f6;
-padding:12px;
-border-radius:12px;
-margin-top:10px;
+  background:#eef7f6;
+  padding:12px;
+  border-radius:12px;
+  margin-top:10px;
 }
 
 .nav-btn{
-position:fixed;
-top:50%;
-transform:translateY(-50%);
-background:rgba(0,0,0,0.5);
-color:#fff;
-border:none;
-padding:10px;
-border-radius:50%;
-z-index:999;
+  position:fixed;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  border:none;
+  padding:10px;
+  border-radius:50%;
+  z-index:999;
 }
 
 .prev{left:10px;}
 .next{right:10px;}
 
 .top-bar{
-position:fixed;
-top:10px;
-left:50%;
-transform:translateX(-50%);
-width:320px;
-display:flex;
-justify-content:space-between;
-z-index:999;
+  position:fixed;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:320px;
+  display:flex;
+  justify-content:space-between;
+  z-index:999;
 }
 
 .top-btn{
-background:linear-gradient(135deg,#4fd1c5,#63b3ed);
-color:#fff;
-border:none;
-padding:8px 14px;
-border-radius:999px;
-cursor:pointer;
+  background:linear-gradient(135deg,#4fd1c5,#63b3ed);
+  color:#fff;
+  border:none;
+  padding:8px 14px;
+  border-radius:999px;
+  cursor:pointer;
 }
 
-body.dark{
-background:#0f172a;
-color:#fff;
-}
+body.dark{background:#0f172a;color:#fff;}
 body.dark .card{background:#1e293b;}
 body.dark .makna{background:#1f2937;}
 </style>
@@ -118,10 +117,8 @@ body.dark .makna{background:#1f2937;}
 
 <script>
 
-/* ===== DATA FULL TANPA ERROR ===== */
+/* ===== TEMPATKAN SEMUA DATA KAMU DI SINI TANPA UBAH ISI ===== */
 const wejanganData = [
-
-{
 img:"img/wejangan1.jpg",
 title:"Kematian Tidak Perlu Dipersiapkan",
 content:`Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?<br><br>
@@ -309,9 +306,12 @@ Dengan cara ini, kekuatan penyeberangan akan bekerja.
 (Penekunan metode ini memerlukan abhiseka).`,
   makna: `Metode ini mengajarkan cara mendoakan mendiang melalui kombinasi mantra dan visualisasi. Dengan niat tulus dan praktik yang benar, diharapkan roh mendapatkan kelapangan dan menuju keadaan yang lebih baik.`
 }
-
+  
+/* paste SEMUA 1–15 milik kamu di sini, TANPA:
+   - koma kosong
+   - script dobel
+*/
 ];
-
 
 /* ===== RENDER ===== */
 let index = 0;
@@ -319,68 +319,75 @@ const container = document.getElementById("container");
 const total = wejanganData.length;
 
 wejanganData.forEach((item,i)=>{
-container.innerHTML += `
-<div class="slide">
-<div class="card">
+  const slide = document.createElement("div");
+  slide.className="slide";
 
-<img src="${item.img}" class="img">
+  slide.innerHTML = `
+    <div class="card">
+      <img src="${item.img}" class="img">
 
-<button class="btn" onclick="toggleText(${i})">🌐 Lihat Terjemahan</button>
-<button class="btn" onclick="shareWA(${i})">📤 Share ke WhatsApp</button>
+      <button class="btn" onclick="toggleText(${i})">🌐 Lihat Terjemahan</button>
+      <button class="btn" onclick="shareWA(${i})">📤 Share ke WhatsApp</button>
 
-<div id="text${i}" class="hidden">
-<h3>${item.title}</h3>
-<p>${item.content}</p>
-<div class="makna">${item.makna}</div>
-</div>
+      <div id="text${i}" class="hidden">
+        <h3>${item.title}</h3>
+        <p>${item.content}</p>
+        <div class="makna">${item.makna}</div>
+      </div>
+    </div>
+  `;
 
-</div>
-</div>
-`;
+  container.appendChild(slide);
 });
 
-
 function toggleText(i){
-document.getElementById("text"+i).classList.toggle("show");
+  document.getElementById("text"+i).classList.toggle("show");
 }
 
 function nextSlide(){
-if(index < total-1){
-index++;
-container.scrollTo({left:index * window.innerWidth});
-}
+  if(index < total-1){
+    index++;
+    container.scrollTo({left:index * window.innerWidth});
+  }
 }
 
 function prevSlide(){
-if(index > 0){
-index--;
-container.scrollTo({left:index * window.innerWidth});
-}else{
-location.href="index.html";
-}
+  if(index > 0){
+    index--;
+    container.scrollTo({left:index * window.innerWidth});
+  } else {
+    location.href="index.html";
+  }
 }
 
 function goHome(){
-location.href="index.html";
+  location.href="index.html";
 }
 
 function toggleDark(){
-document.body.classList.toggle("dark");
+  document.body.classList.toggle("dark");
 }
 
-
-/* ===== SHARE WA ===== */
+/* ===== SHARE (KEMBALIKAN KE MODEL YANG BISA TEKS + PREVIEW) ===== */
 function shareWA(i){
-const item = wejanganData[i];
+  const item = wejanganData[i];
+  const url = "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html";
 
-const url = "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?v=" + Date.now();
+  const text =
+    "Wejangan Harian 🌿\n\n" +
+    item.title + "\n\n" +
+    item.content.replace(/<br>/g,"\n") + "\n\n" +
+    "Makna:\n" + item.makna + "\n\n" +
+    url;
 
-const text =
-"Wejangan Harian 🌿\n\n" +
-item.title + "\n\n" +
-"Baca lengkap:\n" + url;
-
-window.open("https://wa.me/?text=" + encodeURIComponent(text),"_blank");
+  if (navigator.share) {
+    navigator.share({
+      title:"Wejangan Harian",
+      text:text
+    });
+  } else {
+    location.href = "https://wa.me/?text=" + encodeURIComponent(text);
+  }
 }
 
 </script>
