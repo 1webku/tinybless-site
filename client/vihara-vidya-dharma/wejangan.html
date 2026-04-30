@@ -463,7 +463,6 @@ ${item.title}
 Baca lengkap:
 ${url}`;
 
-  // 🔥 PAKAI SHARE SYSTEM HP (tidak paksa WA Business)
   if (navigator.share) {
     navigator.share({
       title: "Wejangan Harian",
@@ -471,8 +470,7 @@ ${url}`;
       url: url
     });
   } else {
-    // fallback kalau tidak support
-    window.open("https://wa.me/?text=" + encodeURIComponent(text));
+    location.href = "https://wa.me/?text=" + encodeURIComponent(text);
   }
 }
   
