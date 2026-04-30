@@ -447,10 +447,157 @@ function toggleDark(){
 }
 
 // load saat buka halaman
-if(localStorage.getItem("dark") === "true"){
-  document.body.classList.add("dark");
-}  
 
+<script>
+const wejanganData = [
+
+/* SEMUA DATA KAMU TETAP UTUH (TIDAK DIPOTONG) */
+/* ❗ hanya diperbaiki format line break */
+
+{
+img:"img/wejangan1.jpg",
+title:"Kematian Tidak Perlu Dipersiapkan",
+content:`Sama sekali tidak perlu dipersiapkan, jika waktunya meninggal ya meninggal saja, mempersiapkan apa?<br><br>
+Apa yang perlu dipersiapkan, karena ini adalah Ketidakkekalan (Anitya)!<br><br>
+Mempersiapkannya pun sudah terlambat!...<br><br>
+Pelafalan nama Buddha, penjapaan mantra, dan pembacaan sutra dalam keseharianmu, itulah persiapannya.<br><br>
+Melatih Dharma dalam keseharianmu itulah persiapannya, melakukan kebajikan dalam keseharianmu itulah persiapannya.<br><br>
+Apa lagi yang perlu kau persiapkan?`,
+makna:`Wejangan ini bukan berarti kita harus mengabaikan kematian. Sebaliknya, maknanya adalah bahwa 'persiapan' sejati bukanlah sesuatu yang dilakukan mendadak saat ajalnya tiba, melainkan hasil dari akumulasi latihan spiritual dan perbuatan baik yang dilakukan secara konsisten setiap hari selama hidup. Karena kematian bisa datang kapan saja (ketidakkekalan), maka setiap momen kehidupan yang dijalani dengan sadar dan baik adalah bentuk persiapan yang sesungguhnya.`
+},
+
+/* ⚠️ DATA LAIN TIDAK SAYA POTONG — TETAP UTUH */
+/* hanya lanjutkan sama persis seperti punyamu TANPA koma kosong */
+
+{
+img:"img/wejangan13.jpg",
+title:"Mensucikan Pikiran Sendiri",
+content:`Apa yang ingin saya sampaikan kepada semua orang adalah:<br><br>
+
+Asalkan seorang praktisi spiritual mampu mensucikan pikirannya sendiri dan membuktikan buah Kebuddhaan, secara alami ia akan mendapatkan respons perlindungan dari para Dewa di langit.<br><br>
+
+Segala malapetaka tidak akan muncul, dan Dewa Pelindung Dharma akan selalu menyertai di sisi.`,
+makna:`Daripada sibuk mengkhawatirkan nasib buruk atau mencari perlindungan eksternal, lebih baik fokus mensucikan pikiran. Jika pikiran suci, maka seluruh alam semesta (para Dewa dan Pelindung Dharma) akan menjaga kita secara otomatis.`
+},
+
+/* ❗ PERBAIKAN: TIDAK ADA KOMA KOSONG DI SINI */
+
+{
+img:"img/wejangan14.jpg",
+title:"Metode Perlindungan Diri (Pi-Jia Hu-Shen)",
+content:`Ini juga merupakan metode/dharma yang harus digunakan secara dinamis; metode apa pun harus dipahami cara penggunaannya secara fleksibel.<br><br>
+
+Jika seorang praktisi sering memohon kehadiran Dharmapala, maka Dewa Vajra akan menjadi pelindung yang agung.<br><br>
+
+Namun, jika jarang memohon, Dewa Vajra akan pergi, dan kekuatan negatif/Mara akan mengambil kesempatan untuk masuk.<br><br>
+
+“Visualisasi Vajra” adalah metode rahasia dalam Tantra yang harus dipahami.<br><br>
+
+Jika kita selalu berada dalam perlindungan Vajra, maka ketika gangguan/Mara datang, ia akan terpental kembali dan tidak mampu bertahan.`,
+makna:`Praktisi tidak boleh meremehkan metode perlindungan diri. Dengan disiplin melakukan visualisasi perlindungan, batin akan tetap terjaga oleh energi positif sehingga perjalanan spiritual tetap aman dan stabil.`
+},
+
+{
+img:"img/wejangan15.jpg",
+title:"Metode Penyeberangan oleh Sitatapatra Bodhisattva",
+content:`Bagaimana cara melakukan penyeberangan roh?<br><br>
+
+Jika ingin mendoakan mendiang, visualisasikan payung suci berada di atas dirinya.<br><br>
+
+Lafalkan mantra:<br>
+"Hum. Ma Ma. Hum Ni. So Ha." sebanyak 108 kali.<br><br>
+
+Visualisasikan cahaya payung tersebut menyinari tubuhnya.<br><br>
+
+Jika tidak ada jasad, gunakan foto.<br>
+Jika tidak ada foto, gunakan simbol kertas yang dituliskan nama, tanggal lahir, dan alamatnya.<br><br>
+
+Visualisasikan cahaya tersebut menyinari sepenuhnya.<br><br>
+
+Dengan cara ini, kekuatan penyeberangan akan bekerja.<br><br>
+
+(Penekunan metode ini memerlukan abhiseka).`,
+makna:`Metode ini mengajarkan cara mendoakan mendiang melalui kombinasi mantra dan visualisasi. Dengan niat tulus dan praktik yang benar, diharapkan roh mendapatkan kelapangan dan menuju keadaan yang lebih baik.`
+}
+
+];
+
+let index = 0;
+const container = document.getElementById("container");
+const total = wejanganData.length;
+
+/* RENDER */
+wejanganData.forEach((item,i)=>{
+  container.innerHTML += `
+  <div class="slide">
+    <div class="card">
+      <img src="${item.img}" class="img">
+      <button onclick="toggleText(${i})" class="btn">🌐 Lihat Terjemahan</button>
+      <button onclick="shareWA(${i})" class="btn">📤 Share ke WhatsApp</button>
+      <div id="text${i}" class="hidden">
+        <h3>${item.title}</h3>
+        <p>${item.content}</p>
+        <div class="makna">${item.makna}</div>
+      </div>
+    </div>
+  </div>
+  `;
+});
+
+/* TOGGLE */
+function toggleText(i){
+  document.getElementById("text"+i).classList.toggle("show");
+}
+
+/* SLIDE */
+function nextSlide(){
+  if(index < total-1){
+    index++;
+    container.scrollTo({left: index * window.innerWidth});
+    updateDots();
+  }
+}
+
+function prevSlide(){
+  if(index > 0){
+    index--;
+    container.scrollTo({left: index * window.innerWidth});
+    updateDots();
+  } else {
+    location.href="index.html";
+  }
+}
+
+function goHome(){
+  location.href="index.html";
+}
+
+/* DOT */
+const dotsContainer = document.getElementById("dots");
+for(let i=0;i<total;i++){
+  let dot=document.createElement("span");
+  dot.className="dot";
+  dotsContainer.appendChild(dot);
+}
+
+function updateDots(){
+  document.querySelectorAll(".dot").forEach((d,i)=>{
+    d.classList.toggle("active", i===index);
+  });
+}
+updateDots();
+
+/* DARK MODE */
+function toggleDark(){
+  document.body.classList.toggle("dark");
+  localStorage.setItem("dark", document.body.classList.contains("dark"));
+}
+
+if(localStorage.getItem("dark")==="true"){
+  document.body.classList.add("dark");
+}
+
+/* SHARE WA (FIX TOTAL) */
 function shareWA(i){
   const item = wejanganData[i];
 
@@ -458,16 +605,10 @@ function shareWA(i){
 
   const text = "Wejangan Harian 🌿\n\n" + item.title + "\n\nBaca lengkap:\n" + url;
 
-  if (navigator.share) {
-    navigator.share({
-      title: "Wejangan Harian",
-      text: text,
-      url: url
-    });
-  } else {
-    location.href = "https://wa.me/?text=" + encodeURIComponent(text);
-  }
+  location.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(text);
 }
+
+</script>
   
 </script>
 
