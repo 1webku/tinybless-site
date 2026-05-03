@@ -419,6 +419,13 @@ wejanganData.forEach((item,i)=>{
   container.appendChild(slide);
 });
 
+setTimeout(()=>{
+  container.scrollTo({
+    left: index * window.innerWidth
+  });
+  updateDots();
+}, 100);  
+  
 function toggleText(i){
   document.getElementById("text"+i).classList.toggle("show");
 }
