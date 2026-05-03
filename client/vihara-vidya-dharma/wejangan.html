@@ -388,6 +388,12 @@ dan mencapai kebuddhaan.`,
 
 /* ===== RENDER ===== */
 let index = 0;
+const params = new URLSearchParams(window.location.search);
+const startIndex = parseInt(params.get("i"));
+
+if(!isNaN(startIndex) && startIndex >= 0 && startIndex < wejanganData.length){
+  index = startIndex;
+}  
 const container = document.getElementById("container");
 const total = wejanganData.length;
 
