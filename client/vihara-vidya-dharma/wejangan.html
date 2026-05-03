@@ -456,20 +456,20 @@ function toggleDark(){
 
 /* ===== SHARE (KEMBALIKAN KE MODEL YANG BISA TEKS + PREVIEW) ===== */
 function shareWA(i){
-  const item = wejanganData[i];
+const item = wejanganData[i];
 
-  const text =
-  "Wejangan Harian 🌿\n\n" +
-  item.title + "\n\n" +
-  item.content
-    .replace(/<br><br>/g, "\n\n")
-    .replace(/<br>/g, "\n") + "\n\n" +
-  "Makna:\n" +
-  item.makna + "\n\n" +
-  "🔗 https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?i=" + i;
-
-  const url = "https://wa.me/?text=" + encodeURIComponent(text);
-  window.open(url, "_blank");
+const text =
+"Wejangan Harian 🌿\n\n" +
+item.title + "\n\n" +
+item.content
+  .replace(/<br><br>/g, "\n\n")
+  .replace(/<br>/g, "\n") + "\n\n" +
+"Makna:\n" +
+item.makna + "\n\n" +
+"🔗 https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?i=" + i;
+  
+const url = "https://wa.me/?text=" + encodeURIComponent(text);
+window.open(url, "_blank");
 }
 
 </script>
