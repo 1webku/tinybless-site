@@ -101,6 +101,14 @@ body{margin:0;font-family:Arial;background:#fdf6f0;}
 body.dark{background:#0f172a;color:#fff;}
 body.dark .card{background:#1e293b;}
 body.dark .makna{background:#1f2937;}
+
+.hint-bottom{
+  text-align:center;
+  font-size:12px;
+  margin-top:12px;
+  opacity:0.6;
+}
+  
 </style>
 </head>
 
@@ -413,6 +421,7 @@ wejanganData.forEach((item,i)=>{
         <p>${item.content}</p>
         <div class="makna">${item.makna}</div>
       </div>
+      <div class="hint-bottom">← Geser lihat artikel lain →</div>
     </div>
   `;
 
