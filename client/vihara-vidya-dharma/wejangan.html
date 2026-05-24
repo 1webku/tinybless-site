@@ -1191,59 +1191,57 @@ function toggleDark(){
 }
 
 /* ===== SHARE (KEMBALIKAN KE MODEL YANG BISA TEKS + PREVIEW) ===== */
-async function shareWA(i){
+async function shareWA(i) {
+  const item = wejanganData[i];
 
-  try {
+  // link menuju wejangan
+  const link =
+    "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?i=" +
+    (i + 1);
 
-    // ambil gambar sesuai nomor wejangan
-    const imageUrl =
-      "img/wejangan" + (i + 1) + ".jpg";
+  // caption pendek
+  const text =
+    "🙏 Wejangan Harian\n\n" +
+    "👇 Baca terjemahan lengkap di sini:\n" +
+    link;
 
-    // download gambar
-    const response = await fetch(imageUrl);
-    const blob = await response.blob();
+  // path gambar
+  const imageUrl = item.image;
 
-    // ubah menjadi file
-    const file = new File(
-      [blob],
-      "wejangan" + (i + 1) + ".jpg",
-      {
-        type: blob.type
-      }
-    );
+  // cek mobile atau desktop
+  const isMobile =
+    /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    // caption pendek
-    const text =
-      "👇 Baca terjemahan di sini\n\n" +
-      "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?i=" +
-      (i + 1);
+  // ===== MOBILE =====
+  if (isMobile && navigator.share) {
+    try {
+      const response = await fetch(imageUrl);
+      const blob = await response.blob();
 
-    // share gambar + caption
-    if (
-      navigator.canShare &&
-      navigator.canShare({ files:[file] })
-    ) {
+      const file = new File(
+        [blob],
+        `wejangan-${i + 1}.jpg`,
+        { type: blob.type }
+      );
 
       await navigator.share({
-        title:"Wejangan Harian",
-        text:text,
-        files:[file]
+        files: [file],
+        text: text
       });
 
-    } else {
-
-      // fallback kalau browser tidak support
-      window.open(
-        "https://wa.me/?text=" +
-        encodeURIComponent(text),
-        "_blank"
-      );
+    } catch (err) {
+      console.log("Share gagal:", err);
     }
 
-  } catch(err) {
-    console.log(err);
+    return;
   }
 
+  // ===== DESKTOP =====
+  const waUrl =
+    "https://wa.me/?text=" +
+    encodeURIComponent(text);
+
+  window.open(waUrl, "_blank");
 }
   
 </script>
