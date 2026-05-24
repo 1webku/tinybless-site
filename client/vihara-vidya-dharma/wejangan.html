@@ -1191,30 +1191,59 @@ function toggleDark(){
 }
 
 /* ===== SHARE (KEMBALIKAN KE MODEL YANG BISA TEKS + PREVIEW) ===== */
-function shareWA(i){
-  const item = wejanganData[i];
+async function shareWA(i){
 
-  // 🔥 rapikan isi (hilangkan spasi berlebih)
-  const cleanContent = item.content
-    .replace(/<br>/g, "\n")
-    .replace(/\n{3,}/g, "\n\n");
+  try {
 
-  const shortText =
-cleanContent.substring(0,180);
+    // ambil gambar sesuai nomor wejangan
+    const imageUrl =
+      "img/wejangan" + (i + 1) + ".jpg";
 
-const text =
-"Wejangan Harian 🌿\n\n" +
+    // download gambar
+    const response = await fetch(imageUrl);
+    const blob = await response.blob();
 
-item.title + "\n\n" +
+    // ubah menjadi file
+    const file = new File(
+      [blob],
+      "wejangan" + (i + 1) + ".jpg",
+      {
+        type: blob.type
+      }
+    );
 
-shortText + "...\n\n" +
+    // caption pendek
+    const text =
+      "👇 Baca terjemahan di sini\n\n" +
+      "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?i=" +
+      (i + 1);
 
-"📖 Baca lengkap klik link:\n" +
+    // share gambar + caption
+    if (
+      navigator.canShare &&
+      navigator.canShare({ files:[file] })
+    ) {
 
-"https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?i=" + (i+1);
-  
-  const url = "https://wa.me/?text=" + encodeURIComponent(text);
-  window.open(url, "_blank");
+      await navigator.share({
+        title:"Wejangan Harian",
+        text:text,
+        files:[file]
+      });
+
+    } else {
+
+      // fallback kalau browser tidak support
+      window.open(
+        "https://wa.me/?text=" +
+        encodeURIComponent(text),
+        "_blank"
+      );
+    }
+
+  } catch(err) {
+    console.log(err);
+  }
+
 }
   
 </script>
