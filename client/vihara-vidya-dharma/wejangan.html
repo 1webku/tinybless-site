@@ -1271,15 +1271,18 @@ async function shareWA(i){
 
   try {
 
-    // ambil gambar sesuai nomor wejangan
     const imageUrl =
       "img/wejangan" + (i + 1) + ".jpg";
 
-    // download gambar
     const response = await fetch(imageUrl);
+
+    if (!response.ok) {
+      alert("Gambar tidak ditemukan: " + imageUrl);
+      return;
+    }
+
     const blob = await response.blob();
 
-    // ubah menjadi file
     const file = new File(
       [blob],
       "wejangan" + (i + 1) + ".jpg",
@@ -1288,14 +1291,13 @@ async function shareWA(i){
       }
     );
 
-    // caption pendek
     const text =
       "👇 Baca terjemahan di sini\n\n" +
       "https://tinybless.my.id/client/vihara-vidya-dharma/wejangan.html?i=" +
       (i + 1);
 
-    // share gambar + caption
     if (
+      navigator.share &&
       navigator.canShare &&
       navigator.canShare({ files:[file] })
     ) {
@@ -1308,7 +1310,6 @@ async function shareWA(i){
 
     } else {
 
-      // fallback kalau browser tidak support
       window.open(
         "https://wa.me/?text=" +
         encodeURIComponent(text),
